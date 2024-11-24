@@ -1,0 +1,163 @@
+{
+    "nav": {
+      "about": "À propos",
+      "skills": "Compétences",
+      "projects": "Projets",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Bonjour, je suis",
+      "role": "Étudiant en Informatique"
+    },
+    "profile": {
+      "greeting": "Bonjour, je suis",
+      "title": "Étudiant en Informatique",
+      "subtitle": "Spécialisé en IA & Science des Données",
+      "contact": "Me Contacter",
+      "resume": "Télécharger CV"
+    },
+    "about": {
+      "explore": "Découvrez",
+      "title": "Mon Parcours",
+      "bio": "Je suis étudiante en 3ème année d'informatique, passionnée par la manipulation des données et particulièrement par les avancées en intelligence artificielle. Je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences en analyse et traitement des données.",
+      "shortTerm": "Objectif à Court Terme",
+      "shortTermDesc": "Intégrer une école me permettant d'approfondir mes connaissances en développement et optimisation d'IA.",
+      "longTerm": "Objectif à Long Terme",
+      "longTermDesc": "Travailler dans la recherche ou le développement en IA.",
+      "experience": {
+        "database": {
+          "title": "Analyse de Base de Données",
+          "description": "Optimisation des performances et analyse approfondie des bases de données municipales."
+        },
+        "neural": {
+          "title": "Évaluation de Réseaux Neuronaux",
+          "description": "Recherche sur l'optimisation des réseaux neuronaux impulsionnels."
+        }
+      },
+      "education": {
+        "title": "Licence en Informatique",
+        "description": "Formation approfondie en Intelligence Artificielle et Science des Données."
+      },
+      "goals": "Mes Objectifs",
+      "timeline": "Mon Parcours"
+    },
+    "skills": {
+      "explore": "Découvrez Mes",
+      "title": "Compétences",
+      "database": "Base de Données",
+      "development": "Développement",
+      "tools": "Outils & Autres",
+      "levels": {
+        "basic": {
+          "label": "Débutant",
+          "description": "Connaissances fondamentales"
+        },
+        "intermediate": {
+          "label": "Intermédiaire",
+          "description": "Bonne maîtrise"
+        },
+        "advanced": {
+          "label": "Avancé",
+          "description": "Expertise approfondie"
+        }
+      },
+      "skillLevels": {
+        "b2": "Niveau B2",
+        "projectManagement": "Gestion de Projet"
+      },
+      "categories": {
+        "database": {
+          "title": "Base de Données",
+          "skills": {
+            "sql": "SQL",
+            "postgresql": "PostgreSQL",
+            "oracle": "Oracle",
+            "excel": "Excel",
+            "neo4j": "Neo4j",
+            "powerbi": "Power BI"
+          }
+        },
+        "development": {
+          "title": "Développement",
+          "skills": {
+            "python": "Python",
+            "csharp": "C#",
+            "htmlcss": "HTML/CSS",
+            "php": "PHP",
+            "cpp": "C++"
+          }
+        },
+        "tools": {
+          "title": "Outils & Autres",
+          "skills": {
+            "git": "Git",
+            "projectManagement": "Gestion de Projet",
+            "promptEngineering": "Ingénierie de Prompts",
+            "english": "Anglais"
+          }
+        }
+      }
+    },
+    "generalSkills": {
+      "title": "Compétences Générales",
+      "skills": {
+        "communication": "Communication",
+        "autonomy": "Autonomie",
+        "adaptability": "Adaptabilité",
+        "collaboration": "Collaboration",
+        "learning": "Apprentissage Continu"
+      }
+    },
+    "projects": {
+      "title": "Projets",
+      "back": "Retour aux projets",
+      "overview": "Vue d'ensemble",
+      "technologies": "Technologies utilisées",
+      "challenges": "Défis",
+      "results": "Résultats",
+      "viewDetails": "Voir les Détails",
+      "viewGithub": "Voir sur GitHub",
+      "brainTumor": {
+        "title": "IA de Détection de Tumeurs Cérébrales",
+        "description": "Développement d'un Réseau de Neurones Convolutif (CNN) pour la détection automatisée de tumeurs cérébrales à partir d'IRM, atteignant une précision de 93% dans la classification des tumeurs.",
+        "tags": {
+          "python": "Python",
+          "cnn": "CNN",
+          "tensorflow": "TensorFlow",
+          "keras": "Keras",
+          "deepLearning": "Deep Learning",
+          "opencv": "OpenCV"
+        }
+      },
+      "multispectral": {
+        "title": "Visionneur d'Images Multispectrales",
+        "description": "Création d'un outil logiciel pour simuler différents types de vision (humaine, daltonienne, abeille) à partir d'images multispectrales, permettant des combinaisons personnalisées de bandes RGB.",
+        "tags": {
+          "python": "Python",
+          "multispectralImage": "Image Multispectrale",
+          "imageProcessing": "Traitement d'Image",
+          "guiDevelopment": "Développement GUI",
+          "searching": "Recherche"
+        }
+      },
+      "portfolio": {
+        "title": "Site Portfolio",
+        "description": "Conception et développement d'un site portfolio professionnel responsive utilisant les technologies web modernes et les meilleures pratiques.",
+        "tags": {
+          "html5": "HTML5",
+          "css3": "CSS3",
+          "javascript": "JavaScript",
+          "responsiveDesign": "Design Responsive"
+        }
+      }
+    },
+    "contact": {
+      "meet": "Rencontrez-moi",
+      "title": "Contactez-moi",
+      "email": "Email",
+      "linkedin": "LinkedIn"
+    },
+    "footer": {
+      "copyright": "Copyright © 2024 Camille Maslin. Tous droits réservés."
+    }
+  }

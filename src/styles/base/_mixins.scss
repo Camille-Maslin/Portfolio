@@ -1,0 +1,54 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin card-hover {
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--color-shadow);
+  }
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == desktop {
+    @media (min-width: 1200px) { @content; }
+  } @else if $breakpoint == laptop {
+    @media (max-width: 1199px) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 768px) { @content; }
+  } @else if $breakpoint == mobile {
+    @media (max-width: 480px) { @content; }
+  }
+}
+
+@mixin section-padding {
+  padding: var(--section-padding) 0;
+}
+
+@mixin container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@mixin flex-container($direction: row, $wrap: wrap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin grid-container($columns: 1fr, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($columns, 1fr));
+  gap: $gap;
+}

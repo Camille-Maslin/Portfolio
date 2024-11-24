@@ -1,0 +1,25 @@
+[data-theme="light"] {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8f9fa;
+  --color-text-primary: #2c3e50;
+  --color-text-secondary: #666666;
+  --color-accent: #3498db;
+  --color-border: #e0e0e0;
+  --color-card-bg: #ffffff;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  
+  .method-card {
+    background: var(--color-card-bg);
+    box-shadow: 0 4px 20px var(--color-shadow);
+    
+    h3 {
+      color: var(--color-text-primary);
+    }
+  }
+  
+  .concept-section,
+  .interface-section {
+    background: var(--color-card-bg);
+    box-shadow: 0 4px 15px var(--color-shadow);
+  }
+}

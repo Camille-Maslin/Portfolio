@@ -1,0 +1,29 @@
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--color-text-primary);
+  transition: all var(--transition-speed);
+  
+  .current-lang {
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  i {
+    font-size: 1.1rem;
+    transition: transform var(--transition-speed);
+  }
+  
+  &:hover {
+    color: var(--color-accent);
+    
+    i {
+      transform: rotate(180deg);
+    }
+  }
+} 

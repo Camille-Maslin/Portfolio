@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Detection AI - Project Details</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <div class="nav-button-container">
+        <a href="/" class="nav-button">
+            <i class="fas fa-arrow-left"></i>
+            Back to Projects
+        </a>
+    </div>
+
+    <div class="project-container">
+        <header class="project-header">
+            <h1 class="project-title">Brain Tumor Detection AI</h1>
+            <p class="project-subtitle">A deep learning approach achieving 94% accuracy in brain tumor classification using CNN</p>
+        </header>
+
+        <div class="project-image-container">
+            <img src="../../assets/projects/brain-tumor-detection/brain-tumor-banner.png" alt="Brain Tumor Detection Project Banner" class="project-image">
+        </div>
+
+        <div class="project-content">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>Developed a Convolutional Neural Network (CNN) model for automated classification of brain tumor MRI scans into four distinct categories: glioma, meningioma, no tumor, and pituitary tumor. This project demonstrates the practical application of deep learning in medical diagnosis support.</p>
+                
+                <h2>Challenge</h2>
+                <p>The main challenge was to create a reliable classification system that could accurately distinguish between different types of brain tumors while maintaining high precision across all categories. This required careful model architecture design and extensive training data optimization.</p>
+            </div>
+
+            <div class="project-details">
+                <div class="technical-details-section">
+                    <h2>Technical Details</h2>
+                    
+                    <div class="tech-stack-grid">
+                        <span>Python</span>
+                        <span>CNN</span>
+                        <span>TensorFlow</span>
+                        <span>Keras</span>
+                        <span>Deep Learning</span>
+                        <span>OpenCV</span>
+                    </div>
+                    
+                    <h3>Key Features</h3>
+                    <ul class="key-features-list">
+                        <li>94% overall classification accuracy</li>
+                        <li>Multi-class tumor classification</li>
+                        <li>Custom CNN architecture</li>
+                        <li>Optimized for 256x256 MRI scans</li>
+                    </ul>
+                    
+                    <a href="#" class="github-button">
+                        <i class="fab fa-github"></i>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <h2>Model Performance</h2>
+            <div class="performance-grid">
+                <div class="performance-card">
+                    <a href="../../assets/projects/brain-tumor-detection/confusion-matrix.png" data-lightbox="project-gallery" data-title="Confusion Matrix">
+                        <img src="../../assets/projects/brain-tumor-detection/confusion-matrix.png" alt="Confusion Matrix" class="performance-image">
+                    </a>
+                    <h3>Confusion Matrix</h3>
+                    <p>Detailed classification results across tumor types</p>
+                </div>
+                <div class="performance-metrics">
+                    <h3>Classification Accuracy by Type</h3>
+                    <ul>
+                        <li>Glioma: 93.6% accuracy</li>
+                        <li>Meningioma: 87.7% accuracy</li>
+                        <li>No Tumor: 98.0% accuracy</li>
+                        <li>Pituitary: 96.7% accuracy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="technical-implementation">
+            <h2>Technical Implementation</h2>
+            
+            <div class="model-architecture">
+                <h3>Model Architecture</h3>
+                <pre class="code-block">
+Model: Sequential
+_________________________________________________________________
+Layer (type)                Output Shape              Param #   
+=================================================================
+rescaling (Rescaling)       (None, 256, 256, 3)      0         
+conv2d (Conv2D)            (None, 256, 256, 16)     448       
+max_pooling2d (MaxPooling)  (None, 128, 128, 16)     0         
+...
+dense_1 (Dense)            (None, 4)                516       
+=================================================================
+                </pre>
+            </div>
+            
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3>Training Progress</h3>
+                    <a href="../../assets/projects/brain-tumor-detection/training-results.png" data-lightbox="project-gallery" data-title="Training Progress: Model accuracy and loss evolution during training">
+                        <img src="../../assets/projects/brain-tumor-detection/training-results.png" alt="Training Progress Graphs">
+                    </a>
+                    <p>Model accuracy and loss evolution during training</p>
+                </div>
+                
+                <div class="analysis-card">
+                    <h3>Example Predictions</h3>
+                    <a href="../../assets/projects/brain-tumor-detection/predictions.png" data-lightbox="project-gallery" data-title="Example Predictions: Sample predictions across different tumor types">
+                        <img src="../../assets/projects/brain-tumor-detection/predictions.png" alt="Example MRI Predictions">
+                    </a>
+                    <p>Sample predictions across different tumor types</p>
+                </div>
+                
+                <div class="analysis-card">
+                    <h3>Confidence Analysis</h3>
+                    <a href="../../assets/projects/brain-tumor-detection/correct-predictions-confidence.png" data-lightbox="project-gallery" data-title="Confidence Analysis: Distribution of model confidence for correct predictions">
+                        <img src="../../assets/projects/brain-tumor-detection/correct-predictions-confidence.png" alt="Confidence Distribution">
+                    </a>
+                    <p>Distribution of model confidence for correct predictions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <script>
+        // Configuration de Lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'albumLabel': "Image %1 of %2",
+            'fadeDuration': 300,
+            'imageFadeDuration': 300,
+            'positionFromTop': 50
+        });
+    </script>
+</body>
+</html>

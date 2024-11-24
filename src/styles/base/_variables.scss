@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+:root {
+  // Colors
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8f9fa;
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #666666;
+  --color-accent: #2563eb;
+  --color-accent-light: rgba(37, 99, 235, 0.1);
+  --color-border: #e2e8f0;
+  --container-width: 1200px;
+  --border-radius: 8px;
+  --color-code-bg: #f8f9fa;
+  --color-card-shadow: rgba(0, 0, 0, 0.05);
+  --color-metrics-bg: #f8f9fa;
+  --color-metrics-border: #e9ecef;
+  --color-tech-bg: rgba(37, 99, 235, 0.1);
+  --color-github: #24292e;
+  --color-github-hover: #1a1e22;
+  
+  // Layout
+  --header-height: 70px;
+  --header-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --section-padding: 6rem;
+  
+  // Typography
+  --font-primary: 'Poppins', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  
+  // Animation
+  --transition-speed: 0.3s;
+  --transition-timing: ease;
+  
+  // Responsive Breakpoints
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 1199px;
+  --breakpoint-desktop: 1200px;
+  
+  // Container Widths
+  --container-width-mobile: 100%;
+  --container-width-tablet: 720px;
+  --container-width-laptop: 960px;
+  --container-width-desktop: 1140px;
+  
+  // Spacing
+  --spacing-mobile: 1rem;
+  --spacing-tablet: 1.5rem;
+  --spacing-desktop: 2rem;
+  
+  // Font Sizes
+  --font-size-base-mobile: 14px;
+  --font-size-base-tablet: 16px;
+  --font-size-base-desktop: 16px;
+} 

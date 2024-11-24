@@ -1,0 +1,180 @@
+@use '../base/mixins' as *;
+
+.projects-section {
+  padding: 6rem 2rem;
+  background: var(--color-bg-primary);
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    
+    .title {
+      font-size: 2.5rem;
+      color: var(--color-text-primary);
+      margin-bottom: 1rem;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--color-accent);
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    
+    @include responsive(laptop) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include responsive(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .project-item {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      
+      .project-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      
+      .project-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin-top: auto;
+        
+        .view-details {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+        
+        .view-github {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .project-links {
+    padding: 0 1.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    
+    .view-github {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      background: var(--color-bg-secondary);
+      color: var(--color-text-primary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: var(--color-bg-secondary-dark);
+        transform: translateY(-2px);
+      }
+      
+      i {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .view-details, .view-github {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .view-details {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    margin: 1rem auto 1.5rem;
+    width: calc(100% - 3rem);
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background: var(--color-accent);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: var(--color-accent-dark);
+      transform: translateY(-2px);
+    }
+    
+    i {
+      font-size: 1.1rem;
+    }
+  }
+
+  .view-github {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    background: #24292e;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+    font-weight: 500;
+    
+    &:hover, &:focus {
+      background: #1a1e22;
+      transform: translateY(-2px);
+      outline: none;
+      box-shadow: 0 0 0 2px var(--color-accent);
+    }
+    
+    &:focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 2px;
+    }
+    
+    i {
+      font-size: 1.1rem;
+    }
+  }
+} 

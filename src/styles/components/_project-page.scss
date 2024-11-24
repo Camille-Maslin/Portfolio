@@ -1,0 +1,107 @@
+.project-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  .nav-button-container {
+    margin-bottom: 2rem;
+    
+    .nav-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--color-bg-secondary);
+      border-radius: 0.5rem;
+      color: var(--color-text-primary);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: var(--color-bg-primary);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .project-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    .project-title {
+      font-size: 2.5rem;
+      color: var(--color-text-primary);
+      margin-bottom: 1rem;
+    }
+    
+    .project-subtitle {
+      font-size: 1.1rem;
+      color: var(--color-text-secondary);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+
+  .project-hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .project-overview {
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-text-primary);
+      border-bottom: 2px solid var(--color-accent);
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+  }
+
+  .technical-details {
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      
+      span {
+        padding: 0.5rem 1rem;
+        background: var(--color-bg-secondary);
+        border-radius: 2rem;
+        font-size: 0.9rem;
+        color: var(--color-text-primary);
+      }
+    }
+    
+    .key-features {
+      list-style: none;
+      padding: 0;
+      
+      li {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+        
+        &::before {
+          content: "→";
+          position: absolute;
+          left: 0;
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+} 

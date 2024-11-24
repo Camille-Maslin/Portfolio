@@ -1,0 +1,112 @@
+@use '../base/mixins' as *;
+
+.nav-button-container {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 100;
+  
+  @include responsive(mobile) {
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--color-card-bg);
+  color: var(--color-text-primary);
+  border-radius: 25px;
+  box-shadow: 0 4px 15px var(--color-shadow);
+  transition: all var(--transition-speed);
+  font-weight: 500;
+  
+  @include responsive(mobile) {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--color-shadow);
+    background-color: var(--color-accent);
+    color: var(--color-bg-primary);
+  }
+  
+  i {
+    font-size: 0.9rem;
+  }
+}
+
+.simulation-methods {
+  margin: 4rem 0;
+  
+  .methods-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    
+    @media (max-width: 968px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.method-card {
+  background: var(--color-card-bg);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px var(--color-shadow);
+  transition: all var(--transition-speed);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--color-shadow);
+  }
+  
+  h3 {
+    color: var(--color-text-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    color: var(--color-text-secondary);
+    text-align: center;
+  }
+}
+
+.method-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+  
+  &-triple {
+    @extend .method-comparison;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    background: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+}

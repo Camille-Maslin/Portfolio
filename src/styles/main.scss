@@ -1,0 +1,74 @@
+// Themes
+@use 'themes/_theme-variables.scss';
+@use 'themes/_light.scss';
+@use 'themes/_dark.scss';
+
+// Base
+@use 'base/_variables.scss';
+@use 'base/_mixins.scss';
+@use 'base/_reset.scss';
+@use 'base/_typography.scss';
+
+// Layout
+@use 'layout/_grid.scss';
+@use 'layout/_container.scss';
+@use 'layout/_responsive.scss';
+
+// Components
+@use 'components/_header.scss';
+@use 'components/_profile.scss';
+@use 'components/_skills.scss';
+@use 'components/_buttons.scss';
+@use 'components/_sections.scss';
+@use 'components/_about.scss';
+@use 'components/_contact.scss';
+@use 'components/_footer.scss';
+@use 'components/_experience.scss';
+@use 'components/_projects.scss';
+@use 'components/_project-page.scss';
+@use 'components/_project-details.scss';
+@use 'components/_language-selector.scss';
+
+// Animations
+@use 'animations/_transitions.scss';
+@use 'animations/_keyframes.scss';
+
+// Utilities
+@use 'utilities/_accessibility.scss';
+@use 'utilities/_layout.scss';
+@use 'utilities/_helpers.scss';
+
+body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    transition: background-color var(--transition-speed),
+                color var(--transition-speed);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--color-text-primary);
+    
+    i {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover i {
+      transform: rotate(180deg);
+    }
+}
+// Référence aux styles existants avec adaptations pour le thème sombre 
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}

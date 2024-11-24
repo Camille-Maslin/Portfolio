@@ -1,0 +1,371 @@
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.nav-button-container {
+  margin-bottom: 3rem;
+  padding: 1rem 2rem;
+  
+  .nav-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: white;
+    color: #4a5568;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 9999px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    
+    &:hover {
+      transform: translateX(-3px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    i {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  
+  .project-title {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+  }
+  
+  .project-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+.project-image-container {
+  margin-bottom: 3rem;
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  margin-bottom: 3rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-description {
+  h2 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4a90e2;
+    display: inline-block;
+  }
+  
+  p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+}
+
+.project-details {
+  h2 {
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    
+    .tech-tag {
+      padding: 0.5rem 1rem;
+      background: #f8f9fa;
+      color: #2d3748;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .key-features {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      color: #666;
+      margin-bottom: 1rem;
+      padding-left: 1.25rem;
+      position: relative;
+      
+      &::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: #4a90e2;
+      }
+    }
+  }
+}
+
+.github-section {
+  margin-top: 2rem;
+  
+  .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #24292e;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    
+    &:hover {
+      background: #1a1e22;
+    }
+    
+    i {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.technical-implementation {
+  margin-top: 4rem;
+  
+  h2 {
+    font-size: 1.75rem;
+    color: var(--color-text-primary);
+    margin-bottom: 2rem;
+  }
+}
+
+.model-architecture {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  
+  pre {
+    font-family: 'Consolas', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+  }
+  
+  .analysis-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    
+    h3 {
+      font-size: 1.25rem;
+      color: var(--color-text-primary);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-accent);
+      display: inline-block;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      color: var(--color-text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+.results-section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  
+  h2 {
+    font-size: 1.75rem;
+    color: var(--color-text-primary);
+    margin-bottom: 2rem;
+  }
+}
+
+.performance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  background: var(--color-bg-secondary);
+  padding: 2rem;
+  border-radius: 8px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.performance-card {
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+    margin-bottom: 0.75rem;
+  }
+  
+  p {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+.performance-metrics {
+  h3 {
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      color: var(--color-text-secondary);
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+      font-size: 0.95rem;
+      
+      &::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--color-accent);
+      }
+    }
+  }
+}
+
+.technical-details-section {
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-top: 2rem;
+  
+  h2 {
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+  }
+}
+
+.tech-stack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  
+  span {
+    background: var(--color-accent-light);
+    color: var(--color-accent);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: transform var(--transition-speed) var(--transition-timing);
+    
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.key-features-list {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    
+    &::before {
+      content: "→";
+      color: var(--color-accent);
+    }
+  }
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #24292e;
+  color: white;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background var(--transition-speed) var(--transition-timing);
+  
+  &:hover {
+    background: #1a1e22;
+  }
+  
+  i {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,37 @@
+[data-theme="dark"] {
+    --color-bg-primary: #121212;
+    --color-bg-secondary: #1a1a1a;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #a0a0a0;
+    --color-accent: #4070F4;
+    --color-border: #2d2d2d;
+    --color-card-bg: #1e1e1e;
+    --color-shadow: rgba(0, 0, 0, 0.4);
+    --color-b2: #818cf8;
+    --color-b2-light: #4f46e5;
+    --color-accent-light: #7a9bff;
+    --color-card-hover: #2d2d2d;
+    --color-primary: #0077ff;
+    --color-primary-light: #3399ff;
+    --color-secondary: #f97316;
+    --color-secondary-light: #fb923c;
+    --color-success: #10b981;
+    --color-success-light: #34d399;
+    --skill-shadow: rgba(0, 0, 0, 0.2);
+    --skill-hover-bg: rgba(255, 255, 255, 0.05);
+    --skill-card-bg: var(--color-card-bg);
+    --color-card-shadow: rgba(0, 0, 0, 0.3);
+    --color-tag-bg: rgba(64, 112, 244, 0.15);
+    --color-tag-text: #7a9bff;
+    --color-hover-shadow: rgba(0, 0, 0, 0.4);
+    --color-icon-bg: rgba(64, 112, 244, 0.15);
+}
+
+.skill-category {
+    background: var(--skill-card-bg);
+    box-shadow: 0 8px 30px var(--skill-shadow);
+    
+    &:hover {
+        background: var(--skill-hover-bg);
+    }
+}

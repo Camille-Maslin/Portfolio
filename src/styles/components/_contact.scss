@@ -1,0 +1,97 @@
+.contact-section {
+  min-height: 60vh;
+  padding: 6rem 2rem;
+  background: var(--color-bg-secondary);
+  
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .contact-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    
+    .section-subtitle {
+      color: var(--color-accent);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+    
+    .section-title {
+      font-size: 2.8rem;
+      color: var(--color-text-primary);
+      font-weight: 600;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--color-accent);
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    width: 100%;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .contact-card {
+    background: var(--color-bg-primary);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    }
+    
+    .contact-icon {
+      font-size: 2.5rem;
+      color: var(--color-accent);
+      margin-bottom: 1.5rem;
+    }
+    
+    h3 {
+      color: var(--color-text-primary);
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    a {
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+}

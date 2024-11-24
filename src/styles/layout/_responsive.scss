@@ -1,0 +1,132 @@
+@use '../base/mixins' as *;
+
+// Navigation
+.navbar {
+  @include responsive(mobile) {
+    padding: 1rem;
+    
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: var(--header-height);
+      left: 0;
+      width: 100%;
+      background: var(--color-bg-primary);
+      flex-direction: column;
+      padding: 1rem;
+      box-shadow: var(--header-shadow);
+      
+      &.active {
+        display: flex;
+      }
+      
+      a {
+        padding: 0.8rem 0;
+      }
+    }
+    
+    .nav-controls {
+      margin-left: auto;
+    }
+  }
+}
+
+// Profile Section
+#profile {
+  @include responsive(tablet) {
+    flex-direction: column;
+    text-align: center;
+    
+    .section__pic-container {
+      margin-bottom: 2rem;
+      
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    
+    .cta-buttons {
+      justify-content: center;
+    }
+  }
+}
+
+// Skills Section
+.skills-categories {
+  @include responsive(tablet) {
+    grid-template-columns: 1fr;
+  }
+  
+  .skill-category {
+    @include responsive(mobile) {
+      padding: 1rem;
+    }
+  }
+}
+
+// Projects Section
+.projects-container {
+  @include grid-container(300px, 1.5rem);
+  
+  @include responsive(mobile) {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card {
+    @include responsive(mobile) {
+      .tech-stack {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        
+        span {
+          font-size: 0.8rem;
+          padding: 0.3rem 0.6rem;
+        }
+      }
+    }
+  }
+}
+
+// Contact Section
+.contact-content {
+  @include responsive(tablet) {
+    flex-direction: column;
+    gap: 2rem;
+    
+    .contact-card {
+      width: 100%;
+    }
+  }
+}
+
+// About Section
+.about-section {
+  @include responsive(tablet) {
+    padding: 3rem 1rem;
+    
+    .goals-grid {
+      grid-template-columns: 1fr !important;
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+  }
+  
+  @include responsive(mobile) {
+    padding: 2rem 1rem;
+    
+    .about-content {
+      .bio-container {
+        padding: 0;
+      }
+      
+      .goals-container {
+        padding: 0;
+        
+        .goals-grid {
+          gap: 1.5rem;
+        }
+      }
+    }
+  }
+} 
