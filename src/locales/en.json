@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "role": "Computer Science Student"
+  },
+  "profile": {
+    "greeting": "Hello, I'm",
+    "title": "Computer Science Student",
+    "subtitle": "Specializing in AI & Data Science",
+    "contact": "Contact Me",
+    "resume": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "bio": "I am a 3rd-year Computer Science student, passionate about data manipulation and particularly advancements in artificial intelligence. I am constantly seeking new opportunities to develop my skills in data analysis and processing.",
+    "shortTerm": "Short-term Goal",
+    "shortTermDesc": "Join a school to enhance my knowledge in AI development and optimization.",
+    "longTerm": "Long-term Goal",
+    "longTermDesc": "Work in AI research or development.",
+    "experience": "Experience",
+    "education": "Education",
+    "internship": "Future Internship",
+    "experienceDetails": {
+      "duration": "9 semaines",
+      "title": "Analyse de Base de Données",
+      "location": "Tours Métropole",
+      "tags": {
+        "sql": "SQL",
+        "postgresql": "PostgreSQL",
+        "dbDesign": "Conception de BDD",
+        "performance": "Optimisation des Performances"
+      }
+    },
+    "educationDetails": {
+      "current": {
+        "duration": "2022-2025",
+        "title": "Licence en Informatique",
+        "location": "Université de Dijon",
+        "viewProgram": "Voir le Programme"
+      },
+      "previous": {
+        "duration": "2022",
+        "title": "Baccalauréat Scientifique",
+        "location": "Lycée Grandmont, Tours"
+      }
+    },
+    "internshipDetails": {
+      "duration": "16 semaines",
+      "title": "Évaluation de Réseaux Neuronaux",
+      "location": "Laboratoire CIAD",
+      "tags": {
+        "python": "Python",
+        "snn": "SNN",
+        "neuralNetworks": "Réseaux Neuronaux",
+        "evolutionary": "Algorithmes Évolutionnaires"
+      }
+    },
+    "subtitle": "ABOUT ME"
+  },
+  "skills": {
+    "explore": "Explore My",
+    "title": "Skills",
+    "database": "Database",
+    "development": "Development",
+    "tools": "Tools & Others",
+    "levels": {
+      "advanced": {
+        "label": "Advanced",
+        "description": "Deep mastery and significant experience"
+      },
+      "intermediate": {
+        "label": "Intermediate",
+        "description": "Good understanding and regular practice"
+      },
+      "basic": {
+        "label": "Basic",
+        "description": "Fundamental knowledge and basic practice"
+      }
+    },
+    "skillLevels": {
+      "b2": "B2 Level",
+      "projectManagement": "Project Management"
+    },
+    "categories": {
+      "database": {
+        "title": "Database",
+        "skills": {
+          "sql": "SQL",
+          "postgresql": "PostgreSQL",
+          "oracle": "Oracle",
+          "excel": "Excel",
+          "neo4j": "Neo4j",
+          "powerbi": "Power BI"
+        }
+      },
+      "development": {
+        "title": "Development",
+        "skills": {
+          "python": "Python",
+          "csharp": "C#",
+          "htmlcss": "HTML/CSS",
+          "php": "PHP",
+          "cpp": "C++"
+        }
+      },
+      "tools": {
+        "title": "Tools & Others",
+        "skills": {
+          "git": "Git",
+          "projectManagement": "Project Management",
+          "promptEngineering": "Prompt Engineering",
+          "english": "English"
+        }
+      }
+    }
+  },
+  "general": {
+    "title": "General Skills",
+    "communication": "Communication",
+    "autonomy": "Autonomy",
+    "adaptability": "Adaptability",
+    "collaboration": "Collaboration",
+    "learning": "Continuous Learning"
+  },
+  "projects": {
+    "title": "Projects",
+    "back": "Back to projects",
+    "overview": "Overview",
+    "technologies": "Technologies Used",
+    "challenges": "Challenges",
+    "results": "Results",
+    "viewDetails": "View Details",
+    "viewGithub": "View on GitHub",
+    "brainTumor": {
+      "title": "Brain Tumor Detection AI",
+      "description": "Developed a Convolutional Neural Network (CNN) for automated brain tumor detection from MRI scans, achieving 93% accuracy in tumor classification.",
+      "tags": {
+        "python": "Python",
+        "cnn": "CNN",
+        "tensorflow": "TensorFlow",
+        "keras": "Keras",
+        "deepLearning": "Deep Learning",
+        "opencv": "OpenCV"
+      }
+    },
+    "multispectral": {
+      "title": "Multispectral Image Viewer",
+      "description": "Created a software tool for simulating various vision types (human, colorblind, bee) from multispectral images, allowing custom RGB band combinations.",
+      "tags": {
+        "python": "Python",
+        "multispectralImage": "Multispectral Image",
+        "imageProcessing": "Image Processing",
+        "guiDevelopment": "GUI Development",
+        "searching": "Searching"
+      }
+    },
+    "portfolio": {
+      "title": "Portfolio Website",
+      "description": "Designed and developed a responsive professional portfolio website using modern web technologies and best practices.",
+      "tags": {
+        "html5": "HTML5",
+        "css3": "CSS3",
+        "javascript": "JavaScript",
+        "responsiveDesign": "Responsive Design"
+      }
+    }
+  },
+  "contact": {
+    "meet": "Meet Me",
+    "title": "Contact Me",
+    "email": "Email",
+    "linkedin": "LinkedIn"
+  },
+  "generalSkills": {
+    "title": "General Skills",
+    "skills": {
+      "communication": "Communication",
+      "autonomy": "Autonomy",
+      "adaptability": "Adaptability",
+      "collaboration": "Collaboration",
+      "learning": "Continuous Learning"
+    }
+  },
+  "footer": {
+    "copyright": "Copyright © 2024 Camille Maslin. All Rights Reserved."
+  }
+}
