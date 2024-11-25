@@ -29,24 +29,25 @@ jobs:
         run: |
           mkdir -p dist/src/styles
           mkdir -p dist/src/scripts
+          mkdir -p dist/src/assets
+          mkdir -p dist/src/locales
 
       - name: Build SCSS
-        run: sass src/styles/main.scss:dist/src/styles/main.css --style compressed
-
-      - name: Copy JS files
         run: |
-          cp -r src/scripts dist/src/scripts/
-          cp src/main.js dist/src/
+          sass src/styles/main.scss:dist/src/styles/main.css --style compressed
+          cp src/styles/main.css dist/src/styles/
 
-      - name: Copy other assets
+      - name: Copy and process files
         run: |
+          cp -r src/scripts dist/src/
           cp -r src/assets dist/src/
           cp -r src/locales dist/src/
-
-      - name: Copy and update index.html
-        run: |
           cp index.html dist/
+
+      - name: Update HTML file paths
+        run: |
           sed -i 's|src/styles/main.scss|src/styles/main.css|g' dist/index.html
+          sed -i 's|src/scripts|src/scripts|g' dist/index.html
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
