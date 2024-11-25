@@ -12,7 +12,7 @@ export const initLanguage = () => {
 
   const setLanguage = async (lang) => {
     try {
-      const path = new URL(`/src/locales/${lang}.json`, import.meta.url).pathname;
+      const path = `${import.meta.env.BASE_URL}locales/${lang}.json`;
       console.log('Chemin complet:', new URL(path, window.location.href).href);
       
       const response = await fetch(path);

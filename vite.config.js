@@ -5,18 +5,6 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    rollupOptions: {
-      input: {
-        main: 'index.html'
-      }
-    }
   },
-  resolve: {
-    alias: {
-      '@': '/src',
-      '@assets': '/src/assets',
-      '@styles': '/src/styles',
-      '@scripts': '/src/scripts'
-    }
-  }
+  publicDir: 'public',
 }); 
