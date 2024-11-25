@@ -1,42 +1,42 @@
 // Themes
-@use 'themes/_theme-variables.scss';
-@use 'themes/_light.scss';
-@use 'themes/_dark.scss';
+@use 'themes/theme-variables.scss';
+@use 'themes/light.scss';
+@use 'themes/dark.scss';
 
 // Base
-@use 'base/_variables.scss';
-@use 'base/_mixins.scss';
-@use 'base/_reset.scss';
-@use 'base/_typography.scss';
+@use 'base/variables.scss';
+@use 'base/mixins.scss';
+@use 'base/reset.scss';
+@use 'base/typography.scss';
 
 // Layout
-@use 'layout/_grid.scss';
-@use 'layout/_container.scss';
-@use 'layout/_responsive.scss';
+@use 'layout/grid.scss';
+@use 'layout/container.scss';
+@use 'layout/responsive.scss';
 
 // Components
-@use 'components/_header.scss';
-@use 'components/_profile.scss';
-@use 'components/_skills.scss';
-@use 'components/_buttons.scss';
-@use 'components/_sections.scss';
-@use 'components/_about.scss';
-@use 'components/_contact.scss';
-@use 'components/_footer.scss';
-@use 'components/_experience.scss';
-@use 'components/_projects.scss';
-@use 'components/_project-page.scss';
-@use 'components/_project-details.scss';
-@use 'components/_language-selector.scss';
+@use 'components/header.scss';
+@use 'components/profile.scss';
+@use 'components/skills.scss';
+@use 'components/buttons.scss';
+@use 'components/sections.scss';
+@use 'components/about.scss';
+@use 'components/contact.scss';
+@use 'components/footer.scss';
+@use 'components/experience.scss';
+@use 'components/projects.scss';
+@use 'components/project-page.scss';
+@use 'components/project-details.scss';
+@use 'components/language-selector.scss';
 
 // Animations
-@use 'animations/_transitions.scss';
-@use 'animations/_keyframes.scss';
+@use 'animations/transitions.scss';
+@use 'animations/keyframes.scss';
 
 // Utilities
-@use 'utilities/_accessibility.scss';
-@use 'utilities/_layout.scss';
-@use 'utilities/_helpers.scss';
+@use 'utilities/accessibility.scss';
+@use 'utilities/layout.scss';
+@use 'utilities/helpers.scss';
 
 body {
     background-color: var(--color-bg-primary);
