@@ -25,11 +25,28 @@ jobs:
           npm install
           npm install -g sass
 
-      - name: Build SCSS
-        run: sass src/styles/main.scss:dist/styles/main.css --style compressed
+      - name: Create dist directory structure
+        run: |
+          mkdir -p dist/src/styles
+          mkdir -p dist/src/scripts/modules
 
-      - name: Build
-        run: npm run build
+      - name: Build SCSS
+        run: sass src/styles/main.scss:dist/src/styles/main.css --style compressed
+
+      - name: Copy JS files
+        run: |
+          cp -r src/scripts/modules dist/src/scripts/
+          cp src/main.js dist/src/
+
+      - name: Copy other assets
+        run: |
+          cp -r src/assets dist/src/
+          cp -r src/locales dist/src/
+
+      - name: Copy and update index.html
+        run: |
+          cp index.html dist/
+          sed -i 's|src/styles/main.scss|src/styles/main.css|g' dist/index.html
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
