@@ -1,9 +1,10 @@
-import { initTheme } from './modules/theme.js';
-import { initNavigation } from './modules/navigation.js';
-import { initLanguage } from './modules/language.js';
+import './modules/theme.js';
+import './modules/navigation.js';
+import './modules/language.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
-  initNavigation();
-  initLanguage();
-}); 
+  initTheme()
+  initScroll()
+  initNavigation()
+  initLanguage()
+}) 

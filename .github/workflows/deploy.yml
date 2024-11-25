@@ -21,7 +21,12 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install -g sass
+
+      - name: Build SCSS
+        run: sass src/styles/main.scss:dist/styles/main.css --style compressed
 
       - name: Build
         run: npm run build
