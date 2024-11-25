@@ -12,12 +12,9 @@ export const initLanguage = () => {
 
   const setLanguage = async (lang) => {
     try {
-      const path = `${window.location.origin}/Portfolio/locales/${lang}.json`;
-      console.log('Chemin complet:', new URL(path, window.location.href).href);
-      
-      const response = await fetch(path);
+      const response = await fetch(`locales/${lang}.json`);
       if (!response.ok) {
-        throw new Error(`HTTP Error! status: ${response.status}, path: ${path}`);
+        throw new Error(`HTTP Error! status: ${response.status}, path: ${response.url}`);
       }
       
       const translations = await response.json();
