@@ -1911,12 +1911,32 @@ footer .footer-links a:hover {
   font-size: 1.1rem;
 }
 .projects-section .view-github {
-  background: var(--color-bg-secondary);
-  color: var(--color-text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  background: #24292e;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1rem;
+  font-weight: 500;
 }
-.projects-section .view-github:hover {
-  background: var(--color-bg-secondary-dark);
+.projects-section .view-github:hover, .projects-section .view-github:focus {
+  background: #1a1e22;
   transform: translateY(-2px);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+.projects-section .view-github:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+.projects-section .view-github i {
+  font-size: 1.1rem;
 }
 
 .project-page {
