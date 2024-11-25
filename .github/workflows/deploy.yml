@@ -28,7 +28,7 @@ jobs:
       - name: Create dist directory structure
         run: |
           mkdir -p dist/src/styles
-          mkdir -p dist/src/scripts/modules
+          mkdir -p dist/src/scripts
 
       - name: Build SCSS
         run: sass src/styles/main.scss:dist/src/styles/main.css --style compressed
