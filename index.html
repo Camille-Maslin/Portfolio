@@ -9,13 +9,20 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./src/styles/main.css">
 
-    <!-- SCRIPT -->
-    <script>
-      const savedTheme = localStorage.getItem('theme') || 
-        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', savedTheme);
+    <!-- Scripts -->
+    <script type="module">
+      import { initTheme } from './src/scripts/theme.js';
+      import { initNavigation } from './src/scripts/navigation.js';
+      import { initLanguage } from './src/scripts/language.js';
+      import { initScroll } from './src/scripts/scroll.js';
+
+      document.addEventListener('DOMContentLoaded', () => {
+        initTheme();
+        initNavigation();
+        initLanguage();
+        initScroll();
+      });
     </script>
-    <script type="module" src="/src/main.js"></script>
     
     <!-- Icons -->
     <link rel="icon" type="image/png" href="dist/assets/favicon.png">
