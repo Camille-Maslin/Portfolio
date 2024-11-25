@@ -1,22 +1,9 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  root: 'src',
+  base: '/Portfolio/',
+  root: './',
   build: {
-    outDir: '../dist',
-    assetsDir: 'assets',
-    rollupOptions: {
-      input: {
-        main: './index.html'
-      }
-    }
-  },
-  base: '/',
-  server: {
-    open: true,
-    watch: {
-      usePolling: true
-    }
-  },
-  publicDir: 'public'
+    outDir: 'dist'
+  }
 }); 

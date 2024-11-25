@@ -60,7 +60,8 @@
         "neuralNetworks": "Réseaux Neuronaux",
         "evolutionary": "Algorithmes Évolutionnaires"
       }
-    }
+    },
+    "subtitle": "ABOUT ME"
   },
   "skills": {
     "explore": "Explore My",
@@ -172,7 +173,9 @@
   },
   "contact": {
     "meet": "Meet Me",
-    "title": "Contact Me"
+    "title": "Contact Me",
+    "email": "Email",
+    "linkedin": "LinkedIn"
   },
   "generalSkills": {
     "title": "General Skills",
