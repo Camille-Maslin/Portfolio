@@ -9,4 +9,4 @@ document.addEventListener('DOMContentLoaded', () => {
   initScroll()
   initNavigation()
   initLanguage()
-})
+}) 
