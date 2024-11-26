@@ -6,28 +6,32 @@ export const initScroll = () => {
     return;
   }
 
-  let scrollTimeout;
   const handleScroll = () => {
-    if (scrollTimeout) {
-      window.cancelAnimationFrame(scrollTimeout);
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    const shouldBeVisible = scrollPosition > 400;
+    
+    if (shouldBeVisible) {
+      backToTopButton.classList.add('visible');
+    } else {
+      backToTopButton.classList.remove('visible');
     }
-
-    scrollTimeout = window.requestAnimationFrame(() => {
-      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-      backToTopButton.classList.toggle('visible', scrollPosition > 300);
-    });
   };
 
-  const scrollToTop = () => {
+  const scrollToTop = (e) => {
+    e.preventDefault();
+    
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
-      duration: 500
+      duration: 800
     });
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
   backToTopButton.addEventListener('click', scrollToTop);
+
+  // Initial check
+  handleScroll();
 
   return () => {
     window.removeEventListener('scroll', handleScroll);

@@ -17,7 +17,7 @@
     "resume": "Download CV"
   },
   "about": {
-    "title": "About Me",
+    "title": "ABOUT ME",
     "bio": "I am a 3rd-year Computer Science student, passionate about data manipulation and particularly advancements in artificial intelligence. I am constantly seeking new opportunities to develop my skills in data analysis and processing. My short-term goal is to join a school that will allow me to enhance my knowledge in AI development and optimization. My long-term goal is to work in AI research or development. I am ready to take on new challenges and contribute to the success of projects.",
     "shortTerm": "Short-term Goal",
     "shortTermDesc": "Join a school to enhance my knowledge in AI development and optimization.",
@@ -109,7 +109,7 @@
     }
   },
   "skills": {
-    "explore": "Explore",
+    "explore": "EXPLORE",
     "title": "My Skills",
     "database": "Database",
     "development": "Development",
@@ -174,7 +174,7 @@
     "learning": "Continuous Learning"
   },
   "projects": {
-    "discover": "Discover",
+    "discover": "DISCOVER",
     "title": "My Projects",
     "back": "Back to projects",
     "overview": "Overview",
@@ -235,6 +235,9 @@
     }
   },
   "footer": {
-    "copyright": "Copyright © 2024 Camille Maslin. All Rights Reserved."
+    "copyright": "Copyright © 2024 Camille Maslin",
+    "rights": "All rights reserved",
+    "madeWith": "Made with",
+    "viewSource": "View source code"
   }
 }

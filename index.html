@@ -99,7 +99,7 @@
           <div class="objectives-section">
             <div class="section-header">
               <p class="section__text__p1">ABOUT ME</p>
-              <h1 class="section-title">My <span class="title-highlight">Objectives</span></h1>
+              <h1 class="section-title"><span class="title-highlight">My Objectives</span></h1>
             </div>
             <div class="bio-text">
               <p data-i18n="about.bio"></p>
@@ -126,7 +126,7 @@
           <section class="journey-section">
             <div class="section-header">
               <p class="section__text__p1">DISCOVER</p>
-              <h1 class="section-title">My <span class="title-highlight">Journey</span></h1>
+              <h1 class="section-title"><span class="title-highlight">My Journey</span></h1>
             </div>
             
             <div class="journey-grid">
@@ -183,13 +183,21 @@
 
         <section id="skills" class="skills-section">
           <div class="section-header">
-            <p class="section__text__p1" data-i18n="skills.explore">EXPLORE</p>
-            <h1 class="section-title">My <span class="title-highlight">Skills</span></h1>
+            <p class="section__text__p1" data-i18n="skills.explore">DÉCOUVRIR</p>
+            <h1 class="section-title"><span class="title-highlight">Mes Compétences</span></h1>
           </div>
           
+          <!-- Filtres de compétences -->
+          <div class="skills-filters">
+            <button class="filter-btn active" data-filter="all">Tout</button>
+            <button class="filter-btn" data-filter="database">Base de données</button>
+            <button class="filter-btn" data-filter="development">Développement</button>
+            <button class="filter-btn" data-filter="tools">Outils</button>
+          </div>
+
           <div class="skills-categories">
             <!-- Database -->
-            <div class="skill-category">
+            <div class="skill-category" data-category="database">
               <div class="category-header">
                 <i class="fas fa-database"></i>
                 <h3 data-i18n="skills.database">Database</h3>
@@ -237,7 +245,7 @@
               </div>
             </div>
 
-            <div class="skill-category">
+            <div class="skill-category" data-category="development">
               <!-- Development Section -->
               <div class="category-header">
                 <i class="fas fa-code"></i>
@@ -293,7 +301,7 @@
             </div>
 
             <!-- Tools Section -->
-            <div class="skill-category">
+            <div class="skill-category" data-category="tools">
               <div class="category-header">
                 <i class="fas fa-tools"></i>
                 <h3 data-i18n="skills.categories.tools.title">Tools & Others</h3>
@@ -338,72 +346,132 @@
               </div>
             </div>
           </div>
+
+          <!-- Graphique radar des compétences -->
+          <div class="skills-radar-chart">
+            <canvas id="skillsRadarChart"></canvas>
+          </div>
         </section>
 
         <!-- Soft Skills -->
         <section class="general-skills">
-          <p class="section__text__p1" data-i18n="skills.explore">EXPLORE</p>
-          <h1 class="section-title" data-i18n="generalSkills.title">My General Skills</h1>
+          <div class="section-header">
+            <p class="section__text__p1">EXPLORE</p>
+            <h1 class="section-title"><span class="title-highlight">My General Skills</span></h1>
+          </div>
+          
           <div class="general-skills-container">
-            <div class="general-skill-item">
-              <i class="fas fa-comments skill-icon"></i>
-              <h3 data-i18n="generalSkills.skills.communication">Communication</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+
+            <!-- Communication -->
+            <div class="general-skill-card" data-skill="communication">
+              <div class="skill-icon">
+                <i class="fas fa-comments"></i>
+              </div>
+              <div class="skill-content">
+                <h3>Communication</h3>
+                <div class="skill-rating" data-rating="5">
+                  <div class="stars">
+                    <div class="star">
+                      <div class="fill"></div>
+                    </div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Autonomy -->
+            <div class="general-skill-card" data-skill="autonomy">
+              <div class="skill-icon">
+                <i class="fas fa-user-gear"></i>
+              </div>
+              <div class="skill-content">
+                <h3>Autonomy</h3>
+                <div class="skill-rating" data-rating="4">
+                  <div class="stars">
+                    <div class="star">
+                      <div class="fill"></div>
+                    </div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="general-skill-item">
-              <i class="fas fa-user-gear skill-icon"></i>
-              <h3 data-i18n="generalSkills.skills.autonomy">Autonomy</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
+            <!-- Adaptability -->
+            <div class="general-skill-card" data-skill="adaptability">
+              <div class="skill-icon">
+                <i class="fas fa-arrows-spin"></i>
+              </div>
+              <div class="skill-content">
+                <h3>Adaptability</h3>
+                <div class="skill-rating" data-rating="4">
+                  <div class="stars">
+                    <div class="star">
+                      <div class="fill"></div>
+                    </div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="general-skill-item">
-              <i class="fas fa-arrows-spin skill-icon"></i>
-              <h3 data-i18n="generalSkills.skills.adaptability">Adaptability</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
+            <!-- Collaboration -->
+            <div class="general-skill-card" data-skill="collaboration">
+              <div class="skill-icon">
+                <i class="fas fa-people-group"></i>
+              </div>
+              <div class="skill-content">
+                <h3>Collaboration</h3>
+                <div class="skill-rating" data-rating="3">
+                  <div class="stars">
+                    <div class="star">
+                      <div class="fill"></div>
+                    </div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="general-skill-item">
-              <i class="fas fa-people-group skill-icon"></i>
-              <h3 data-i18n="generalSkills.skills.collaboration">Collaboration</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
+            <!-- Continuous Learning -->
+            <div class="general-skill-card" data-skill="learning">
+              <div class="skill-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="skill-content">
+                <h3>Continuous Learning</h3>
+                <div class="skill-rating" data-rating="4">
+                  <div class="stars">
+                    <div class="star">
+                      <div class="fill"></div>
+                    </div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="general-skill-item">
-              <i class="fas fa-book-open-reader skill-icon"></i>
-              <h3 data-i18n="generalSkills.skills.learning">Continuous Learning</h3>
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -412,7 +480,7 @@
         <section id="projects" class="projects-section">
           <div class="section-header">
             <p class="section__text__p1" data-i18n="projects.discover">DISCOVER</p>
-            <h1 class="section-title">My <span class="title-highlight">Projects</span></h1>
+            <h1 class="section-title"><span class="title-highlight">My Projects</span></h1>
           </div>
           
           <div class="projects-container">
@@ -527,9 +595,9 @@
 
         <section id="contact" class="contact-section">
           <div class="contact-container">
-            <div class="contact-header">
+            <div class="section-header">
               <p class="section__text__p1" data-i18n="contact.getInTouch">GET IN TOUCH</p>
-              <h1 class="section-title" data-i18n="contact.title">Contact Me</h1>
+              <h1 class="section-title"><span class="title-highlight">Contact Me</span></h1>
             </div>
             
             <div class="contact-content">
@@ -554,9 +622,42 @@
 
     <!-- FOOTER -->
 
-    <footer>
+    <footer class="footer">
       <div class="footer-content">
-        <p class="copyright" data-i18n="footer.copyright">Copyright © 2024 Camille Maslin. All Rights Reserved.</p>
+        <div class="footer-grid">
+          <!-- Colonne 1 : Copyright -->
+          <div class="footer-column">
+            <div class="footer-copyright">
+              <p class="copyright-text" data-i18n="footer.copyright">
+                <i class="far fa-copyright"></i> Copyright © 2024 Camille Maslin
+              </p>
+              <p class="rights-text" data-i18n="footer.rights">All rights reserved</p>
+            </div>
+          </div>
+          
+          <!-- Colonne 2 : Technologies -->
+          <div class="footer-column">
+            <div class="footer-tech">
+              <p class="tech-text" data-i18n="footer.madeWith">Made with</p>
+              <div class="tech-stack">
+                <i class="fab fa-html5" title="HTML5"></i>
+                <i class="fab fa-css3-alt" title="CSS3"></i>
+                <i class="fab fa-js" title="JavaScript"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne 3 : Version -->
+          <div class="footer-column">
+            <div class="footer-version">
+              <p class="version-text">v1.0.0</p>
+              <a href="https://github.com/mmillle/portfolio" class="source-link" data-i18n="footer.viewSource">
+                <i class="fab fa-github"></i>
+                <span>Source</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
 

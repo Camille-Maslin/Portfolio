@@ -9,81 +9,25 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.6rem 1.2rem;
-    border-radius: 2rem;
-    font-size: 0.85rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 500;
-    transition: all 0.3s ease;
-    background: rgba(59, 130, 246, 0.1);
+    background: var(--icon-bg);
+    border: 1px solid var(--icon-border);
+    color: var(--icon-primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
     i {
       font-size: 1rem;
-      color: var(--tag-color);
+      color: currentColor;
     }
-
-    // Dégradé bleu -> violet (tons plus soutenus)
-    &[data-category="ai"] {
-      --tag-color: #3B82F6; // Bleu
-      border: 1px solid var(--tag-color);
-      color: var(--tag-color);
-    }
-
-    &[data-category="framework"] {
-      --tag-color: #4F46E5; // Indigo
-      border: 1px solid var(--tag-color);
-      color: var(--tag-color);
-    }
-
-    &[data-category="tool"] {
-      --tag-color: #6366F1; // Indigo-bleu
-      border: 1px solid var(--tag-color);
-      color: var(--tag-color);
-    }
-
-    &[data-category="image"] {
-      --tag-color: #7C3AED; // Violet
-      border: 1px solid var(--tag-color);
-      color: var(--tag-color);
-    }
-
-    &[data-category="dev"] {
-      --tag-color: #8B5CF6; // Violet moyen
-      border: 1px solid var(--tag-color);
-      color: var(--tag-color);
-    }
-
-    &[data-category="web"] {
-      --tag-color: #9333EA; // Violet soutenu
-      border: 1px solid var(--tag-color);
-      color: var(--tag-color);
-    }
-
-    &[data-category="programming"] {
-      --tag-color: #A855F7; // Violet-pourpre
-      border: 1px solid var(--tag-color);
-      color: var(--tag-color);
-    }
-
-    &[data-category="design"] {
-      --tag-color: #C026D3; // Magenta
-      border: 1px solid var(--tag-color);
-      color: var(--tag-color);
-    }
-
-    &[data-category="research"] {
-      --tag-color: #6D28D9; // Violet foncé
-      border: 1px solid var(--tag-color);
-      color: var(--tag-color);
-    }
-
+    
     &:hover {
-      background: var(--tag-color);
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
       color: white;
+      border-color: transparent;
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
-
-      i {
-        color: white;
-      }
+      box-shadow: var(--icon-hover-shadow);
     }
   }
 } 

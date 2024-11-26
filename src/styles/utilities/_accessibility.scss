@@ -8,6 +8,12 @@
 // Focus styles
 a:focus,
 button:focus {
+  outline: none;
+}
+
+// Ajouter un style de focus uniquement pour la navigation au clavier
+a:focus-visible,
+button:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }

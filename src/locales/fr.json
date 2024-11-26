@@ -219,6 +219,9 @@
       "linkedin": "LinkedIn"
     },
     "footer": {
-      "copyright": "Copyright © 2024 Camille Maslin. Tous droits réservés."
+      "copyright": "Copyright © 2024 Camille Maslin",
+      "rights": "Tous droits réservés",
+      "madeWith": "Réalisé avec",
+      "viewSource": "Voir le code source"
     }
   }

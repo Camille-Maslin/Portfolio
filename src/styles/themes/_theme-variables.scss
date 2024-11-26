@@ -3,9 +3,9 @@
   --color-bg-secondary: #f8f9fa;
   --color-text-primary: #2c3e50;
   --color-text-secondary: #666666;
-  --color-accent: #3498db;
+  --color-accent: rgb(37, 99, 235);
   --color-accent-secondary: #6366f1;
-  --color-border: rgba(0, 0, 0, 0.1);
+  --color-border: rgba(128, 128, 128, 0.3);
   --color-card-bg: #ffffff;
   --color-shadow: rgba(0, 0, 0, 0.08);
   --transition-speed: 0.3s;
@@ -37,7 +37,7 @@
   --color-level-b2-bg: rgba(59, 130, 246, 0.1);
   --color-level-b2-text: #3b82f6;
   --color-level-b2-border: rgba(59, 130, 246, 0.3);
-  --color-accent-dark: #3730a3;
+  --color-accent-dark: rgb(29, 78, 216);
   --color-bg-secondary-dark: #1e293b;
   --color-accent-light: rgba(37, 99, 235, 0.1);
   --color-card-hover: rgba(255, 255, 255, 1);
@@ -54,7 +54,7 @@
   --color-bg-secondary: var(--color-card-bg);
   --color-tag-bg: rgba(var(--color-accent-rgb), 0.1);
   --color-border: rgba(var(--color-accent-rgb), 0.2);
-  --color-accent-rgb: 64, 112, 244;
+  --color-accent-rgb: 37, 99, 235;
   --color-white: #ffffff;
   --color-accent-dark: #1a56db;
   --tag-ai-color: #4361EE;
@@ -65,6 +65,31 @@
   --particle-color-1: 59, 130, 246;   // Bleu vif
   --particle-color-2: 37, 99, 235;    // Bleu royal
   --particle-opacity: 0.4;
+  --color-accent-rgb: 37, 99, 235;
+  --color-accent: rgb(var(--color-accent-rgb));
+  --color-accent-dark: rgb(29, 78, 216);
+  --color-accent-light: rgb(96, 165, 250);
+  
+  --transition-speed: 0.3s;
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --color-ornament: rgba(0, 0, 0, 0.1);
+  --color-ornament-dark: rgba(255, 255, 255, 0.1);
+  --gradient-start: var(--color-accent);
+  --gradient-end: #4F46E5;
+  --title-shadow: 0 2px 15px rgba(var(--color-accent-rgb), 0.15);
+  --gradient-start: #2563eb;
+  --gradient-middle: #4f46e5;
+  --gradient-end: #6366f1;
+  --gradient-speed: 8s;
+  --text-contrast-ratio: 1.2;
+  --color-text-primary: rgba(45, 55, 72, var(--text-contrast-ratio));
+  --color-text-secondary: rgba(102, 102, 102, var(--text-contrast-ratio));
+  --icon-primary: #2563eb;
+  --icon-secondary: #4f46e5;
+  --icon-accent: #6366f1;
+  --icon-bg: rgba(37, 99, 235, 0.08);
+  --icon-border: rgba(37, 99, 235, 0.15);
+  --icon-hover-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
 }
 
 html[data-theme="dark"] {
@@ -74,7 +99,7 @@ html[data-theme="dark"] {
   --color-text-secondary: #a0a0a0;
   --color-accent: #60a5fa;
   --color-accent-secondary: #818cf8;
-  --color-border: #2d2d2d;
+  --color-border: rgba(160, 160, 160, 0.2);
   --color-card-bg: #1e1e1e;
   --color-shadow: rgba(0, 0, 0, 0.4);
   --color-basic: #14b8a6;
@@ -91,4 +116,25 @@ html[data-theme="dark"] {
   --particle-color-1: 96, 165, 250;   // Bleu clair
   --particle-color-2: 147, 197, 253;  // Bleu très clair
   --particle-opacity: 0.2;
+  --color-ornament: rgba(255, 255, 255, 0.1);
+  --color-ornament-dark: rgba(255, 255, 255, 0.05);
+  --gradient-start: var(--color-accent);
+  --gradient-end: #818CF8;
+  --gradient-start: #3b82f6;
+  --gradient-middle: #6366f1;
+  --gradient-end: #8b5cf6;
+  --text-contrast-ratio: 1.1;
+  --color-text-primary: rgba(255, 255, 255, var(--text-contrast-ratio));
+  --color-text-secondary: rgba(160, 160, 160, var(--text-contrast-ratio));
+  --icon-primary: #60a5fa;
+  --icon-secondary: #818cf8;
+  --icon-accent: #93c5fd;
+  --icon-bg: rgba(96, 165, 250, 0.08);
+  --icon-border: rgba(96, 165, 250, 0.15);
+  --icon-hover-shadow: 0 8px 20px rgba(96, 165, 250, 0.2);
+}
+
+html[data-theme="light"] {
+  --gradient-start: var(--color-accent);
+  --gradient-end: #6366F1;
 }

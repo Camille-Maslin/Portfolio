@@ -1,0 +1,56 @@
+.icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background: var(--icon-bg);
+  border: 1px solid var(--icon-border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  i {
+    font-size: 1.25rem;
+    color: var(--icon-primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(
+      135deg,
+      var(--gradient-start),
+      var(--gradient-end)
+    );
+    border-color: transparent;
+    box-shadow: 0 8px 20px rgba(var(--color-accent-rgb), 0.25);
+    
+    i {
+      color: white;
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Variantes de style pour différentes catégories
+.icon {
+  &-skill { --icon-primary: var(--gradient-start); }
+  &-tool { --icon-primary: var(--gradient-middle); }
+  &-framework { --icon-primary: var(--gradient-end); }
+  &-contact { --icon-primary: var(--color-accent); }
+}
+
+// Tailles d'icônes
+.icon {
+  &-sm {
+    width: 2.5rem;
+    height: 2.5rem;
+    i { font-size: 1rem; }
+  }
+  
+  &-lg {
+    width: 3.5rem;
+    height: 3.5rem;
+    i { font-size: 1.5rem; }
+  }
+} 

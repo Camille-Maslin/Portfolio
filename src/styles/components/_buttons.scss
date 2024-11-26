@@ -31,7 +31,8 @@
     margin-top: 1rem;
 }
 
-.btn {
+.btn,
+button {
     display: inline-flex;
     align-items: center;
     padding: 0.8rem 1.5rem;
@@ -41,6 +42,7 @@
     cursor: pointer;
     border: none;
     text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     
     &-primary {
         background-color: var(--color-accent);
@@ -61,6 +63,14 @@
             background-color: var(--color-bg-primary);
             transform: translateY(-2px);
         }
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+    
+    &:hover {
+        box-shadow: 0 2px 8px var(--color-shadow);
     }
 }
 
@@ -129,40 +139,81 @@
     transition: transform var(--transition-speed);
   }
 
-  &:hover {
+  // Rotation du cadre
+  &:hover:not(:hover i) {
     color: var(--color-accent);
     
     i {
       transform: rotate(180deg);
     }
   }
+
+  // Rotation de l'icône
+  i.fa-moon:hover {
+    transform: rotate(360deg) !important;
+  }
+
+  i.fa-sun:hover {
+    transform: rotate(180deg) !important;
+  }
 }
 
 .back-to-top-btn {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background: var(--color-accent);
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
-    border: none;
-    z-index: 100;
-    
-    &.visible {
-        opacity: 1;
-    }
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  
+  i {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+  }
+  
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
     
     &:hover {
-        transform: translateY(-3px);
+      transform: translateY(-5px);
+      background: var(--color-accent-dark);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      
+      i {
+        transform: translateY(-2px);
+      }
     }
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-accent-light);
+  }
+  
+  @media (max-width: 768px) {
+    width: 45px;
+    height: 45px;
+    bottom: 2rem;
+    right: 2rem;
+    
+    i {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 .contact-button {
@@ -222,3 +273,61 @@
       font-size: 1.1rem;
     }
   }
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    position: relative;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    text-align: center;
+    
+    &:focus-visible {
+      outline: 3px solid var(--color-accent);
+      outline-offset: 2px;
+    }
+
+    &-primary {
+      background: var(--color-accent);
+      color: white;
+      
+      &:hover, &:focus {
+        background: var(--color-accent-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(var(--color-accent-rgb), 0.3);
+      }
+
+      &:hover, &:focus {
+        color: white;
+      }
+    }
+
+    &-secondary {
+      background: transparent;
+      border: 2px solid var(--color-accent);
+      color: var(--color-text-primary);
+      
+      &:hover, &:focus {
+        background: var(--color-accent);
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
