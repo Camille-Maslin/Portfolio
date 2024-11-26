@@ -1,0 +1,57 @@
+.background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.content-overlay {
+  position: relative;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(var(--color-bg-overlay), var(--overlay-opacity));
+  border-radius: 1rem;
+  backdrop-filter: blur(3px);
+}
+
+.hero-section {
+  position: relative;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2rem;
+  background: transparent;
+}
+
+.contact-section {
+  position: relative;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2rem;
+  background: transparent;
+}
+
+[data-theme="light"] {
+  --particle-color-1: 20, 20, 20;      // Gris presque noir
+  --particle-color-2: 40, 40, 40;      // Gris très foncé
+  --particle-color-3: 60, 60, 60;      // Gris foncé
+  --particle-color-4: 80, 80, 80;      // Gris moyen-foncé
+  --particle-color-5: 100, 100, 100;   // Gris moyen
+  --particle-opacity: 0.6;             // Opacité augmentée
+  --color-bg-overlay: 255, 255, 255;
+  --overlay-opacity: 0.75;             // Opacité réduite
+}
+
+[data-theme="dark"] {
+  --particle-color-1: 255, 255, 255;   // Blanc pur
+  --particle-color-2: 240, 240, 240;   // Blanc légèrement cassé
+  --particle-color-3: 220, 220, 220;   // Blanc cassé
+  --particle-color-4: 200, 200, 200;   // Gris très clair
+  --particle-color-5: 180, 180, 180;   // Gris clair
+  --particle-opacity: 0.3;
+  --color-bg-overlay: 18, 18, 18;
+  --overlay-opacity: 0.65;             // Opacité réduite
+} 

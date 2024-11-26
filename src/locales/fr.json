@@ -19,7 +19,7 @@
     "about": {
       "explore": "Découvrez",
       "title": "Mon Parcours",
-      "bio": "Je suis étudiante en 3ème année d'informatique, passionnée par la manipulation des données et particulièrement par les avancées en intelligence artificielle. Je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences en analyse et traitement des données.",
+      "bio": "Je suis étudiante en 3ème année d'informatique, passionnée par la manipulation des données et particulièrement par les avancées en intelligence artificielle. Je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences en analyse et traitement des données. Mon objectif à court terme est d'intégrer une école me permettant d'approfondir mes connaissances en développement et optimisation d'IA. Mon objectif à long terme est de travailler dans la recherche ou le développement en IA. Je suis prête à relever de nouveaux défis et à contribuer au succès des projets.",
       "shortTerm": "Objectif à Court Terme",
       "shortTermDesc": "Intégrer une école me permettant d'approfondir mes connaissances en développement et optimisation d'IA.",
       "longTerm": "Objectif à Long Terme",
@@ -35,18 +35,78 @@
         }
       },
       "education": {
-        "title": "Licence en Informatique",
+        "title": "BUT Informatique",
         "description": "Formation approfondie en Intelligence Artificielle et Science des Données."
       },
       "goals": "Mes Objectifs",
       "timeline": "Mon Parcours",
-      "subtitle": "À PROPOS DE MOI"
+      "subtitle": "À PROPOS DE MOI",
+      "objectives": {
+        "title": "Mes Objectifs",
+        "shortTerm": {
+          "title": "Objectif à Court Terme",
+          "description": "Intégrer une école me permettant d'approfondir mes connaissances en développement et optimisation d'IA"
+        },
+        "longTerm": {
+          "title": "Objectif à Long Terme",
+          "description": "Travailler dans la recherche ou le développement en IA"
+        }
+      },
+      "journey": {
+        "title": "Mon Parcours",
+        "experience": {
+          "title": "Expérience",
+          "duration": "9 semaines",
+          "databaseAnalysis": "Analyse de Base de Données",
+          "location": "Tours Métropole",
+          "techTags": {
+            "sql": "SQL",
+            "postgresql": "PostgreSQL",
+            "dbDesign": "Conception BDD",
+            "performance": "Performance"
+          }
+        },
+        "education": {
+          "title": "Formation",
+          "duration": "2022-2025",
+          "bachelor": "BUT Informatique",
+          "location": "Université de Dijon",
+          "viewProgram": "Voir le Programme"
+        },
+        "futureInternship": {
+          "title": "Stage à Venir",
+          "duration": "16 semaines",
+          "neuralNetworkEvaluation": "Évaluation de Réseaux Neuronaux",
+          "location": "Laboratoire CIAD, Dijon",
+          "techTags": {
+            "python": "Python",
+            "snn": "SNN",
+            "neuralNetworks": "Réseaux Neuronaux",
+            "evolutionary": "Évolutionnaire"
+          }
+        }
+      }
     },
     "skills": {
-      "explore": "Découvrez Mes",
-      "title": "Compétences",
-      "database": "Base de Données",
-      "development": "Développement",
+      "explore": "Découvrez",
+      "title": "Mes Compétences",
+      "database": {
+        "skills": {
+          "sql": "SQL",
+          "excel": "Excel",
+          "neo4j": "Neo4j",
+          "powerBi": "Power BI"
+        }
+      },
+      "development": {
+        "skills": {
+          "python": "Python",
+          "cSharp": "C#",
+          "htmlCss": "HTML/CSS",
+          "php": "PHP",
+          "cPlusPlus": "C++"
+        }
+      },
       "tools": "Outils & Autres",
       "levels": {
         "basic": {

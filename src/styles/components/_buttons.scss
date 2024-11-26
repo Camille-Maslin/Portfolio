@@ -164,3 +164,61 @@
         transform: translateY(-3px);
     }
 }
+
+.contact-button {
+  background: var(--color-accent);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  border: 2px solid var(--color-accent);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    background: var(--color-accent);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(var(--color-accent-rgb), 0.3);
+  }
+}
+
+.view-details, .view-github {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .view-details {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    margin: 1rem auto 1.5rem;
+    width: calc(100% - 3rem);
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background: var(--color-accent);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: var(--color-accent-dark);
+      transform: translateY(-2px);
+    }
+    
+    i {
+      font-size: 1.1rem;
+    }
+  }

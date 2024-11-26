@@ -15,12 +15,14 @@
       import { initNavigation } from './src/scripts/navigation.js';
       import { initLanguage } from './src/scripts/language.js';
       import { initScroll } from './src/scripts/scroll.js';
+      import { initBackgroundAnimation } from './src/scripts/modules/backgroundAnimation.js';
 
       document.addEventListener('DOMContentLoaded', () => {
         initTheme();
         initNavigation();
         initLanguage();
         initScroll();
+        initBackgroundAnimation();
       });
     </script>
     
@@ -57,434 +59,498 @@
 
     <!-- MAIN BODY -->
 
-    <!-- PROFILE -->
+    <main>
+      <div class="hero-section">
+        <!-- PROFILE -->
 
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./src/assets/index/profile-pic.webp" alt="Camille Maslin profile picture">
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1" data-i18n="profile.greeting">Hello, I'm</p>
-        <h1 class="title">Camille Maslin</h1>
-        <p class="section__text__p2" data-i18n="profile.title">Computer Science Student</p>
-        <p class="section__text__p3" data-i18n="profile.subtitle">Specializing in AI & Data Science</p>
-        <div class="cta-buttons">
-          <a href="#contact" class="btn btn-primary" data-i18n="profile.contact">Contact Me</a>
-          <a href="assets/CV_Camille_Maslin.pdf" class="btn btn-secondary" download data-i18n="profile.resume">
-            <i class="fas fa-download"></i> Download CV
-          </a>
-        </div>
-        <div id="socials-container">
-          <a href="https://linkedin.com/in/camille-maslin" target="_blank">
-            <i class="fab fa-linkedin icon"></i>
-          </a>
-          <a href="https://github.com/mmillle" target="_blank">
-            <i class="fab fa-github icon"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-
-    <section class="about-section">
-      <div class="section-header">
-        <p class="section-subtitle" data-i18n="about.subtitle">ABOUT ME</p>
-      </div>
-      <div class="objectives-section">
-        <h2 class="section-title">My Objectives</h2>
-        <div class="objectives-grid">
-          <div class="objective-card">
-            <div class="objective-icon">
-              <i class="fas fa-rocket"></i>
+        <section id="profile">
+          <div class="section-header">
+            <p class="section__text__p1" data-i18n="profile.greeting">Hello, I'm</p>
+            <h1>Camille Maslin</h1>
+          </div>
+          <div class="section__pic-container">
+            <img src="./src/assets/index/profile-pic.webp" alt="Camille Maslin profile picture">
+          </div>
+          <div class="section__text">
+            <p class="section__text__p2" data-i18n="profile.title">Computer Science Student</p>
+            <p class="section__text__p3" data-i18n="profile.subtitle">Specializing in AI & Data Science</p>
+            <div class="cta-buttons">
+              <a href="#contact" class="btn btn-primary" data-i18n="profile.contact">Contact Me</a>
+              <a href="assets/CV_Camille_Maslin.pdf" class="btn btn-secondary" download data-i18n="profile.resume">
+                <i class="fas fa-download"></i> Download CV
+              </a>
             </div>
-            <h3>Short Term Goal</h3>
-            <p>Join a school to enhance my knowledge in AI development and optimization.</p>
+            <div id="socials-container">
+              <a href="https://linkedin.com/in/camille-maslin" target="_blank">
+                <i class="fab fa-linkedin icon"></i>
+              </a>
+              <a href="https://github.com/mmillle" target="_blank">
+                <i class="fab fa-github icon"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="content-overlay">
+        <!-- ABOUT -->
+
+        <section id="about" class="about-section">
+          <div class="objectives-section">
+            <div class="section-header">
+              <p class="section__text__p1">ABOUT ME</p>
+              <h1 class="section-title">My <span class="title-highlight">Objectives</span></h1>
+            </div>
+            <div class="bio-text">
+              <p data-i18n="about.bio"></p>
+            </div>
+            <div class="objectives-grid">
+              <div class="objective-card">
+                <div class="objective-icon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <h3 data-i18n="about.objectives.shortTerm.title">Short Term Goal</h3>
+                <p data-i18n="about.objectives.shortTerm.description">Join a school to enhance my knowledge in AI development and optimization.</p>
+              </div>
+              
+              <div class="objective-card">
+                <div class="objective-icon">
+                  <i class="fas fa-microscope"></i>
+                </div>
+                <h3 data-i18n="about.objectives.longTerm.title">Long Term Goal</h3>
+                <p data-i18n="about.objectives.longTerm.description">Work in AI research or development.</p>
+              </div>
+            </div>
           </div>
           
-          <div class="objective-card">
-            <div class="objective-icon">
-              <i class="fas fa-microscope"></i>
+          <section class="journey-section">
+            <div class="section-header">
+              <p class="section__text__p1">DISCOVER</p>
+              <h1 class="section-title">My <span class="title-highlight">Journey</span></h1>
             </div>
-            <h3>Long Term Goal</h3>
-            <p>Work in AI research or development.</p>
+            
+            <div class="journey-grid">
+              <!-- Experience -->
+              <div class="journey-card">
+                <div class="journey-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <h3 data-i18n="about.journey.experience.title">Experience</h3>
+                <p class="duration" data-i18n="about.journey.experience.duration">9 weeks</p>
+                <h4 data-i18n="about.journey.experience.databaseAnalysis">Database Analysis</h4>
+                <p class="location" data-i18n="about.journey.experience.location">Tours Métropole</p>
+                <div class="tech-tags">
+                  <span class="tag" data-i18n="about.journey.experience.techTags.sql">SQL</span>
+                  <span class="tag" data-i18n="about.journey.experience.techTags.postgresql">PostgreSQL</span>
+                  <span class="tag" data-i18n="about.journey.experience.techTags.dbDesign">DB Design</span>
+                  <span class="tag" data-i18n="about.journey.experience.techTags.performance">Performance</span>
+                </div>
+              </div>
+
+              <!-- Education -->
+              <div class="journey-card">
+                <div class="journey-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 data-i18n="about.journey.education.title">Education</h3>
+                <p class="duration" data-i18n="about.journey.education.duration">2022-2025</p>
+                <h4 data-i18n="about.journey.education.bachelor">Bachelor in Computer Science</h4>
+                <p class="location" data-i18n="about.journey.education.location">Dijon University</p>
+                <a href="/src/assets/index/BUT-Prog-Dijon.pdf" class="view-program" data-i18n="about.journey.education.viewProgram">View Program</a>
+              </div>
+
+              <!-- Future Internship -->
+              <div class="journey-card">
+                <div class="journey-icon">
+                  <i class="fas fa-flask"></i>
+                </div>
+                <h3 data-i18n="about.journey.futureInternship.title">Future Internship</h3>
+                <p class="duration" data-i18n="about.journey.futureInternship.duration">16 weeks</p>
+                <h4 data-i18n="about.journey.futureInternship.neuralNetworkEvaluation">Neural Network Evaluation</h4>
+                <p class="location" data-i18n="about.journey.futureInternship.location">CIAD Laboratory, Dijon</p>
+                <div class="tech-tags">
+                  <span class="tag" data-i18n="about.journey.futureInternship.techTags.python">Python</span>
+                  <span class="tag" data-i18n="about.journey.futureInternship.techTags.snn">SNN</span>
+                  <span class="tag" data-i18n="about.journey.futureInternship.techTags.neuralNetworks">Neural Networks</span>
+                  <span class="tag" data-i18n="about.journey.futureInternship.techTags.evolutionary">Evolutionary</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- SKILLS -->
+
+        <section id="skills" class="skills-section">
+          <div class="section-header">
+            <p class="section__text__p1" data-i18n="skills.explore">EXPLORE</p>
+            <h1 class="section-title">My <span class="title-highlight">Skills</span></h1>
           </div>
-        </div>
+          
+          <div class="skills-categories">
+            <!-- Database -->
+            <div class="skill-category">
+              <div class="category-header">
+                <i class="fas fa-database"></i>
+                <h3 data-i18n="skills.database">Database</h3>
+              </div>
+              <div class="skills-grid">
+                <div class="skill-bar">
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skills.categories.database.skills.sql">SQL</span>
+                    <span class="skill-level advanced" data-i18n="skills.levels.advanced.label">Advanced</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 85%" data-level="advanced"></div>
+                  </div>
+                </div>
+
+                <div class="skill-bar">
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skills.database.skills.excel">Excel</span>
+                    <span class="skill-level intermediate" data-i18n="skills.levels.intermediate.label">Intermediate</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 65%" data-level="intermediate"></div>
+                  </div>
+                </div>
+
+                <div class="skill-bar">
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skills.database.skills.neo4j">Neo4j</span>
+                    <span class="skill-level intermediate" data-i18n="skills.levels.intermediate.label">Intermediate</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 55%" data-level="intermediate"></div>
+                  </div>
+                </div>
+
+                <div class="skill-bar">
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skills.database.skills.powerBi">Power BI</span>
+                    <span class="skill-level basic" data-i18n="skills.levels.basic.label">Basic</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 45%" data-level="basic"></div>
+                  </div>
+                </div>    
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <!-- Development Section -->
+              <div class="category-header">
+                <i class="fas fa-code"></i>
+                <h3 data-i18n="skills.development">Development</h3>
+              </div>
+              <div class="skills-grid">
+                <div class="skill-bar">
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skills.development.skills.python">Python</span>
+                    <span class="skill-level advanced" data-i18n="skills.levels.advanced.label">Advanced</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 85%" data-level="advanced"></div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skills.development.skills.cSharp">C#</span>
+                    <span class="skill-level intermediate" data-i18n="skills.levels.intermediate.label">Intermediate</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 65%" data-level="intermediate"></div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skills.development.skills.htmlCss">HTML/CSS</span>
+                    <span class="skill-level advanced" data-i18n="skills.levels.advanced.label">Advanced</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 75%" data-level="advanced"></div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skills.development.skills.php">PHP</span>
+                    <span class="skill-level basic" data-i18n="skills.levels.basic.label">Basic</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 50%" data-level="basic"></div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skills.development.skills.cPlusPlus">C++</span>
+                    <span class="skill-level basic" data-i18n="skills.levels.basic.label">Basic</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 40%" data-level="basic"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tools Section -->
+            <div class="skill-category">
+              <div class="category-header">
+                <i class="fas fa-tools"></i>
+                <h3 data-i18n="skills.categories.tools.title">Tools & Others</h3>
+              </div>
+              <div class="skills-grid">
+                <div class="skill-bar">
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skills.categories.tools.skills.git">Git</span>
+                    <span class="skill-level intermediate" data-i18n="skills.levels.intermediate.label">Intermediate</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 65%" data-level="intermediate"></div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skills.categories.tools.skills.projectManagement">Project Management</span>
+                    <span class="skill-level advanced" data-i18n="skills.levels.advanced.label">Advanced</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 80%" data-level="advanced"></div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skills.categories.tools.skills.promptEngineering">Prompt Engineering</span>
+                    <span class="skill-level basic" data-i18n="skills.levels.basic.label">Basic</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 35%" data-level="basic"></div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skills.categories.tools.skills.english">English</span>
+                    <span class="skill-level b2" data-i18n="skills.skillLevels.b2">B2</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 70%" data-level="intermediate"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Soft Skills -->
+        <section class="general-skills">
+          <p class="section__text__p1" data-i18n="skills.explore">EXPLORE</p>
+          <h1 class="section-title" data-i18n="generalSkills.title">My General Skills</h1>
+          <div class="general-skills-container">
+            <div class="general-skill-item">
+              <i class="fas fa-comments skill-icon"></i>
+              <h3 data-i18n="generalSkills.skills.communication">Communication</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+
+            <div class="general-skill-item">
+              <i class="fas fa-user-gear skill-icon"></i>
+              <h3 data-i18n="generalSkills.skills.autonomy">Autonomy</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+
+            <div class="general-skill-item">
+              <i class="fas fa-arrows-spin skill-icon"></i>
+              <h3 data-i18n="generalSkills.skills.adaptability">Adaptability</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+
+            <div class="general-skill-item">
+              <i class="fas fa-people-group skill-icon"></i>
+              <h3 data-i18n="generalSkills.skills.collaboration">Collaboration</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+
+            <div class="general-skill-item">
+              <i class="fas fa-book-open-reader skill-icon"></i>
+              <h3 data-i18n="generalSkills.skills.learning">Continuous Learning</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+
+          <!-- PROJETS -->
+
+        <section id="projects" class="projects-section">
+          <div class="section-header">
+            <p class="section__text__p1" data-i18n="projects.discover">DISCOVER</p>
+            <h1 class="section-title">My <span class="title-highlight">Projects</span></h1>
+          </div>
+          
+          <div class="projects-container">
+            <!-- Brain Tumor Detection AI -->
+            <div class="project-card">
+              <img src="./src/assets/index/brain-tumor-ai.webp" alt="Brain Tumor Detection AI" class="project-img">
+              <h3 data-i18n="projects.brainTumor.title">Brain Tumor Detection AI</h3>
+              <p data-i18n="projects.brainTumor.description">Developed a Convolutional Neural Network (CNN) for automated brain tumor detection from MRI scans, achieving 93% accuracy in tumor classification.</p>
+              <div class="project-skills">
+                <div class="skill-tag" data-category="ai">
+                  <i class="fab fa-python"></i>
+                  <span>Python</span>
+                </div>
+                <div class="skill-tag" data-category="framework">
+                  <i class="fas fa-brain"></i>
+                  <span>TensorFlow</span>
+                </div>
+                <div class="skill-tag" data-category="framework">
+                  <i class="fas fa-layer-group"></i>
+                  <span>Keras</span>
+                </div>
+                <div class="skill-tag" data-category="tool">
+                  <i class="fas fa-camera"></i>
+                  <span>OpenCV</span>
+                </div>
+                <div class="skill-tag" data-category="ai">
+                  <i class="fas fa-network-wired"></i>
+                  <span>Deep Learning</span>
+                </div>
+                <div class="skill-tag" data-category="ai">
+                  <i class="fas fa-brain"></i>
+                  <span>CNN</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="/src/pages/projects/brain-tumor-detection.html" class="view-details">
+                  <i class="fas fa-external-link-alt"></i>
+                  <span data-i18n="projects.viewDetails">View Details</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Multispectral Image Viewer -->
+            <div class="project-card">
+              <img src="./src/assets/index/multispectral-viewer.webp" alt="Multispectral Image Viewer" class="project-img">
+              <h3 data-i18n="projects.multispectral.title">Multispectral Image Viewer</h3>
+              <p data-i18n="projects.multispectral.description">Created a software tool for simulating various vision types...</p>
+              <div class="project-skills">
+                <div class="skill-tag" data-category="programming">
+                  <i class="fab fa-python"></i>
+                  <span>Python</span>
+                </div>
+                <div class="skill-tag" data-category="image">
+                  <i class="fas fa-camera"></i>
+                  <span>Multispectral Image</span>
+                </div>
+                <div class="skill-tag" data-category="tool">
+                  <i class="fas fa-wand-magic-sparkles"></i>
+                  <span>Image Processing</span>
+                </div>
+                <div class="skill-tag" data-category="dev">
+                  <i class="fas fa-window-maximize"></i>
+                  <span>GUI Development</span>
+                </div>
+                <div class="skill-tag" data-category="research">
+                  <i class="fas fa-magnifying-glass"></i>
+                  <span>Research</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="/src/pages/projects/multispectral-image-viewer.html" class="view-details">
+                  <i class="fas fa-external-link-alt"></i>
+                  <span data-i18n="projects.viewDetails">View Details</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Portfolio Website -->
+            <div class="project-card">
+              <img src="./src/assets/index/portfolio.webp" alt="Portfolio Website" class="project-img">
+              <h3 data-i18n="projects.portfolio.title">Portfolio Website</h3>
+              <p data-i18n="projects.portfolio.description">Designed and developed a responsive professional portfolio...</p>
+              <div class="project-skills">
+                <div class="skill-tag" data-category="web">
+                  <i class="fab fa-html5"></i>
+                  <span>HTML5</span>
+                </div>
+                <div class="skill-tag" data-category="web">
+                  <i class="fab fa-css3-alt"></i>
+                  <span>CSS3</span>
+                </div>
+                <div class="skill-tag" data-category="programming">
+                  <i class="fab fa-js"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-tag" data-category="design">
+                  <i class="fas fa-palette"></i>
+                  <span>Responsive Design</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/mmillle/portfolio" class="view-github">
+                  <i class="fab fa-github"></i>
+                  <span data-i18n="projects.viewGithub">View on GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+
+        <section id="contact" class="contact-section">
+          <div class="contact-container">
+            <div class="contact-header">
+              <p class="section__text__p1" data-i18n="contact.getInTouch">GET IN TOUCH</p>
+              <h1 class="section-title" data-i18n="contact.title">Contact Me</h1>
+            </div>
+            
+            <div class="contact-content">
+              <div class="contact-info">
+                <div class="contact-card">
+                  <i class="fas fa-envelope contact-icon"></i>
+                  <h3 data-i18n="contact.email">Email</h3>
+                  <a href="mailto:camillemaslin@gmail.com">camillemaslin@gmail.com</a>
+                </div>
+
+                <div class="contact-card">
+                  <i class="fab fa-linkedin contact-icon"></i>
+                  <h3 data-i18n="contact.linkedin">LinkedIn</h3>
+                  <a href="https://linkedin.com/in/camille-maslin" target="_blank">linkedin.com/in/camille-maslin</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-
-      <div class="experience-section">
-        <div class="section-title-container">
-          <h2 class="section-title">My Journey</h2>
-        </div>
-        <div class="experience-grid">
-          <div class="experience-card">
-          <div class="card-icon">
-            <i class="fas fa-briefcase"></i>
-          </div>
-          <h3>Experience</h3>
-          <span class="duration">9 weeks</span>
-          <h4>Database Analysis</h4>
-          <p class="location">Tours Métropole</p>
-          <div class="skills-tags">
-            <span class="tag">SQL</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">Database Design</span>
-            <span class="tag">Performance Tuning</span>
-          </div>
-        </div>
-
-        <div class="experience-card">
-          <div class="card-icon">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <h3>Education</h3>
-          <span class="duration">3rd Year (2022-2025)</span>
-          <h4>Bachelor in Computer Science</h4>
-          <p class="location">Université de Dijon</p>
-          <a href="#" class="view-link">View Program</a>
-        </div>
-
-        <div class="experience-card">
-          <div class="card-icon">
-            <i class="fas fa-flask"></i>
-          </div>
-          <h3>Future Internship</h3>
-          <span class="duration">16 weeks</span>
-          <h4>Neural Network Evaluation</h4>
-          <p class="location">CIAD Laboratory, Dijon</p>
-          <div class="skills-tags">
-            <span class="tag">Python</span>
-            <span class="tag">SNN</span>
-            <span class="tag">Neural Networks</span>
-            <span class="tag">Evolutionary Algorithms</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-
-    <section id="skills" class="skills-section">
-      <div class="section-header">
-        <p class="section__text__p1" data-i18n="skills.explore">Explore My</p>
-        <h1 class="title" data-i18n="skills.title">Skills</h1>
-      </div>
-      
-      <div class="skills-categories">
-        <!-- Database -->
-        <div class="skill-category">
-          <div class="category-header">
-            <i class="fas fa-database"></i>
-            <h3 data-i18n="skills.database">Database</h3>
-          </div>
-          <div class="skills-grid">
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span class="skill-name">SQL</span>
-                <span class="skill-level advanced" data-i18n="skills.levels.advanced.label">Advanced</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 85%" data-level="advanced"></div>
-              </div>
-            </div>
-
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span class="skill-name">Excel</span>
-                <span class="skill-level intermediate" data-i18n="skills.levels.intermediate.label">Intermediate</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 65%" data-level="intermediate"></div>
-              </div>
-            </div>
-
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span class="skill-name">Neo4j</span>
-                <span class="skill-level intermediate" data-i18n="skills.levels.intermediate.label">Intermediate</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 55%" data-level="intermediate"></div>
-              </div>
-            </div>
-
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span class="skill-name">Power BI</span>
-                <span class="skill-level basic" data-i18n="skills.levels.basic.label">Basic</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 45%" data-level="basic"></div>
-              </div>
-            </div>    
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <!-- Development Section -->
-          <div class="category-header">
-            <i class="fas fa-code"></i>
-            <h3 data-i18n="skills.development">Development</h3>
-          </div>
-          <div class="skills-grid">
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span class="skill-name">Python</span>
-                <span class="skill-level advanced" data-i18n="skills.levels.advanced.label">Advanced</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 85%" data-level="advanced"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span class="skill-name">C#</span>
-                <span class="skill-level intermediate" data-i18n="skills.levels.intermediate.label">Intermediate</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 65%" data-level="intermediate"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span class="skill-name">HTML/CSS</span>
-                <span class="skill-level advanced" data-i18n="skills.levels.advanced.label">Advanced</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 75%" data-level="advanced"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span class="skill-name">PHP</span>
-                <span class="skill-level basic" data-i18n="skills.levels.basic.label">Basic</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 50%" data-level="basic"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span class="skill-name">C++</span>
-                <span class="skill-level basic" data-i18n="skills.levels.basic.label">Basic</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 40%" data-level="basic"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tools Section -->
-        <div class="skill-category">
-          <div class="category-header">
-            <i class="fas fa-tools"></i>
-            <h3 data-i18n="skills.categories.tools.title">Tools & Others</h3>
-          </div>
-          <div class="skills-grid">
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span class="skill-name" data-i18n="skills.categories.tools.skills.git">Git</span>
-                <span class="skill-level intermediate" data-i18n="skills.levels.intermediate.label">Intermediate</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 65%" data-level="intermediate"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span class="skill-name" data-i18n="skills.categories.tools.skills.projectManagement">Project Management</span>
-                <span class="skill-level advanced" data-i18n="skills.levels.advanced.label">Advanced</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 80%" data-level="advanced"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span class="skill-name" data-i18n="skills.categories.tools.skills.promptEngineering">Prompt Engineering</span>
-                <span class="skill-level basic" data-i18n="skills.levels.basic.label">Basic</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 35%" data-level="basic"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span class="skill-name" data-i18n="skills.categories.tools.skills.english">English</span>
-                <span class="skill-level b2" data-i18n="skills.skillLevels.b2">B2</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 70%" data-level="intermediate"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Soft Skills -->
-    <section class="general-skills">
-      <h2 class="skills-title" data-i18n="generalSkills.title">General Skills</h2>
-      <div class="general-skills-container">
-        <div class="general-skill-item">
-          <i class="fas fa-comments skill-icon"></i>
-          <h3 data-i18n="generalSkills.skills.communication">Communication</h3>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-        </div>
-
-        <div class="general-skill-item">
-          <i class="fas fa-user-gear skill-icon"></i>
-          <h3 data-i18n="generalSkills.skills.autonomy">Autonomy</h3>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-          </div>
-        </div>
-
-        <div class="general-skill-item">
-          <i class="fas fa-arrows-spin skill-icon"></i>
-          <h3 data-i18n="generalSkills.skills.adaptability">Adaptability</h3>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-          </div>
-        </div>
-
-        <div class="general-skill-item">
-          <i class="fas fa-people-group skill-icon"></i>
-          <h3 data-i18n="generalSkills.skills.collaboration">Collaboration</h3>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-          </div>
-        </div>
-
-        <div class="general-skill-item">
-          <i class="fas fa-book-open-reader skill-icon"></i>
-          <h3 data-i18n="generalSkills.skills.learning">Continuous Learning</h3>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-
-      <!-- PROJETS -->
-
-    <section id="projects" class="projects-section">
-      <div class="section-header">
-        <h1 class="title" data-i18n="projects.title">Projects</h1>
-      </div>
-      
-      <div class="projects-container">
-        <!-- Brain Tumor Detection AI -->
-        <div class="project-card">
-          <img src="./src/assets/index/brain-tumor-ai.webp" alt="Brain Tumor Detection AI" class="project-img">
-          <h3 data-i18n="projects.brainTumor.title">Brain Tumor Detection AI</h3>
-          <p data-i18n="projects.brainTumor.description">Developed a Convolutional Neural Network (CNN) for automated brain tumor detection from MRI scans, achieving 93% accuracy in tumor classification.</p>
-          <div class="tech-stack">
-            <span data-i18n="projects.brainTumor.tags.python">Python</span>
-            <span data-i18n="projects.brainTumor.tags.cnn">CNN</span>
-            <span data-i18n="projects.brainTumor.tags.tensorflow">TensorFlow</span>
-            <span data-i18n="projects.brainTumor.tags.keras">Keras</span>
-            <span data-i18n="projects.brainTumor.tags.deepLearning">Deep Learning</span>
-            <span data-i18n="projects.brainTumor.tags.opencv">OpenCV</span>
-          </div>
-          <div class="project-actions">
-            <a href="/pages/projects/brain-tumor-detection.html" class="view-details">
-              <i class="fas fa-external-link-alt"></i>
-              <span data-i18n="projects.viewDetails">View Details</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Multispectral Image Viewer -->
-        <div class="project-card">
-          <img src="./src/assets/index/multispectral-viewer.webp" alt="Multispectral Image Viewer" class="project-img">
-          <h3 data-i18n="projects.multispectral.title">Multispectral Image Viewer</h3>
-          <p data-i18n="projects.multispectral.description">Created a software tool for simulating various vision types (human, colorblind, bee) from multispectral images, allowing custom RGB band combinations.</p>
-          <div class="tech-stack">
-            <span data-i18n="projects.multispectral.tags.python">Python</span>
-            <span data-i18n="projects.multispectral.tags.multispectralImage">Multispectral Image</span>
-            <span data-i18n="projects.multispectral.tags.imageProcessing">Image Processing</span>
-            <span data-i18n="projects.multispectral.tags.guiDevelopment">GUI Development</span>
-            <span data-i18n="projects.multispectral.tags.searching">Searching</span>
-          </div>
-          <div class="project-actions">
-            <a href="/pages/projects/multispectral-image-viewer.html" class="view-details">
-              <i class="fas fa-external-link-alt"></i>
-              <span data-i18n="projects.viewDetails">View Details</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Portfolio Website -->
-        <div class="project-card">
-          <img src="./src/assets/index/portfolio.webp" alt="Portfolio Website" class="project-img">
-          <h3 data-i18n="projects.portfolio.title">Portfolio Website</h3>
-          <p data-i18n="projects.portfolio.description">Designed and developed a responsive professional portfolio website using modern web technologies and best practices.</p>
-          <div class="tech-stack">
-            <span data-i18n="projects.portfolio.tags.html5">HTML5</span>
-            <span data-i18n="projects.portfolio.tags.css3">CSS3</span>
-            <span data-i18n="projects.portfolio.tags.javascript">JavaScript</span>
-            <span data-i18n="projects.portfolio.tags.responsiveDesign">Responsive Design</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://github.com/username/portfolio" class="view-github">
-              <i class="fab fa-github"></i>
-              <span data-i18n="projects.viewGithub">View on GitHub</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-
-    <section id="contact" class="contact-section">
-      <div class="contact-container">
-        <div class="contact-header">
-          <p class="section-subtitle" data-i18n="contact.meet">Meet Me</p>
-          <h2 class="section-title" data-i18n="contact.title">Contact Me</h2>
-        </div>
-        
-        <div class="contact-content">
-          <div class="contact-info">
-            <div class="contact-card">
-              <i class="fas fa-envelope contact-icon"></i>
-              <h3 data-i18n="contact.email">Email</h3>
-              <a href="mailto:camillemaslin@gmail.com">camillemaslin@gmail.com</a>
-            </div>
-
-            <div class="contact-card">
-              <i class="fab fa-linkedin contact-icon"></i>
-              <h3 data-i18n="contact.linkedin">LinkedIn</h3>
-              <a href="https://linkedin.com/in/camille-maslin" target="_blank">linkedin.com/in/camille-maslin</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </main>
 
     <!-- FOOTER -->
 
@@ -497,6 +563,8 @@
     <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
       <i class="fas fa-arrow-up"></i>
     </button>
+
+    <canvas id="background-animation" class="background-canvas" aria-hidden="true"></canvas>
 
   </body>
 

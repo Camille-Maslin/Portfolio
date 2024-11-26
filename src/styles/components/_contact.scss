@@ -1,27 +1,28 @@
 .contact-section {
   min-height: 60vh;
-  padding: 6rem 2rem;
+  padding: 4rem 1rem;
   background: var(--color-bg-secondary);
   
   .contact-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
   }
 
   .contact-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     
     .section-subtitle {
       color: var(--color-accent);
-      font-size: 1.1rem;
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 1rem;
     }
     
     .section-title {
-      font-size: 2.8rem;
+      font-size: clamp(2rem, 4vw, 2.8rem);
       color: var(--color-text-primary);
       font-weight: 600;
       position: relative;
@@ -32,7 +33,7 @@
         bottom: -1rem;
         left: 50%;
         transform: translateX(-50%);
-        width: 80px;
+        width: clamp(60px, 10vw, 80px);
         height: 4px;
         background: var(--color-accent);
         border-radius: 2px;
@@ -44,23 +45,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 1rem;
   }
 
   .contact-info {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
     max-width: 800px;
     width: 100%;
-    
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
   }
 
   .contact-card {
     background: var(--color-bg-primary);
-    padding: 2.5rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
     border-radius: 1rem;
     text-align: center;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -72,26 +70,38 @@
     }
     
     .contact-icon {
-      font-size: 2.5rem;
+      font-size: clamp(2rem, 5vw, 2.5rem);
       color: var(--color-accent);
       margin-bottom: 1.5rem;
     }
     
     h3 {
       color: var(--color-text-primary);
-      font-size: 1.25rem;
+      font-size: clamp(1.1rem, 3vw, 1.25rem);
       margin-bottom: 1rem;
     }
     
     a {
       color: var(--color-text-secondary);
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: clamp(1rem, 2.5vw, 1.1rem);
       transition: color 0.3s ease;
+      word-break: break-word;
       
       &:hover {
         color: var(--color-accent);
       }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-info {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .contact-card {
+      padding: 1.5rem;
     }
   }
 }

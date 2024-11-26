@@ -18,7 +18,7 @@
   },
   "about": {
     "title": "About Me",
-    "bio": "I am a 3rd-year Computer Science student, passionate about data manipulation and particularly advancements in artificial intelligence. I am constantly seeking new opportunities to develop my skills in data analysis and processing.",
+    "bio": "I am a 3rd-year Computer Science student, passionate about data manipulation and particularly advancements in artificial intelligence. I am constantly seeking new opportunities to develop my skills in data analysis and processing. My short-term goal is to join a school that will allow me to enhance my knowledge in AI development and optimization. My long-term goal is to work in AI research or development. I am ready to take on new challenges and contribute to the success of projects.",
     "shortTerm": "Short-term Goal",
     "shortTermDesc": "Join a school to enhance my knowledge in AI development and optimization.",
     "longTerm": "Long-term Goal",
@@ -28,21 +28,21 @@
     "internship": "Future Internship",
     "experienceDetails": {
       "duration": "9 semaines",
-      "title": "Analyse de Base de Données",
+      "title": "Database Analysis",
       "location": "Tours Métropole",
       "tags": {
         "sql": "SQL",
         "postgresql": "PostgreSQL",
-        "dbDesign": "Conception de BDD",
-        "performance": "Optimisation des Performances"
+        "dbDesign": "Database Design",
+        "performance": "Performance Optimization"
       }
     },
     "educationDetails": {
       "current": {
         "duration": "2022-2025",
-        "title": "Licence en Informatique",
+        "title": "BUT Informatique",
         "location": "Université de Dijon",
-        "viewProgram": "Voir le Programme"
+        "viewProgram": "View Program"
       },
       "previous": {
         "duration": "2022",
@@ -52,20 +52,65 @@
     },
     "internshipDetails": {
       "duration": "16 semaines",
-      "title": "Évaluation de Réseaux Neuronaux",
+      "title": "Evaluation of Neural Networks",
       "location": "Laboratoire CIAD",
       "tags": {
         "python": "Python",
         "snn": "SNN",
-        "neuralNetworks": "Réseaux Neuronaux",
-        "evolutionary": "Algorithmes Évolutionnaires"
+        "neuralNetworks": "Neural Networks",
+        "evolutionary": "Evolutionary Algorithms"
       }
     },
-    "subtitle": "ABOUT ME"
+    "subtitle": "ABOUT ME",
+    "journey": {
+      "title": "My Journey",
+      "experience": {
+        "title": "Experience",
+        "duration": "9 weeks",
+        "databaseAnalysis": "Database Analysis",
+        "location": "Tours Métropole",
+        "techTags": {
+          "sql": "SQL",
+          "postgresql": "PostgreSQL",
+          "dbDesign": "Database Design",
+          "performance": "Performance"
+        }
+      },
+      "education": {
+        "title": "Education",
+        "duration": "2022-2025",
+        "bachelor": "Bachelor in Computer Science",
+        "location": "Dijon University",
+        "viewProgram": "View Program"
+      },
+      "futureInternship": {
+        "title": "Future Internship",
+        "duration": "16 weeks",
+        "neuralNetworkEvaluation": "Neural Network Evaluation",
+        "location": "CIAD Laboratory, Dijon",
+        "techTags": {
+          "python": "Python",
+          "snn": "SNN",
+          "neuralNetworks": "Neural Networks",
+          "evolutionary": "Evolutionary"
+        }
+      }
+    },
+    "objectives": {
+      "title": "My Objectives",
+      "shortTerm": {
+        "title": "Short Term Goal",
+        "description": "Join a school to enhance my knowledge in AI development and optimization"
+      },
+      "longTerm": {
+        "title": "Long Term Goal",
+        "description": "Work in AI research or development"
+      }
+    }
   },
   "skills": {
-    "explore": "Explore My",
-    "title": "Skills",
+    "explore": "Explore",
+    "title": "My Skills",
     "database": "Database",
     "development": "Development",
     "tools": "Tools & Others",
@@ -121,7 +166,7 @@
     }
   },
   "general": {
-    "title": "General Skills",
+    "title": "My General Skills",
     "communication": "Communication",
     "autonomy": "Autonomy",
     "adaptability": "Adaptability",
@@ -129,7 +174,8 @@
     "learning": "Continuous Learning"
   },
   "projects": {
-    "title": "Projects",
+    "discover": "Discover",
+    "title": "My Projects",
     "back": "Back to projects",
     "overview": "Overview",
     "technologies": "Technologies Used",
@@ -175,10 +221,11 @@
     "meet": "Meet Me",
     "title": "Contact Me",
     "email": "Email",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "getInTouch": "GET IN TOUCH"
   },
   "generalSkills": {
-    "title": "General Skills",
+    "title": "My General Skills",
     "skills": {
       "communication": "Communication",
       "autonomy": "Autonomy",

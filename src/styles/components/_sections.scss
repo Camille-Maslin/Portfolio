@@ -134,3 +134,89 @@ section {
     }
   }
 }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 6rem;
+  
+  .section__text__p1 {
+    color: var(--color-accent);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--color-text-primary);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+    
+    .title-highlight {
+      background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      border-radius: 2px;
+    }
+  }
+}
+
+.journey-section {
+  padding: 6rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 6rem;
+    
+    .section__text__p1 {
+      color: var(--color-accent);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      color: var(--color-text-primary);
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1rem;
+      
+      .title-highlight {
+        background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+        border-radius: 2px;
+      }
+    }
+  }
+}

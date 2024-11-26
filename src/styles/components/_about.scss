@@ -264,29 +264,24 @@
   }
 }
 
-.objectives-section {
+.objectives-section .section-title,
+.experience-section .section-title {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
+  position: relative;
+  font-size: 2.2rem;
+  color: var(--color-text-primary);
   
-  .section-title {
-    font-size: 2.2rem;
-    margin-bottom: 3rem;
-    color: var(--color-text-primary);
-    text-align: center;
-    position: relative;
-    display: inline-block;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 50px;
-      height: 3px;
-      background: var(--color-accent);
-      border-radius: 2px;
-    }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 2px;
   }
 }
 
@@ -311,24 +306,137 @@
   }
 }
 
-.objectives-section .section-title,
-.experience-section .section-title {
-  text-align: center;
-  margin-bottom: 4rem;
-  position: relative;
-  font-size: 2.2rem;
-  color: var(--color-text-primary);
+.journey-section {
+  padding: 6rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
   
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: var(--color-accent);
-    border-radius: 2px;
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-text-primary);
+    margin-bottom: 4rem;
+    
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 4px;
+      background: var(--color-accent);
+      margin: 1rem auto;
+      border-radius: 2px;
+    }
+  }
+  
+  .journey-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+    
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .journey-card {
+    background: var(--color-bg-secondary);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+    
+    .journey-icon {
+      font-size: 2rem;
+      color: var(--color-accent);
+      margin-bottom: 1.5rem;
+      
+      i {
+        background: var(--color-tag-bg);
+        padding: 1rem;
+        border-radius: 50%;
+      }
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-text-primary);
+    }
+    
+    .duration {
+      color: var(--color-accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-text-primary);
+    }
+    
+    .location {
+      color: var(--color-text-secondary);
+      margin-bottom: 1rem;
+    }
+    
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 1rem;
+      
+      .tag {
+        background: var(--color-tag-bg);
+        color: var(--color-text-secondary);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-size: 0.85rem;
+        transition: all 0.3s ease;
+        border: 1px solid var(--color-border);
+        
+        &:hover {
+          background: var(--color-accent);
+          color: var(--color-bg-primary);
+          transform: translateY(-2px);
+        }
+      }
+    }
+    
+    .view-program {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--color-accent);
+      text-decoration: none;
+      font-weight: 600;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.bio-text {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
   }
 }
 
