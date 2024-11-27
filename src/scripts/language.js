@@ -36,11 +36,19 @@ export const initLanguage = () => {
       const langFile = lang.toLowerCase();
       const isGitHubPages = window.location.hostname === 'mmillle.github.io';
       const basePath = isGitHubPages ? '/Portfolio' : '';
+      const localesPath = `${basePath}/src/locales/${langFile}.json`;
       
-      const response = await fetch(`${basePath}/src/locales/${langFile}.json`);
+      console.log('Tentative de chargement du fichier de langue:', localesPath);
+      
+      const response = await fetch(localesPath, {
+        headers: {
+          'Accept': 'application/json',
+          'Cache-Control': 'no-cache'
+        }
+      });
       
       if (!response.ok) {
-        throw new Error(`Erreur HTTP: ${response.status} - ${response.statusText}`);
+        throw new Error(`Erreur HTTP: ${response.status} - ${response.statusText} - ${localesPath}`);
       }
       
       const translations = await response.json();
@@ -54,9 +62,9 @@ export const initLanguage = () => {
       console.log(`Changement de langue réussi: ${previousLang} -> ${lang}`);
     } catch (error) {
       console.error('Erreur détaillée lors du changement de langue:', {
-        error: error.message,
-        url: error.url,
-        status: error.status
+        message: error.message,
+        path: error.url || 'N/A',
+        status: error.status || 'N/A'
       });
       const savedLang = localStorage.getItem('language') || 'EN';
       currentLang.textContent = savedLang;
@@ -66,18 +74,12 @@ export const initLanguage = () => {
   };
 
   languageSelector.addEventListener('click', async () => {
-    const currentLanguage = currentLang.textContent;
-    const newLanguage = currentLanguage === 'EN' ? 'FR' : 'EN';
-    try {
-      await setLanguage(newLanguage);
-    } catch (error) {
-      console.error('Erreur lors du changement de langue:', error);
-      alert('Erreur lors du changement de langue. Veuillez réessayer.');
-    }
+    const newLanguage = currentLang.textContent === 'EN' ? 'FR' : 'EN';
+    await setLanguage(newLanguage);
   });
 
-  const savedLanguage = localStorage.getItem('language') || 
-    (navigator.language.startsWith('fr') ? 'FR' : 'EN');
+  const browserLang = navigator.language.startsWith('fr') ? 'FR' : 'EN';
+  const savedLanguage = localStorage.getItem('language') || browserLang;
   
   setLanguage(savedLanguage).catch(error => {
     console.error('Erreur lors de l\'initialisation de la langue:', error);
