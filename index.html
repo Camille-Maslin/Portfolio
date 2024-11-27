@@ -19,20 +19,22 @@
     </style>
 
     <!-- Scripts -->
-    <script type="module">
-        import { initTheme } from './src/scripts/theme.js';
-        import { initNavigation } from './src/scripts/navigation.js';
-        import { initLanguage } from './src/scripts/language.js';
-        import { initScroll } from './src/scripts/scroll.js';
-        import { initBackgroundAnimation } from './src/scripts/modules/backgroundAnimation.js';
+    <script type="module" defer>
+        const initApp = async () => {
+            const { initTheme } = await import('./src/scripts/theme.js');
+            const { initNavigation } = await import('./src/scripts/navigation.js');
+            const { initLanguage } = await import('./src/scripts/language.js');
+            const { initScroll } = await import('./src/scripts/scroll.js');
+            const { initBackgroundAnimation } = await import('./src/scripts/modules/backgroundAnimation.js');
 
-        document.addEventListener('DOMContentLoaded', () => {
             initTheme();
             initNavigation();
             initLanguage();
             initScroll();
             initBackgroundAnimation();
-        });
+        };
+
+        document.addEventListener('DOMContentLoaded', initApp);
     </script>
     
     <!-- Icons -->
@@ -42,7 +44,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
 
     <script>
