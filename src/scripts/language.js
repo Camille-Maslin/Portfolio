@@ -28,8 +28,8 @@ export const initLanguage = () => {
     });
   };
 
-  const setLanguage = async (lang) => {
-    if (isChangingLanguage || currentLang.textContent === lang) return;
+  const setLanguage = async (lang, isInitial = false) => {
+    if (isChangingLanguage || (!isInitial && currentLang.textContent === lang)) return;
     isChangingLanguage = true;
     
     try {
@@ -59,15 +59,19 @@ export const initLanguage = () => {
       currentLang.textContent = lang;
       document.documentElement.setAttribute('lang', langFile);
       
-      console.log(`Changement de langue réussi: ${previousLang} -> ${lang}`);
+      if (!isInitial) {
+        console.log(`Changement de langue réussi: ${previousLang} -> ${lang}`);
+      }
     } catch (error) {
       console.error('Erreur détaillée lors du changement de langue:', {
         message: error.message,
         path: error.url || 'N/A',
         status: error.status || 'N/A'
       });
-      const savedLang = localStorage.getItem('language') || 'EN';
-      currentLang.textContent = savedLang;
+      if (!isInitial) {
+        const savedLang = localStorage.getItem('language') || 'EN';
+        currentLang.textContent = savedLang;
+      }
     } finally {
       isChangingLanguage = false;
     }
@@ -81,7 +85,5 @@ export const initLanguage = () => {
   const browserLang = navigator.language.startsWith('fr') ? 'FR' : 'EN';
   const savedLanguage = localStorage.getItem('language') || browserLang;
   
-  setLanguage(savedLanguage).catch(error => {
-    console.error('Erreur lors de l\'initialisation de la langue:', error);
-  });
+  setLanguage(savedLanguage, true);
 }; 
