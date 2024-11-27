@@ -1,0 +1,40 @@
+.notebook-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+
+  h2 {
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  p {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+}
+
+.jupyter-notebook-container {
+  background: var(--color-bg-primary);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin-top: 2rem;
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+
+  iframe {
+    width: 100%;
+    min-height: 800px;
+    border: none;
+    background: transparent;
+    transition: filter 0.3s ease;
+  }
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+  }
+}

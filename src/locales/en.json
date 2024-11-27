@@ -217,6 +217,10 @@
           "noTumor": "No Tumor: 98.0% accuracy",
           "pituitary": "Pituitary: 96.7% accuracy"
         }
+      },
+      "notebook": {
+        "title": "Complete Implementation Details",
+        "description": "Below is the complete implementation of the brain tumor detection model, including data processing, model architecture, training, and evaluation."
       }
     },
     "multispectral": {

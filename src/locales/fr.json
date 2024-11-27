@@ -200,6 +200,10 @@
             "noTumor": "Pas de Tumeur : 98.0% de précision",
             "pituitary": "Pituitaire : 96.7% de précision"
           }
+        },
+        "notebook": {
+          "title": "Détails Complets de l'Implémentation",
+          "description": "Voici l'implémentation complète du modèle de détection de tumeurs cérébrales, y compris le traitement des données, l'architecture du modèle, l'entraînement et l'évaluation."
         }
       },
       "multispectral": {

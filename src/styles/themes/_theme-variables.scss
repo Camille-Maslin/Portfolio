@@ -90,6 +90,11 @@
   --icon-bg: rgba(37, 99, 235, 0.08);
   --icon-border: rgba(37, 99, 235, 0.15);
   --icon-hover-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+  --color-code-bg: #1e1e1e;
+  --color-code-text: #d4d4d4;
+  --jupyter-bg: var(--color-bg-primary);
+  --jupyter-text: var(--color-text-primary);
+  --jupyter-border: var(--color-border);
 }
 
 html[data-theme="dark"] {
