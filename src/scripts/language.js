@@ -33,7 +33,8 @@ export const initLanguage = () => {
     isChangingLanguage = true;
     
     try {
-      const response = await fetch(`/Portfolio/src/locales/${lang}.json`);
+      const langFile = lang.toLowerCase();
+      const response = await fetch(`./src/locales/${langFile}.json`);
       if (!response.ok) throw new Error(`HTTP Error! status: ${response.status}`);
       
       const translations = await response.json();
@@ -42,11 +43,12 @@ export const initLanguage = () => {
       localStorage.setItem('language', lang);
       await updateTranslations(translations);
       currentLang.textContent = lang;
-      document.documentElement.setAttribute('lang', lang.toLowerCase());
+      document.documentElement.setAttribute('lang', langFile);
       
       console.log(`Changement de langue: ${previousLang} -> ${lang}`);
     } catch (error) {
       console.error('Erreur lors du changement de langue:', error);
+      isChangingLanguage = false;
     } finally {
       setTimeout(() => {
         isChangingLanguage = false;
