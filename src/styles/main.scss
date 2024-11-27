@@ -41,7 +41,6 @@
 @use 'utilities/accessibility.scss';
 @use 'utilities/layout.scss';
 @use 'utilities/helpers.scss';
-
 body {
     background-color: var(--color-bg-primary);
     color: var(--color-text-primary);
@@ -77,3 +76,4 @@ html {
   scroll-padding-top: var(--header-height);
   scroll-timeline: none;
 }
+

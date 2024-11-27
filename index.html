@@ -8,8 +8,10 @@
     
     <!-- Styles -->
     <link rel="shortcut icon" href="#">
-    <link rel="preload" href="./src/styles/main.css" as="style">
-    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="preload" href="./src/styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="./src/styles/main.css">
+    </noscript>
     <style>
         body {
             visibility: hidden;
@@ -36,6 +38,25 @@
     <!-- Icons -->
     <link rel="icon" type="image/png" href="dist/assets/favicon.png">
     <script src="https://kit.fontawesome.com/0ac83e1618.js" crossorigin="anonymous" defer></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+
+    <script>
+        if ("fonts" in document) {
+            Promise.all([
+                document.fonts.load("300 1em Poppins"),
+                document.fonts.load("400 1em Poppins"),
+                document.fonts.load("500 1em Poppins"),
+                document.fonts.load("600 1em Poppins")
+            ]).then(() => {
+                document.documentElement.classList.add("fonts-loaded");
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -595,7 +616,7 @@
                             <div class="contact-card">
                                 <i class="fas fa-envelope contact-icon"></i>
                                 <h3 data-i18n="contact.email">Email</h3>
-                                <a href="mailto:camillemaslin@gmail.com">camillemaslin@gmail.com</a>
+                                <a href="mailto:camillemaslin@gmail.com" target="_blank">camillemaslin@gmail.com</a>
                             </div>
 
                             <div class="contact-card">
