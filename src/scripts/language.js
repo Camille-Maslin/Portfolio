@@ -1,66 +1,65 @@
 export const initLanguage = () => {
   const languageSelector = document.querySelector('.language-selector');
-  const currentLang = document.querySelector('.current-lang');
+  let currentLang = document.querySelector('.current-lang');
+  let isChangingLanguage = false;
   
   if (!languageSelector || !currentLang) {
-    console.error('Éléments du sélecteur de langue non trouvés', {
-      languageSelector: !!languageSelector,
-      currentLang: !!currentLang
-    });
+    console.error('Éléments du sélecteur de langue non trouvés');
     return;
   }
 
-  const setLanguage = async (lang) => {
-    try {
-      const path = `./src/locales/${lang}.json`;
-      console.log('Chemin complet:', new URL(path, window.location.href).href);
+  const updateTranslations = async (translations) => {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const keys = element.getAttribute('data-i18n').split('.');
+      let value = translations;
       
-      const response = await fetch(path);
-      if (!response.ok) {
-        throw new Error(`HTTP Error! status: ${response.status}, path: ${path}`);
+      for (const key of keys) {
+        value = value[key];
+        if (!value) break;
       }
       
-      const translations = await response.json();
-      document.documentElement.setAttribute('lang', lang);
-      currentLang.textContent = lang.toUpperCase();
-      
-      document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        const translation = key.split('.').reduce((obj, i) => {
-          if (obj === undefined) return undefined;
-          return obj[i];
-        }, translations);
-        
-        if (translation) {
-          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-            element.placeholder = translation;
-          } else {
-            element.textContent = translation;
-          }
+      if (value) {
+        if (element.tagName === 'INPUT' && element.type === 'placeholder') {
+          element.placeholder = value;
         } else {
-          console.warn(`Traduction manquante pour la clé: ${key}`, {
-            lang,
-            key,
-            element: element.outerHTML
-          });
+          element.textContent = value;
         }
-      });
+      }
+    });
+  };
 
+  const setLanguage = async (lang) => {
+    if (isChangingLanguage || currentLang.textContent === lang) return;
+    isChangingLanguage = true;
+    
+    try {
+      const response = await fetch(`/Portfolio/src/locales/${lang}.json`);
+      if (!response.ok) throw new Error(`HTTP Error! status: ${response.status}`);
+      
+      const translations = await response.json();
+      const previousLang = currentLang.textContent;
+      
       localStorage.setItem('language', lang);
-      console.log(`Langue changée en: ${lang}`);
+      await updateTranslations(translations);
+      currentLang.textContent = lang;
+      document.documentElement.setAttribute('lang', lang.toLowerCase());
+      
+      console.log(`Changement de langue: ${previousLang} -> ${lang}`);
     } catch (error) {
       console.error('Erreur lors du changement de langue:', error);
+    } finally {
+      setTimeout(() => {
+        isChangingLanguage = false;
+      }, 500);
     }
   };
 
   languageSelector.addEventListener('click', () => {
-    const currentLanguage = document.documentElement.getAttribute('lang') || 'en';
-    const newLanguage = currentLanguage === 'en' ? 'fr' : 'en';
-    console.log(`Changement de langue: ${currentLanguage} -> ${newLanguage}`);
+    const newLanguage = currentLang.textContent === 'EN' ? 'FR' : 'EN';
     setLanguage(newLanguage);
   });
 
   const savedLanguage = localStorage.getItem('language') || 
-    (navigator.language.startsWith('fr') ? 'fr' : 'en');
+    (navigator.language.startsWith('fr') ? 'FR' : 'EN');
   setLanguage(savedLanguage);
 }; 

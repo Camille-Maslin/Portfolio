@@ -1,13 +1,13 @@
-// Themes
-@use 'themes/theme-variables.scss';
-@use 'themes/light.scss';
-@use 'themes/dark.scss';
-
 // Base
 @use 'base/variables.scss';
 @use 'base/mixins.scss';
 @use 'base/reset.scss';
 @use 'base/typography.scss';
+
+// Themes
+@use 'themes/theme-variables.scss';
+@use 'themes/light.scss';
+@use 'themes/dark.scss';
 
 // Layout
 @use 'layout/grid.scss';
@@ -32,7 +32,6 @@
 @use 'components/background.scss';
 @use 'components/titles.scss';
 @use 'components/icons.scss';
-@use 'components/skills-enhanced';
 
 // Animations
 @use 'animations/transitions.scss';
@@ -76,4 +75,5 @@ body {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
+  scroll-timeline: none;
 }

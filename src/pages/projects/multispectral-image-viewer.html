@@ -3,27 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multispectral Image Viewer - Advanced Image Processing Application">
     <title>Multispectral Image Viewer - Project Details</title>
-    <link rel="stylesheet" href="../../styles/project-style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    
+    <link rel="shortcut icon" href="#">
+    <link rel="preload" href="../../styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    </noscript>
 </head>
 <body>
-    <div class="nav-button-container">
-        <a href="/" class="nav-button">
-            <i class="fas fa-arrow-left"></i>
-            Back to Projects
-        </a>
-    </div>
+    <header>
+        <nav class="navbar">
+            <a href="../../../index.html#projects" class="nav-back">
+                <i class="fas fa-arrow-left"></i>
+                <span data-i18n="projects.back">Back to Projects</span>
+            </a>
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="language-selector" aria-label="Change language">
+                    <span class="current-lang">EN</span>
+                    <i class="fas fa-globe"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
 
     <div class="project-container">
-        <header class="project-header">
-            <h1 class="project-title">Multispectral Image Viewer</h1>
-            <p class="project-subtitle">A Python application for visualizing and manipulating multispectral images with various simulation methods</p>
+        <header class="project-header text-center">
+            <h1 class="main-title" data-i18n="projects.multispectral.title">Multispectral Image Viewer</h1>
+            <p class="main-subtitle" data-i18n="projects.multispectral.subtitle">A Python application for visualizing and manipulating multispectral images with various simulation methods</p>
         </header>
 
         <div class="project-image-container">
-            <img src="../assets/projects/multispectral-image-viewer/banner.png" alt="Multispectral Image Viewer Banner" class="project-image">
+            <img src="../../assets/projects/multispectral-image-viewer/banner.png" alt="Multispectral Image Viewer Banner" class="project-image">
         </div>
 
         <div class="project-content">
@@ -71,8 +90,8 @@
                     <p>Each band in a multispectral image represents the intensity of light at a specific wavelength. For example, a single band might show how strongly a scene reflects light at 550nm (green light). These bands can be combined in various ways to reveal different aspects of the captured scene.</p>
                 </div>
                 <div class="concept-image">
-                    <a href="../assets/projects/multispectral-image-viewer/Band.png" data-lightbox="concepts" data-title="Example of a single band from a multispectral image">
-                        <img src="../assets/projects/multispectral-image-viewer/Band.png" alt="Band Example">
+                    <a href="../../assets/projects/multispectral-image-viewer/Band.png" data-lightbox="concepts" data-title="Example of a single band from a multispectral image">
+                        <img src="../../assets/projects/multispectral-image-viewer/Band.png" alt="Band Example">
                     </a>
                     <p class="image-caption">Example of a single spectral band (grayscale representation)</p>
                 </div>
@@ -93,8 +112,8 @@
                     </ul>
                 </div>
                 <div class="interface-preview">
-                    <a href="../assets/projects/multispectral-image-viewer/Simulation-Window.png" data-lightbox="interface" data-title="SimulFCImage Application Interface">
-                        <img src="../assets/projects/multispectral-image-viewer/Simulation-Window.png" alt="Application Interface">
+                    <a href="../../assets/projects/multispectral-image-viewer/Simulation-Window.png" data-lightbox="interface" data-title="SimulFCImage Application Interface">
+                        <img src="../../assets/projects/multispectral-image-viewer/Simulation-Window.png" alt="Application Interface">
                     </a>
                     <p class="image-caption">SimulFCImage main interface with band navigation and simulation options</p>
                 </div>
@@ -108,23 +127,23 @@
                     <h3>True Color Generation</h3>
                     <div class="method-input">
                         <h4>Input Bands</h4>
-                        <a href="../assets/projects/multispectral-image-viewer/Band.png" data-lightbox="simulation-methods" data-title="True Color Generation Input">
-                            <img src="../assets/projects/multispectral-image-viewer/Band.png" alt="Input Bands" class="input-image">
+                        <a href="../../assets/projects/multispectral-image-viewer/Band.png" data-lightbox="simulation-methods" data-title="True Color Generation Input">
+                            <img src="../../assets/projects/multispectral-image-viewer/Band.png" alt="Input Bands" class="input-image">
                         </a>
                         <p class="step-caption">203 Input Bands</p>
                     </div>
                     <div class="method-comparison-dual">
                         <div class="method-step">
                             <h4>Generated Result</h4>
-                            <a href="../assets/projects/multispectral-image-viewer/HumanView.png" data-lightbox="simulation-methods" data-title="True Color Generation Result">
-                                <img src="../assets/projects/multispectral-image-viewer/HumanView.png" alt="Generated Result" class="comparison-image">
+                            <a href="../../assets/projects/multispectral-image-viewer/HumanView.png" data-lightbox="simulation-methods" data-title="True Color Generation Result">
+                                <img src="../../assets/projects/multispectral-image-viewer/HumanView.png" alt="Generated Result" class="comparison-image">
                             </a>
                             <p class="step-caption">Our Method</p>
                         </div>
                         <div class="method-step">
                             <h4>Original RGB</h4>
-                            <a href="../assets/projects/multispectral-image-viewer/BaseRGB.png" data-lightbox="simulation-methods" data-title="True Color Generation Reference">
-                                <img src="../assets/projects/multispectral-image-viewer/BaseRGB.png" alt="Original RGB" class="comparison-image">
+                            <a href="../../assets/projects/multispectral-image-viewer/BaseRGB.png" data-lightbox="simulation-methods" data-title="True Color Generation Reference">
+                                <img src="../../assets/projects/multispectral-image-viewer/BaseRGB.png" alt="Original RGB" class="comparison-image">
                             </a>
                             <p class="step-caption">Reference Image</p>
                         </div>
@@ -134,16 +153,16 @@
 
                 <div class="method-card">
                     <h3>False Color Generation</h3>
-                    <a href="../assets/projects/multispectral-image-viewer/BandChoice.png" data-lightbox="simulation-methods" data-title="False Color Generation Method">
-                        <img src="../assets/projects/multispectral-image-viewer/BandChoice.png" alt="False Color Example">
+                    <a href="../../assets/projects/multispectral-image-viewer/BandChoice.png" data-lightbox="simulation-methods" data-title="False Color Generation Method">
+                        <img src="../../assets/projects/multispectral-image-viewer/BandChoice.png" alt="False Color Example">
                     </a>
                     <p>Custom RGB band selection for specialized visualization where the user can choose the bands to be displayed, in this case, <b>the red is assigned to the 167th band</b>, <b>the green to the 32th band</b> and <b>the blue to the 86th band</b></p>
                 </div>
 
                 <div class="method-card">
                     <h3>Bee Vision Simulation</h3>
-                    <a href="../assets/projects/multispectral-image-viewer/BeeColor.png" data-lightbox="simulation-methods" data-title="Bee Vision Simulation">
-                        <img src="../assets/projects/multispectral-image-viewer/BeeColor.png" alt="Bee Vision Example">
+                    <a href="../../assets/projects/multispectral-image-viewer/BeeColor.png" data-lightbox="simulation-methods" data-title="Bee Vision Simulation">
+                        <img src="../../assets/projects/multispectral-image-viewer/BeeColor.png" alt="Bee Vision Example">
                     </a>
                     <p>Simulates how bees perceive multispectral images</p>
                 </div>
@@ -172,5 +191,20 @@ S5_C1_LaBabaTcheam
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script type="module">
+        import { initTheme } from '../../scripts/theme.js';
+        import { initLanguage } from '../../scripts/language.js';
+        import { initBackgroundAnimation } from '../../scripts/modules/backgroundAnimation.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            initLanguage();
+            initBackgroundAnimation();
+        });
+
+        window.addEventListener('load', () => {
+            document.body.style.visibility = 'visible';
+        });
+    </script>
 </body>
 </html>

@@ -3,95 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brain Tumor Detection AI Project - Deep Learning Application">
     <title>Brain Tumor Detection AI - Project Details</title>
-    <link rel="stylesheet" href="../../styles/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    
+    <link rel="shortcut icon" href="#">
+    <link rel="preload" href="../../styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    </noscript>
+    
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+    
+    <script type="module">
+        import { initTheme } from '../../scripts/theme.js';
+        import { initLanguage } from '../../scripts/language.js';
+        import { initBackgroundAnimation } from '../../scripts/modules/backgroundAnimation.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            initLanguage();
+            initBackgroundAnimation();
+        });
+
+        // Ajouter la gestion du FOUC
+        window.addEventListener('load', () => {
+            document.body.style.visibility = 'visible';
+        });
+    </script>
 </head>
 <body>
-    <div class="nav-button-container">
-        <a href="/" class="nav-button">
-            <i class="fas fa-arrow-left"></i>
-            Back to Projects
-        </a>
-    </div>
-
-    <div class="project-container">
-        <header class="project-header">
-            <h1 class="project-title">Brain Tumor Detection AI</h1>
-            <p class="project-subtitle">A deep learning approach achieving 94% accuracy in brain tumor classification using CNN</p>
-        </header>
-
-        <div class="project-image-container">
-            <img src="../../assets/projects/brain-tumor-detection/brain-tumor-banner.png" alt="Brain Tumor Detection Project Banner" class="project-image">
-        </div>
-
-        <div class="project-content">
-            <div class="project-description">
-                <h2>Project Overview</h2>
-                <p>Developed a Convolutional Neural Network (CNN) model for automated classification of brain tumor MRI scans into four distinct categories: glioma, meningioma, no tumor, and pituitary tumor. This project demonstrates the practical application of deep learning in medical diagnosis support.</p>
-                
-                <h2>Challenge</h2>
-                <p>The main challenge was to create a reliable classification system that could accurately distinguish between different types of brain tumors while maintaining high precision across all categories. This required careful model architecture design and extensive training data optimization.</p>
+    <header>
+        <nav class="navbar">
+            <a href="../../../index.html#projects" class="nav-back">
+                <i class="fas fa-arrow-left"></i>
+                <span data-i18n="projects.back" data-i18n-key="projects.back">Back to Projects</span>
+            </a>
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="language-selector" aria-label="Change language">
+                    <span class="current-lang">EN</span>
+                    <i class="fas fa-globe"></i>
+                </button>
             </div>
+        </nav>
+    </header>
 
-            <div class="project-details">
-                <div class="technical-details-section">
-                    <h2>Technical Details</h2>
-                    
-                    <div class="tech-stack-grid">
-                        <span>Python</span>
-                        <span>CNN</span>
-                        <span>TensorFlow</span>
-                        <span>Keras</span>
-                        <span>Deep Learning</span>
-                        <span>OpenCV</span>
+    <main>
+        <div class="content-overlay">
+
+            <div class="project-container">
+                <div class="project-header text-center">
+                    <h1 class="main-title" data-i18n="projects.brainTumor.title">Brain Tumor Detection AI</h1>
+                    <p class="main-subtitle" data-i18n="projects.brainTumor.subtitle">A deep learning approach achieving 94% accuracy in brain tumor classification using CNN</p>
+                </div>
+
+                <div class="project-image-container">
+                    <img src="../../assets/projects/brain-tumor-detection/brain-tumor-banner.png" alt="Brain Tumor Detection Project Banner" class="project-image">
+                </div>
+
+                <div class="project-content">
+                    <div class="project-description">
+                        <h2 data-i18n="projects.brainTumor.overview.title">Project Overview</h2>
+                        <p data-i18n="projects.brainTumor.overview.description">Developed a Convolutional Neural Network (CNN) model for automated classification of brain tumor MRI scans into four distinct categories: glioma, meningioma, no tumor, and pituitary tumor. This project demonstrates the practical application of deep learning in medical diagnosis support.</p>
+                        
+                        <h2 data-i18n="projects.brainTumor.challenge.title">Challenge</h2>
+                        <p data-i18n="projects.brainTumor.challenge.description">The main challenge was to create a reliable classification system that could accurately distinguish between different types of brain tumors while maintaining high precision across all categories. This required careful model architecture design and extensive training data optimization.</p>
                     </div>
-                    
-                    <h3>Key Features</h3>
-                    <ul class="key-features-list">
-                        <li>94% overall classification accuracy</li>
-                        <li>Multi-class tumor classification</li>
-                        <li>Custom CNN architecture</li>
-                        <li>Optimized for 256x256 MRI scans</li>
-                    </ul>
-                    
-                    <a href="#" class="github-button">
-                        <i class="fab fa-github"></i>
-                        View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
 
-        <div class="results-section">
-            <h2>Model Performance</h2>
-            <div class="performance-grid">
-                <div class="performance-card">
-                    <a href="../../assets/projects/brain-tumor-detection/confusion-matrix.png" data-lightbox="project-gallery" data-title="Confusion Matrix">
-                        <img src="../../assets/projects/brain-tumor-detection/confusion-matrix.png" alt="Confusion Matrix" class="performance-image">
-                    </a>
-                    <h3>Confusion Matrix</h3>
-                    <p>Detailed classification results across tumor types</p>
+                    <div class="project-details">
+                        <div class="technical-details-section">
+                            <h2 data-i18n="projects.brainTumor.technical.title">Technical Details</h2>
+                            
+                            <div class="tech-stack-grid">
+                                <span data-i18n="projects.brainTumor.technical.features.python">Python</span>
+                                <span data-i18n="projects.brainTumor.technical.features.cnn">CNN</span>
+                                <span data-i18n="projects.brainTumor.technical.features.tensorflow">TensorFlow</span>
+                                <span data-i18n="projects.brainTumor.technical.features.keras">Keras</span>
+                                <span data-i18n="projects.brainTumor.technical.features.deepLearning">Deep Learning</span>
+                                <span data-i18n="projects.brainTumor.technical.features.opencv">OpenCV</span>
+                            </div>
+                            
+                            <h3 data-i18n="projects.brainTumor.technical.keyFeatures">Key Features</h3>
+                            <ul class="key-features-list">
+                                <li data-i18n="projects.brainTumor.technical.features.accuracy">94% overall classification accuracy</li>
+                                <li data-i18n="projects.brainTumor.technical.features.classification">Multi-class tumor classification</li>
+                                <li data-i18n="projects.brainTumor.technical.features.architecture">Custom CNN architecture</li>
+                                <li data-i18n="projects.brainTumor.technical.features.optimization">Optimized for 256x256 MRI scans</li>
+                            </ul>
+                            
+                            <div class="github-button-wrapper">
+                                <a href="https://github.com/..." class="github-button">
+                                    <i class="fab fa-github"></i>
+                                    <span data-i18n="projects.brainTumor.viewGithub">View on GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="performance-metrics">
-                    <h3>Classification Accuracy by Type</h3>
-                    <ul>
-                        <li>Glioma: 93.6% accuracy</li>
-                        <li>Meningioma: 87.7% accuracy</li>
-                        <li>No Tumor: 98.0% accuracy</li>
-                        <li>Pituitary: 96.7% accuracy</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <div class="technical-implementation">
-            <h2>Technical Implementation</h2>
-            
-            <div class="model-architecture">
-                <h3>Model Architecture</h3>
-                <pre class="code-block">
+                <div class="results-section">
+                    <h2 data-i18n="projects.brainTumor.performance.title">Model Performance</h2>
+                    <div class="performance-grid">
+                        <div class="performance-card">
+                            <a href="../../assets/projects/brain-tumor-detection/confusion-matrix.png" data-lightbox="project-gallery" data-title="Confusion Matrix">
+                                <img src="../../assets/projects/brain-tumor-detection/confusion-matrix.png" alt="Confusion Matrix" class="performance-image">
+                            </a>
+                            <h3 data-i18n="projects.brainTumor.performance.matrix">Confusion Matrix</h3>
+                            <p data-i18n="projects.brainTumor.performance.matrixDesc">Detailed classification results across tumor types</p>
+                        </div>
+                        <div class="performance-metrics">
+                            <h3 data-i18n="projects.brainTumor.performance.accuracyByType">Classification Accuracy by Type</h3>
+                            <ul>
+                                <li data-i18n="projects.brainTumor.performance.types.glioma">Glioma: 93.6% accuracy</li>
+                                <li data-i18n="projects.brainTumor.performance.types.meningioma">Meningioma: 87.7% accuracy</li>
+                                <li data-i18n="projects.brainTumor.performance.types.noTumor">No Tumor: 98.0% accuracy</li>
+                                <li data-i18n="projects.brainTumor.performance.types.pituitary">Pituitary: 96.7% accuracy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="technical-implementation">
+                    <h2 data-i18n="projects.brainTumor.technical.implementation">Technical Implementation</h2>
+                    
+                    <div class="model-architecture">
+                        <h3 data-i18n="projects.brainTumor.technical.architecture">Model Architecture</h3>
+                        <pre class="code-block">
 Model: Sequential
 _________________________________________________________________
 Layer (type)                Output Shape              Param #   
@@ -102,49 +149,58 @@ max_pooling2d (MaxPooling)  (None, 128, 128, 16)     0
 ...
 dense_1 (Dense)            (None, 4)                516       
 =================================================================
-                </pre>
-            </div>
-            
-            <div class="analysis-grid">
-                <div class="analysis-card">
-                    <h3>Training Progress</h3>
-                    <a href="../../assets/projects/brain-tumor-detection/training-results.png" data-lightbox="project-gallery" data-title="Training Progress: Model accuracy and loss evolution during training">
-                        <img src="../../assets/projects/brain-tumor-detection/training-results.png" alt="Training Progress Graphs">
-                    </a>
-                    <p>Model accuracy and loss evolution during training</p>
-                </div>
-                
-                <div class="analysis-card">
-                    <h3>Example Predictions</h3>
-                    <a href="../../assets/projects/brain-tumor-detection/predictions.png" data-lightbox="project-gallery" data-title="Example Predictions: Sample predictions across different tumor types">
-                        <img src="../../assets/projects/brain-tumor-detection/predictions.png" alt="Example MRI Predictions">
-                    </a>
-                    <p>Sample predictions across different tumor types</p>
-                </div>
-                
-                <div class="analysis-card">
-                    <h3>Confidence Analysis</h3>
-                    <a href="../../assets/projects/brain-tumor-detection/correct-predictions-confidence.png" data-lightbox="project-gallery" data-title="Confidence Analysis: Distribution of model confidence for correct predictions">
-                        <img src="../../assets/projects/brain-tumor-detection/correct-predictions-confidence.png" alt="Confidence Distribution">
-                    </a>
-                    <p>Distribution of model confidence for correct predictions</p>
+                        </pre>
+                    </div>
+                    
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <h3 data-i18n="projects.brainTumor.technical.training">Training Progress</h3>
+                            <a href="../../assets/projects/brain-tumor-detection/training-results.png" data-lightbox="project-gallery" data-title="Training Progress: Model accuracy and loss evolution during training">
+                                <img src="../../assets/projects/brain-tumor-detection/training-results.png" alt="Training Progress Graphs">
+                            </a>
+                            <p data-i18n="projects.brainTumor.technical.trainingDesc">Model accuracy and loss evolution during training</p>
+                        </div>
+                        
+                        <div class="analysis-card">
+                            <h3 data-i18n="projects.brainTumor.technical.predictions">Example Predictions</h3>
+                            <a href="../../assets/projects/brain-tumor-detection/predictions.png" data-lightbox="project-gallery" data-title="Example Predictions: Sample predictions across different tumor types">
+                                <img src="../../assets/projects/brain-tumor-detection/predictions.png" alt="Example MRI Predictions">
+                            </a>
+                            <p data-i18n="projects.brainTumor.technical.predictionsDesc">Sample predictions across different tumor types</p>
+                        </div>
+                        
+                        <div class="analysis-card">
+                            <h3 data-i18n="projects.brainTumor.technical.confidence">Confidence Analysis</h3>
+                            <a href="../../assets/projects/brain-tumor-detection/correct-predictions-confidence.png" data-lightbox="project-gallery" data-title="Confidence Analysis: Distribution of model confidence for correct predictions">
+                                <img src="../../assets/projects/brain-tumor-detection/correct-predictions-confidence.png" alt="Confidence Distribution">
+                            </a>
+                            <p data-i18n="projects.brainTumor.technical.confidenceDesc">Distribution of model confidence for correct predictions</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+
+    <canvas id="background-animation" class="background-canvas" aria-hidden="true"></canvas>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
     <script>
-        // Configuration de Lightbox
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true,
-            'albumLabel': "Image %1 of %2",
-            'fadeDuration': 300,
-            'imageFadeDuration': 300,
-            'positionFromTop': 50
+        // Attendre que le DOM et les scripts soient chargés
+        document.addEventListener('DOMContentLoaded', function() {
+            // S'assurer que lightbox est défini
+            if (typeof lightbox !== 'undefined') {
+                lightbox.option({
+                    'resizeDuration': 200,
+                    'wrapAround': true,
+                    'albumLabel': "Image %1 of %2",
+                    'fadeDuration': 300,
+                    'imageFadeDuration': 300,
+                    'positionFromTop': 50
+                });
+            }
         });
     </script>
 </body>

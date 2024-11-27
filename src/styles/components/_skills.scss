@@ -150,141 +150,170 @@
 }
 
 .skills-section {
-  padding: 6rem 0;
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
   
-  .section-header {
-    text-align: center;
-    margin-bottom: 6rem;
-    
-    .section-subtitle {
-      color: var(--color-accent);
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
+  @media (min-width: 768px) {
+    padding: 4rem 2rem;
   }
+}
 
-  .skills-categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    
-    @include responsive(tablet) {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    
-    @include responsive(mobile) {
-      padding: 0;
-      gap: 1rem;
-    }
+.skills-categories {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
   }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
 
-  .skill-category {
-    background: var(--color-card-bg);
-    border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    transition: transform 0.3s ease;
+.skill-category {
+  background: var(--color-bg-secondary);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      var(--category-gradient-start),
+      var(--category-gradient-end)
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--box-shadow-hover);
+    border-color: transparent;
     
-    &:hover {
-      transform: translateY(-5px);
+    &::before {
+      opacity: 0.05;
     }
-
+    
     .category-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2.5rem;
-      
       i {
-        font-size: 2rem;
-        color: var(--color-accent);
+        transform: scale(1.15) rotate(8deg);
+        color: var(--category-color);
       }
       
       h3 {
-        font-size: 1.5rem;
-        color: var(--color-text-primary);
-        font-weight: 600;
+        color: var(--category-color);
       }
     }
   }
+}
 
-  .skill-bars {
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  
+  i {
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: center;
+    will-change: transform, color;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: color 0.4s ease;
+  }
+}
+
+.skill-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  
+  @include responsive(mobile) {
+    gap: 1rem;
+  }
+}
+
+.skill-bar {
+  .skill-info {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
     
-    @include responsive(mobile) {
-      gap: 1rem;
+    .skill-name {
+      color: var(--color-text-primary);
+      font-weight: 500;
+    }
+    
+    .skill-percentage {
+      color: var(--color-text-secondary);
     }
   }
 
-  .skill-bar {
-    .skill-info {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.5rem;
-      
-      .skill-name {
-        color: var(--color-text-primary);
-        font-weight: 500;
-      }
-      
-      .skill-percentage {
-        color: var(--color-text-secondary);
-      }
-    }
-
-    .progress {
-      height: 10px;
-      background: var(--color-bg-secondary);
+  .progress {
+    height: 10px;
+    background: var(--color-bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    
+    .progress-bar {
+      height: 100%;
       border-radius: 8px;
-      overflow: hidden;
+      transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       
-      .progress-bar {
-        height: 100%;
-        border-radius: 8px;
-        transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-        position: relative;
-        
-        &::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.1) 0%,
-            rgba(255, 255, 255, 0.2) 50%,
-            rgba(255, 255, 255, 0.1) 100%
-          );
-          animation: shimmer 2s infinite;
-        }
-        
-        &[data-level="advanced"] {
-          background: linear-gradient(90deg, #4338ca 0%, #6366f1 100%);
-        }
-        
-        &[data-level="intermediate"] {
-          background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%);
-        }
-        
-        &[data-level="basic"] {
-          background: linear-gradient(90deg, #0d9488 0%, #2dd4bf 100%);
-        }
-        
-        &[data-level="b2"] {
-          background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
-        }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.1) 100%
+        );
+        animation: shimmer 2s infinite;
+      }
+      
+      &[data-level="advanced"] {
+        background: linear-gradient(90deg, #4338ca 0%, #6366f1 100%);
+      }
+      
+      &[data-level="intermediate"] {
+        background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%);
+      }
+      
+      &[data-level="basic"] {
+        background: linear-gradient(90deg, #0d9488 0%, #2dd4bf 100%);
+      }
+      
+      &[data-level="b2"] {
+        background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
       }
     }
   }
@@ -388,33 +417,42 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 2rem;
   font-size: 0.85rem;
   font-weight: 500;
   white-space: nowrap;
-  min-width: 80px;
-  height: 24px;
+  min-width: 90px;
+  height: 26px;
+  transition: all 0.3s ease;
   
   &.advanced {
-    background-color: rgba(67, 56, 202, 0.1);
-    color: #4338ca;
+    background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(67, 56, 202, 0.25);
   }
   
   &.intermediate {
-    background-color: rgba(2, 132, 199, 0.1);
-    color: #0284c7;
+    background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
   }
   
   &.basic {
-    background-color: rgba(13, 148, 136, 0.1);
-    color: #0d9488;
+    background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.25);
   }
   
   &.b2 {
-    background-color: rgba(59, 130, 246, 0.1);
-    color: #3b82f6;
-    border: 1px solid rgba(59, 130, 246, 0.3);
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--color-accent-rgb), 0.3);
   }
 }
 
@@ -611,5 +649,92 @@
   }
   100% {
     transform: scale(1) rotate(0);
+  }
+}
+
+.progress {
+  .progress-bar {
+    &[data-level="advanced"] {
+      background: linear-gradient(90deg, #4338ca 0%, #6366f1 100%);
+    }
+    
+    &[data-level="intermediate"] {
+      background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%);
+    }
+    
+    &[data-level="basic"] {
+      background: linear-gradient(90deg, #0d9488 0%, #2dd4bf 100%);
+    }
+    
+    &[data-level="b2"] {
+      background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+    }
+  }
+}
+
+// Couleurs spécifiques pour chaque catégorie
+.skill-category[data-category="database"] {
+  --category-color: #0ea5e9;
+  --category-gradient-start: #0ea5e9;
+  --category-gradient-end: #38bdf8;
+}
+
+.skill-category[data-category="development"] {
+  --category-color: #8b5cf6;
+  --category-gradient-start: #8b5cf6;
+  --category-gradient-end: #a78bfa;
+}
+
+.skill-category[data-category="tools"] {
+  --category-color: #10b981;
+  --category-gradient-start: #10b981;
+  --category-gradient-end: #34d399;
+}
+
+[data-theme="dark"] {
+  .skill-level {
+    &.advanced {
+      background: var(--color-level-advanced-bg);
+      color: var(--color-level-advanced-text);
+      border: 1px solid rgba(79, 70, 229, 0.3);
+    }
+    
+    &.intermediate {
+      background: var(--color-level-intermediate-bg);
+      color: var(--color-level-intermediate-text);
+      border: 1px solid rgba(14, 165, 233, 0.3);
+    }
+    
+    &.basic {
+      background: var(--color-level-basic-bg);
+      color: var(--color-level-basic-text);
+      border: 1px solid rgba(20, 184, 166, 0.3);
+    }
+    
+    &.b2 {
+      background: var(--color-level-b2-bg);
+      color: var(--color-level-b2-text);
+      border: 1px solid rgba(96, 165, 250, 0.3);
+    }
+  }
+
+  .progress-bar {
+    background: rgba(255, 255, 255, 0.1);
+    
+    [data-level="advanced"] {
+      background: linear-gradient(90deg, var(--color-level-advanced-text), var(--color-level-advanced-bg));
+    }
+    
+    [data-level="intermediate"] {
+      background: linear-gradient(90deg, var(--color-level-intermediate-text), var(--color-level-intermediate-bg));
+    }
+    
+    [data-level="basic"] {
+      background: linear-gradient(90deg, var(--color-level-basic-text), var(--color-level-basic-bg));
+    }
+    
+    [data-level="b2"] {
+      background: linear-gradient(90deg, var(--color-level-b2-text), var(--color-level-b2-bg));
+    }
   }
 }

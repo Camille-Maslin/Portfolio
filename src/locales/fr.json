@@ -5,42 +5,18 @@
       "projects": "Projets",
       "contact": "Contact"
     },
-    "hero": {
-      "greeting": "Bonjour, je suis",
-      "role": "Étudiant en Informatique"
-    },
     "profile": {
       "greeting": "Bonjour, je suis",
       "title": "Étudiant en Informatique",
       "subtitle": "Spécialisé en IA & Science des Données",
-      "contact": "Me Contacter",
-      "resume": "Télécharger CV"
+      "contact": "Me Contacter",  
+      "resume": "Voir Mon CV"
     },
     "about": {
-      "explore": "Découvrez",
+      "explore": "DÉCOUVRIR",
       "title": "Mon Parcours",
-      "bio": "Je suis étudiante en 3ème année d'informatique, passionnée par la manipulation des données et particulièrement par les avancées en intelligence artificielle. Je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences en analyse et traitement des données. Mon objectif à court terme est d'intégrer une école me permettant d'approfondir mes connaissances en développement et optimisation d'IA. Mon objectif à long terme est de travailler dans la recherche ou le développement en IA. Je suis prête à relever de nouveaux défis et à contribuer au succès des projets.",
-      "shortTerm": "Objectif à Court Terme",
-      "shortTermDesc": "Intégrer une école me permettant d'approfondir mes connaissances en développement et optimisation d'IA.",
-      "longTerm": "Objectif à Long Terme",
-      "longTermDesc": "Travailler dans la recherche ou le développement en IA.",
-      "experience": {
-        "database": {
-          "title": "Analyse de Base de Données",
-          "description": "Optimisation des performances et analyse approfondie des bases de données municipales."
-        },
-        "neural": {
-          "title": "Évaluation de Réseaux Neuronaux",
-          "description": "Recherche sur l'optimisation des réseaux neuronaux impulsionnels."
-        }
-      },
-      "education": {
-        "title": "BUT Informatique",
-        "description": "Formation approfondie en Intelligence Artificielle et Science des Données."
-      },
-      "goals": "Mes Objectifs",
-      "timeline": "Mon Parcours",
       "subtitle": "À PROPOS DE MOI",
+      "bio": "Je suis étudiante en 3ème année d'informatique, passionnée par la manipulation des données et particulièrement par les avancées en intelligence artificielle. Je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences en analyse et traitement des données. Je suis prête à relever de nouveaux défis et à contribuer au succès des projets.",
       "objectives": {
         "title": "Mes Objectifs",
         "shortTerm": {
@@ -90,6 +66,7 @@
     "skills": {
       "explore": "Découvrez",
       "title": "Mes Compétences",
+      "title2": "Mes Compétences Générales",
       "database": {
         "skills": {
           "sql": "SQL",
@@ -128,7 +105,7 @@
       },
       "categories": {
         "database": {
-          "title": "Base de Données",
+          "title": "Base de données",
           "skills": {
             "sql": "SQL",
             "postgresql": "PostgreSQL",
@@ -154,23 +131,27 @@
             "git": "Git",
             "projectManagement": "Gestion de Projet",
             "promptEngineering": "Ingénierie de Prompts",
-            "english": "Anglais"
+            "english": "Anglais",
+            "tensorflow": "TensorFlow",
+            "keras": "Keras",
+            "opencv": "OpenCV",
+            "deepLearning": "Apprentissage Profond",
+            "cnn": "Réseau Neuronal Convolutif",
+            "multispectralImage": "Image Multispectrale",
+            "imageProcessing": "Traitement d'Image",
+            "guiDevelopment": "Développement d'Interface",
+            "research": "Recherche",
+            "html5": "HTML5",
+            "css3": "CSS3",
+            "javascript": "JavaScript",
+            "responsiveDesign": "Design Adaptatif"
           }
         }
       }
     },
-    "generalSkills": {
-      "title": "Compétences Générales",
-      "skills": {
-        "communication": "Communication",
-        "autonomy": "Autonomie",
-        "adaptability": "Adaptabilité",
-        "collaboration": "Collaboration",
-        "learning": "Apprentissage Continu"
-      }
-    },
     "projects": {
-      "title": "Projets",
+      "title": "Mes Projets",
+      "discover": "Découvrez",
       "back": "Retour aux projets",
       "overview": "Vue d'ensemble",
       "technologies": "Technologies utilisées",
@@ -180,25 +161,116 @@
       "viewGithub": "Voir sur GitHub",
       "brainTumor": {
         "title": "IA de Détection de Tumeurs Cérébrales",
-        "description": "Développement d'un Réseau de Neurones Convolutif (CNN) pour la détection automatisée de tumeurs cérébrales à partir d'IRM, atteignant une précision de 93% dans la classification des tumeurs.",
-        "tags": {
-          "python": "Python",
-          "cnn": "CNN",
-          "tensorflow": "TensorFlow",
-          "keras": "Keras",
-          "deepLearning": "Deep Learning",
-          "opencv": "OpenCV"
+        "subtitle": "Une approche d'apprentissage profond atteignant 94% de précision dans la classification des tumeurs cérébrales utilisant les CNN",
+        "overview": {
+          "title": "Vue d'ensemble",
+          "description": "Développement d'un modèle de Réseau de Neurones Convolutifs (CNN) pour la classification automatisée des IRM cérébrales en quatre catégories distinctes : gliome, méningiome, absence de tumeur et tumeur pituitaire. Ce projet démontre l'application pratique de l'apprentissage profond dans l'aide au diagnostic médical."
+        },
+        "challenge": {
+          "title": "Défi",
+          "description": "Le principal défi était de créer un système de classification fiable capable de distinguer avec précision les différents types de tumeurs cérébrales tout en maintenant une haute précision pour toutes les catégories. Cela a nécessité une conception minutieuse de l'architecture du modèle et une optimisation approfondie des données d'entraînement."
+        },
+        "technical": {
+          "title": "Détails Techniques",
+          "keyFeatures": "Caractéristiques Principales",
+          "features": {
+            "accuracy": "94% de précision globale",
+            "classification": "Classification multi-classes des tumeurs",
+            "architecture": "Architecture CNN personnalisée",
+            "optimization": "Optimisé pour les IRM 256x256"
+          },
+          "implementation": "Implémentation Technique",
+          "architecture": "Architecture du Modèle",
+          "training": "Progression de l'Entraînement",
+          "predictions": "Exemples de Prédictions",
+          "confidence": "Analyse de la Confiance",
+          "trainingDesc": "Évolution de la précision et de la perte du modèle pendant l'entraînement",
+          "predictionsDesc": "Prédictions sur différents types de tumeurs",
+          "confidenceDesc": "Distribution de la confiance du modèle pour les prédictions correctes"
+        },
+        "performance": {
+          "title": "Performance du Modèle",
+          "matrix": "Matrice de Confusion",
+          "matrixDesc": "Résultats détaillés de classification par type de tumeur",
+          "accuracyByType": "Précision par Type",
+          "types": {
+            "glioma": "Gliome : 93.6% de précision",
+            "meningioma": "Méningiome : 87.7% de précision",
+            "noTumor": "Pas de Tumeur : 98.0% de précision",
+            "pituitary": "Pituitaire : 96.7% de précision"
+          }
         }
       },
       "multispectral": {
         "title": "Visionneur d'Images Multispectrales",
-        "description": "Création d'un outil logiciel pour simuler différents types de vision (humaine, daltonienne, abeille) à partir d'images multispectrales, permettant des combinaisons personnalisées de bandes RGB.",
-        "tags": {
-          "python": "Python",
-          "multispectralImage": "Image Multispectrale",
-          "imageProcessing": "Traitement d'Image",
-          "guiDevelopment": "Développement GUI",
-          "searching": "Recherche"
+        "subtitle": "Une application Python pour visualiser et manipuler des images multispectrales avec différentes méthodes de simulation",
+        "overview": {
+          "title": "Vue d'ensemble",
+          "description": "SimulFCImage est un outil sophistiqué conçu pour manipuler des images multispectrales, permettant aux utilisateurs de les visualiser dans différentes représentations colorées. L'application propose plusieurs méthodes de simulation, de la génération de couleurs réelles aux visualisations spécialisées comme la simulation de la vision des abeilles."
+        },
+        "features": {
+          "title": "Fonctionnalités Clés",
+          "list": {
+            "trueColor": "Génération de Couleurs Réelles",
+            "falseColor": "Sélection de Bandes RGB Personnalisée",
+            "beeVision": "Simulation de Vision des Abeilles",
+            "colorBlind": "Simulation de Daltonisme",
+            "interface": "Interface Utilisateur Intuitive"
+          }
+        },
+        "technical": {
+          "title": "Détails Techniques",
+          "tags": {
+            "python": "Python",
+            "multispectral": "Image Multispectrale",
+            "imageProcessing": "Traitement d'Image",
+            "gui": "Développement Interface",
+            "searching": "Recherche"
+          }
+        },
+        "concept": {
+          "title": "Comprendre les Images Multispectrales",
+          "whatIs": {
+            "title": "Qu'est-ce qu'une Image Multispectrale ?",
+            "description": "Une image multispectrale est composée de plusieurs bandes, chacune capturant la lumière à différentes longueurs d'onde. Contrairement aux images RGB classiques qui ne capturent que la lumière visible, les images multispectrales peuvent capturer des informations au-delà de la vision humaine, incluant l'infrarouge et l'ultraviolet."
+          },
+          "bands": {
+            "title": "Comprendre les Bandes",
+            "description": "Chaque bande dans une image multispectrale représente l'intensité de la lumière à une longueur d'onde spécifique. Par exemple, une bande unique peut montrer l'intensité de réflexion de la lumière à 550nm (lumière verte). Ces bandes peuvent être combinées de différentes manières pour révéler divers aspects de la scène capturée."
+          },
+          "bandExample": "Exemple d'une bande spectrale unique (représentation en niveaux de gris)"
+        },
+        "interface": {
+          "title": "Aperçu de l'Interface",
+          "design": {
+            "title": "Design Convivial",
+            "description": "L'application propose une interface intuitive permettant aux utilisateurs de :",
+            "features": {
+              "import": "Importer facilement des images multispectrales",
+              "navigate": "Naviguer entre les différentes bandes",
+              "select": "Sélectionner les méthodes de simulation",
+              "visualize": "Visualiser et sauvegarder les résultats"
+            }
+          },
+          "preview": "Interface principale de SimulFCImage avec navigation entre les bandes et options de simulation"
+        },
+        "methods": {
+          "title": "Méthodes de Simulation",
+          "trueColor": {
+            "title": "Génération de Couleurs Réelles",
+            "input": "Bandes d'Entrée",
+            "result": "Résultat Généré",
+            "reference": "RGB Original",
+            "description": "Génère une représentation en couleurs naturelles telle que vue par l'œil humain"
+          },
+          "falseColor": {
+            "title": "Génération de Fausses Couleurs",
+            "description": "Sélection personnalisée des bandes RGB pour une visualisation spécialisée où l'utilisateur peut choisir les bandes à afficher, dans ce cas, le rouge est assigné à la 167ème bande, le vert à la 32ème bande et le bleu à la 86ème bande"
+          },
+          "beeVision": {
+            "title": "Simulation de Vision des Abeilles",
+            "description": "Simule la façon dont les abeilles perçoivent les images multispectrales"
+          }
         }
       },
       "portfolio": {
@@ -213,7 +285,7 @@
       }
     },
     "contact": {
-      "meet": "Rencontrez-moi",
+      "getInTouch": "Rencontrez-moi",
       "title": "Contactez-moi",
       "email": "Email",
       "linkedin": "LinkedIn"

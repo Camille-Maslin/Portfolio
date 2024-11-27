@@ -14,12 +14,13 @@
     "title": "Computer Science Student",
     "subtitle": "Specializing in AI & Data Science",
     "contact": "Contact Me",
-    "resume": "Download CV"
+    "resume": "View My CV"
   },
   "about": {
     "title": "ABOUT ME",
-    "bio": "I am a 3rd-year Computer Science student, passionate about data manipulation and particularly advancements in artificial intelligence. I am constantly seeking new opportunities to develop my skills in data analysis and processing. My short-term goal is to join a school that will allow me to enhance my knowledge in AI development and optimization. My long-term goal is to work in AI research or development. I am ready to take on new challenges and contribute to the success of projects.",
+    "bio": "I am a 3rd-year Computer Science student, passionate about data manipulation and particularly advancements in artificial intelligence. I am constantly seeking new opportunities to develop my skills in data analysis and processing. I am ready to take on new challenges and contribute to the success of projects.",
     "shortTerm": "Short-term Goal",
+    "explore": "ABOUT ME",
     "shortTermDesc": "Join a school to enhance my knowledge in AI development and optimization.",
     "longTerm": "Long-term Goal",
     "longTermDesc": "Work in AI research or development.",
@@ -111,6 +112,7 @@
   "skills": {
     "explore": "EXPLORE",
     "title": "My Skills",
+    "title2": "My General Skills",
     "database": "Database",
     "development": "Development",
     "tools": "Tools & Others",
@@ -185,14 +187,36 @@
     "viewGithub": "View on GitHub",
     "brainTumor": {
       "title": "Brain Tumor Detection AI",
-      "description": "Developed a Convolutional Neural Network (CNN) for automated brain tumor detection from MRI scans, achieving 93% accuracy in tumor classification.",
-      "tags": {
-        "python": "Python",
-        "cnn": "CNN",
-        "tensorflow": "TensorFlow",
-        "keras": "Keras",
-        "deepLearning": "Deep Learning",
-        "opencv": "OpenCV"
+      "subtitle": "A deep learning approach achieving 94% accuracy in brain tumor classification using CNN",
+      "overview": {
+        "title": "Project Overview",
+        "description": "Developed a Convolutional Neural Network (CNN) model for automated classification of brain tumor MRI scans into four distinct categories: glioma, meningioma, no tumor, and pituitary tumor. This project demonstrates the practical application of deep learning in medical diagnosis support."
+      },
+      "challenge": {
+        "title": "Challenge",
+        "description": "The main challenge was to create a reliable classification system that could accurately distinguish between different types of brain tumors while maintaining high precision across all categories. This required careful model architecture design and extensive training data optimization."
+      },
+      "technical": {
+        "title": "Technical Details",
+        "keyFeatures": "Key Features",
+        "features": {
+          "accuracy": "94% overall classification accuracy",
+          "classification": "Multi-class tumor classification",
+          "architecture": "Custom CNN architecture",
+          "optimization": "Optimized for 256x256 MRI scans"
+        }
+      },
+      "performance": {
+        "title": "Model Performance",
+        "matrix": "Confusion Matrix",
+        "matrixDesc": "Detailed classification results across tumor types",
+        "accuracyByType": "Classification Accuracy by Type",
+        "types": {
+          "glioma": "Glioma: 93.6% accuracy",
+          "meningioma": "Meningioma: 87.7% accuracy",
+          "noTumor": "No Tumor: 98.0% accuracy",
+          "pituitary": "Pituitary: 96.7% accuracy"
+        }
       }
     },
     "multispectral": {

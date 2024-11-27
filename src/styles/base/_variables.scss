@@ -17,6 +17,7 @@
   --color-tech-bg: rgba(37, 99, 235, 0.1);
   --color-github: #24292e;
   --color-github-hover: #1a1e22;
+  --color-github-text: #ffffff;
   
   // Layout
   --header-height: 70px;
@@ -93,6 +94,17 @@
   // Skill Level Shadows
   --skill-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   --skill-hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  
+  // Ajoutez ces variables
+  --project-card-width-mobile: 100%;
+  --project-card-max-width-mobile: 450px;
+  --project-card-padding-mobile: 1rem;
+  --project-grid-gap-mobile: 1.5rem;
+  --color-tech-bg: rgba(37, 99, 235, 0.1);
+  --color-border: rgba(37, 99, 235, 0.2);
+  --tech-tag-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --color-accent-dark: #1d4ed8;
+  --color-accent-rgb: 37, 99, 235;
 } 
 
 [data-theme="dark"] {
@@ -105,4 +117,15 @@
   --icon-hover: #3b82f6;
   --icon-bg: rgba(96, 165, 250, 0.08);
   --icon-border: rgba(96, 165, 250, 0.15);
+  --color-tech-bg: rgba(96, 165, 250, 0.1);
+  --color-border: rgba(96, 165, 250, 0.2);
+  --tech-tag-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --color-text-primary: #e2e8f0;
+  --color-bg-secondary: rgba(59, 130, 246, 0.05);
+  --color-border: rgba(59, 130, 246, 0.2);
+  --color-accent-rgb: 59, 130, 246;
+  --tech-tag-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+  --color-github: #1a1e22;
+  --color-github-hover: #24292e;
+  --color-github-text: #ffffff;
 }
