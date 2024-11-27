@@ -62,8 +62,8 @@
   --tag-tool-color: #E63946;
   --tag-web-color: #2D3748;
   --tag-design-color: #805AD5;
-  --particle-color-1: 59, 130, 246;   // Bleu vif
-  --particle-color-2: 37, 99, 235;    // Bleu royal
+  --particle-color-1: 59, 130, 246;
+  --particle-color-2: 37, 99, 235;
   --particle-opacity: 0.4;
   --color-accent-rgb: 37, 99, 235;
   --color-accent: rgb(var(--color-accent-rgb));
@@ -122,8 +122,8 @@ html[data-theme="dark"] {
   --color-tag-bg: rgba(var(--color-accent-rgb), 0.15);
   --color-border: rgba(var(--color-accent-rgb), 0.3);
   --color-accent-rgb: 122, 155, 255;
-  --particle-color-1: 96, 165, 250;   // Bleu clair
-  --particle-color-2: 147, 197, 253;  // Bleu très clair
+  --particle-color-1: 96, 165, 250;
+  --particle-color-2: 147, 197, 253;
   --particle-opacity: 0.2;
   --color-ornament: rgba(255, 255, 255, 0.1);
   --color-ornament-dark: rgba(255, 255, 255, 0.05);

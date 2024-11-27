@@ -6,6 +6,7 @@
     <meta name="description" content="Multispectral Image Viewer - Advanced Image Processing Application">
     <title>Multispectral Image Viewer - Project Details</title>
     
+    <!-- Styles -->
     <link rel="shortcut icon" href="#">
     <link rel="preload" href="../../styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -15,13 +16,54 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     </noscript>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script type="module">
+        import { initTheme } from '../../scripts/theme.js';
+        import { initLanguage } from '../../scripts/language.js';
+        import { initBackgroundAnimation } from '../../scripts/modules/backgroundAnimation.js';
+        import { initScroll } from '../../scripts/scroll.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            initLanguage();
+            initBackgroundAnimation();
+            initScroll();
+        });
+
+        window.addEventListener('load', () => {
+            document.body.style.visibility = 'visible';
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lightbox !== 'undefined') {
+                lightbox.option({
+                    'resizeDuration': 200,
+                    'wrapAround': true,
+                    'albumLabel': "Image %1 of %2",
+                    'fadeDuration': 300,
+                    'imageFadeDuration': 300,
+                    'positionFromTop': 50
+                });
+            }
+        });
+    </script>
+
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <a href="../../../index.html#projects" class="nav-back">
                 <i class="fas fa-arrow-left"></i>
-                <span data-i18n="projects.back">Back to Projects</span>
+                <span data-i18n="projects.multispectral.back">Back to Projects</span>
             </a>
             <div class="nav-controls">
                 <button class="theme-toggle" aria-label="Toggle theme">
@@ -47,130 +89,130 @@
 
         <div class="project-content">
             <div class="project-description">
-                <h2>Project Overview</h2>
-                <p>SimulFCImage is a sophisticated tool designed for manipulating multispectral images, enabling users to visualize them in various color representations. The application provides multiple simulation methods, from true color generation to specialized visualizations like bee vision simulation.</p>
+                <h2 data-i18n="projects.multispectral.overview.title">Project Overview</h2>
+                <p data-i18n="projects.multispectral.overview.description">SimulFCImage is a tool designed for manipulating multispectral images, enabling users to visualize them in various color representations. The application provides multiple simulation methods, from true color generation to specialized visualizations like bee vision simulation.</p>
                 
-                <h2>Key Features</h2>
+                <h2 data-i18n="projects.multispectral.features.title">Key Features</h2>
                 <ul class="feature-list">
-                    <li>True Color Generation</li>
-                    <li>False Color RGB Band Selection</li>
-                    <li>Bee Vision Simulation</li>
-                    <li>Color Blindness Simulation</li>
-                    <li>Intuitive User Interface</li>
+                    <li data-i18n="projects.multispectral.features.list.trueColor">True Color Generation</li>
+                    <li data-i18n="projects.multispectral.features.list.falseColor">False Color RGB Band Selection</li>
+                    <li data-i18n="projects.multispectral.features.list.beeVision">Bee Vision Simulation</li>
+                    <li data-i18n="projects.multispectral.features.list.colorBlind">Color Blindness Simulation</li>
+                    <li data-i18n="projects.multispectral.features.list.interface">Intuitive User Interface</li>
                 </ul>
             </div>
 
             <div class="project-details">
-                <h2>Technical Details</h2>
+                <h2 data-i18n="projects.multispectral.technical.title">Technical Details</h2>
                 <div class="tech-stack">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Multispectral Image</span>
-                    <span class="tech-tag">Image Processing</span>
-                    <span class="tech-tag">GUI Development</span>
-                    <span class="tech-tag">Searching</span>
+                    <span class="tech-tag" data-i18n="projects.multispectral.technical.tags.python">Python</span>
+                    <span class="tech-tag" data-i18n="projects.multispectral.technical.tags.multispectralImage">Multispectral Image</span>
+                    <span class="tech-tag" data-i18n="projects.multispectral.technical.tags.imageProcessing">Image Processing</span>
+                    <span class="tech-tag" data-i18n="projects.multispectral.technical.tags.guiDevelopment">GUI Development</span>
+                    <span class="tech-tag" data-i18n="projects.multispectral.technical.tags.searching">Searching</span>
                 </div>
                 
                 <div class="github-section">
                     <a href="https://github.com/dept-info-iut-dijon/S5_C1_LaBabaTcheam" class="github-link" target="_blank">
                         <i class="fab fa-github"></i>
-                        <span>View on GitHub</span>
+                        <span data-i18n="projects.multispectral.viewGithub">View on GitHub</span>
                     </a>
                 </div>
             </div>
         </div>
 
         <div class="concept-section">
-            <h2>Understanding Multispectral Images</h2>
+            <h2 data-i18n="projects.multispectral.concept.title">Understanding Multispectral Images</h2>
             <div class="concept-grid">
                 <div class="concept-explanation">
-                    <h3>What is a Multispectral Image?</h3>
-                    <p>A multispectral image consists of several bands, each capturing light at different wavelengths. Unlike regular RGB images that only capture visible light, multispectral images can capture information beyond human vision, including infrared and ultraviolet wavelengths.</p>
+                    <h3 data-i18n="projects.multispectral.concept.whatIs.title">What is a Multispectral Image?</h3>
+                    <p data-i18n="projects.multispectral.concept.whatIs.description">A multispectral image consists of several bands, each capturing light at different wavelengths. Unlike regular RGB images that only capture visible light, multispectral images can capture information beyond human vision, including infrared and ultraviolet wavelengths.</p>
                     
-                    <h3>Understanding Bands</h3>
-                    <p>Each band in a multispectral image represents the intensity of light at a specific wavelength. For example, a single band might show how strongly a scene reflects light at 550nm (green light). These bands can be combined in various ways to reveal different aspects of the captured scene.</p>
+                    <h3 data-i18n="projects.multispectral.concept.understandingBands.title">Understanding Bands</h3>
+                    <p data-i18n="projects.multispectral.concept.understandingBands.description">Each band in a multispectral image represents the intensity of light at a specific wavelength. For example, a single band might show how strongly a scene reflects light at 550nm (green light). These bands can be combined in various ways to reveal different aspects of the captured scene.</p>
                 </div>
                 <div class="concept-image">
                     <a href="../../assets/projects/multispectral-image-viewer/Band.png" data-lightbox="concepts" data-title="Example of a single band from a multispectral image">
                         <img src="../../assets/projects/multispectral-image-viewer/Band.png" alt="Band Example">
                     </a>
-                    <p class="image-caption">Example of a single spectral band (grayscale representation)</p>
+                    <p class="image-caption" data-i18n="projects.multispectral.concept.bandExample">Example of a single spectral band (grayscale representation)</p>
                 </div>
             </div>
         </div>
 
         <div class="interface-section">
-            <h2>Interface Overview</h2>
+            <h2 data-i18n="projects.multispectral.interface.title">Interface Overview</h2>
             <div class="interface-showcase">
                 <div class="interface-description">
-                    <h3>User-Friendly Design</h3>
-                    <p>The application features an intuitive interface that allows users to:</p>
+                    <h3 data-i18n="projects.multispectral.interface.design.title">User-Friendly Design</h3>
+                    <p data-i18n="projects.multispectral.interface.design.description">The application features an intuitive interface that allows users to:</p>
                     <ul>
-                        <li>Import multispectral images easily</li>
-                        <li>Navigate through different bands</li>
-                        <li>Select simulation methods</li>
-                        <li>Visualize and save results</li>
+                        <li data-i18n="projects.multispectral.interface.design.features.import">Import multispectral images easily</li>
+                        <li data-i18n="projects.multispectral.interface.design.features.navigate">Navigate through different bands</li>
+                        <li data-i18n="projects.multispectral.interface.design.features.select">Select simulation methods</li>
+                        <li data-i18n="projects.multispectral.interface.design.features.visualize">Visualize and save results</li>
                     </ul>
                 </div>
                 <div class="interface-preview">
                     <a href="../../assets/projects/multispectral-image-viewer/Simulation-Window.png" data-lightbox="interface" data-title="SimulFCImage Application Interface">
                         <img src="../../assets/projects/multispectral-image-viewer/Simulation-Window.png" alt="Application Interface">
                     </a>
-                    <p class="image-caption">SimulFCImage main interface with band navigation and simulation options</p>
+                    <p class="image-caption" data-i18n="projects.multispectral.interface.preview.caption">SimulFCImage main interface with band navigation and simulation options</p>
                 </div>
             </div>
         </div>
 
         <div class="simulation-methods">
-            <h2>Simulation Methods</h2>
+            <h2 data-i18n="projects.multispectral.methods.title">Simulation Methods</h2>
             <div class="methods-grid">
                 <div class="method-card">
-                    <h3>True Color Generation</h3>
+                    <h3 data-i18n="projects.multispectral.methods.trueColor.title">True Color Generation</h3>
                     <div class="method-input">
-                        <h4>Input Bands</h4>
+                        <h4 data-i18n="projects.multispectral.methods.trueColor.inputBands">Input Bands</h4>
                         <a href="../../assets/projects/multispectral-image-viewer/Band.png" data-lightbox="simulation-methods" data-title="True Color Generation Input">
                             <img src="../../assets/projects/multispectral-image-viewer/Band.png" alt="Input Bands" class="input-image">
                         </a>
-                        <p class="step-caption">203 Input Bands</p>
+                        <p class="step-caption" data-i18n="projects.multispectral.methods.trueColor.inputBandsCaption">203 Input Bands</p>
                     </div>
                     <div class="method-comparison-dual">
                         <div class="method-step">
-                            <h4>Generated Result</h4>
+                            <h4 data-i18n="projects.multispectral.methods.trueColor.generatedResult">Generated Result</h4>
                             <a href="../../assets/projects/multispectral-image-viewer/HumanView.png" data-lightbox="simulation-methods" data-title="True Color Generation Result">
                                 <img src="../../assets/projects/multispectral-image-viewer/HumanView.png" alt="Generated Result" class="comparison-image">
                             </a>
-                            <p class="step-caption">Our Method</p>
+                            <p class="step-caption" data-i18n="projects.multispectral.methods.trueColor.generatedResultCaption">Our Method</p>
                         </div>
                         <div class="method-step">
-                            <h4>Original RGB</h4>
+                            <h4 data-i18n="projects.multispectral.methods.trueColor.originalRGB">Original RGB</h4>
                             <a href="../../assets/projects/multispectral-image-viewer/BaseRGB.png" data-lightbox="simulation-methods" data-title="True Color Generation Reference">
                                 <img src="../../assets/projects/multispectral-image-viewer/BaseRGB.png" alt="Original RGB" class="comparison-image">
                             </a>
-                            <p class="step-caption">Reference Image</p>
+                            <p class="step-caption" data-i18n="projects.multispectral.methods.trueColor.originalRGBCaption">Reference Image</p>
                         </div>
                     </div>
-                    <p class="method-description">Generates natural color representation as seen by human eyes</p>
+                    <p class="method-description" data-i18n="projects.multispectral.simulation.trueColor.description">Generates natural color representation as seen by human eyes</p>
                 </div>
 
                 <div class="method-card">
-                    <h3>False Color Generation</h3>
+                    <h3 data-i18n="projects.multispectral.methods.falseColor.title">False Color Generation</h3>
                     <a href="../../assets/projects/multispectral-image-viewer/BandChoice.png" data-lightbox="simulation-methods" data-title="False Color Generation Method">
                         <img src="../../assets/projects/multispectral-image-viewer/BandChoice.png" alt="False Color Example">
                     </a>
-                    <p>Custom RGB band selection for specialized visualization where the user can choose the bands to be displayed, in this case, <b>the red is assigned to the 167th band</b>, <b>the green to the 32th band</b> and <b>the blue to the 86th band</b></p>
+                    <p data-i18n="projects.multispectral.methods.falseColor.description">Custom RGB band selection for specialized visualization where the user can choose the bands to be displayed, in this case, <b>the red is assigned to the 167th band</b>, <b>the green to the 32th band</b> and <b>the blue to the 86th band</b></p>
                 </div>
 
                 <div class="method-card">
-                    <h3>Bee Vision Simulation</h3>
+                    <h3 data-i18n="projects.multispectral.methods.beeVision.title">Bee Vision Simulation</h3>
                     <a href="../../assets/projects/multispectral-image-viewer/BeeColor.png" data-lightbox="simulation-methods" data-title="Bee Vision Simulation">
                         <img src="../../assets/projects/multispectral-image-viewer/BeeColor.png" alt="Bee Vision Example">
                     </a>
-                    <p>Simulates how bees perceive multispectral images</p>
+                    <p data-i18n="projects.multispectral.methods.beeVision.description">Simulates how bees perceive multispectral images</p>
                 </div>
             </div>
         </div>
 
         <div class="architecture-section">
-            <h2>Project Architecture</h2>
+            <h2 data-i18n="projects.multispectral.architecture.title">Project Architecture</h2>
             <div class="architecture-diagram">
                 <pre class="code-block">
 S5_C1_LaBabaTcheam
@@ -189,22 +231,50 @@ S5_C1_LaBabaTcheam
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <script type="module">
-        import { initTheme } from '../../scripts/theme.js';
-        import { initLanguage } from '../../scripts/language.js';
-        import { initBackgroundAnimation } from '../../scripts/modules/backgroundAnimation.js';
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <!-- Colonne 1 : Copyright -->
+          <div class="footer-column">
+            <div class="footer-copyright">
+              <p class="copyright-text" data-i18n="footer.copyright">
+                <i class="far fa-copyright"></i> Copyright © 2024 Camille Maslin
+              </p>
+              <p class="rights-text" data-i18n="footer.rights">All rights reserved</p>
+            </div>
+          </div>
+          
+          <!-- Colonne 2 : Technologies -->
+          <div class="footer-column">
+            <div class="footer-tech">
+              <p class="tech-text" data-i18n="footer.madeWith">Made with</p>
+              <div class="tech-stack">
+                <i class="fab fa-html5" title="HTML5"></i>
+                <i class="fab fa-css3-alt" title="CSS3"></i>
+                <i class="fab fa-js" title="JavaScript"></i>
+              </div>
+            </div>
+          </div>
 
-        document.addEventListener('DOMContentLoaded', () => {
-            initTheme();
-            initLanguage();
-            initBackgroundAnimation();
-        });
+          <!-- Colonne 3 : Version -->
+          <div class="footer-column">
+            <div class="footer-version">
+              <p class="version-text">v1.0.0</p>
+              <a href="https://github.com/mmillle/portfolio" class="source-link" target="_blank" data-i18n="footer.viewSource">
+                <i class="fab fa-github"></i>
+                <span>Source</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-        window.addEventListener('load', () => {
-            document.body.style.visibility = 'visible';
-        });
-    </script>
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <canvas id="background-animation" class="background-canvas" aria-hidden="true"></canvas>
 </body>
 </html>

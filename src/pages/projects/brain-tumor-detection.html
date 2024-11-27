@@ -6,6 +6,7 @@
     <meta name="description" content="Brain Tumor Detection AI Project - Deep Learning Application">
     <title>Brain Tumor Detection AI - Project Details</title>
     
+    <!-- Styles -->
     <link rel="shortcut icon" href="#">
     <link rel="preload" href="../../styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -15,36 +16,54 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     </noscript>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script type="module">
+        import { initTheme } from '../../scripts/theme.js';
+        import { initLanguage } from '../../scripts/language.js';
+        import { initBackgroundAnimation } from '../../scripts/modules/backgroundAnimation.js';
+        import { initScroll } from '../../scripts/scroll.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            initLanguage();
+            initBackgroundAnimation();
+            initScroll();
+        });
+
+        window.addEventListener('load', () => {
+            document.body.style.visibility = 'visible';
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lightbox !== 'undefined') {
+                lightbox.option({
+                    'resizeDuration': 200,
+                    'wrapAround': true,
+                    'albumLabel': "Image %1 of %2",
+                    'fadeDuration': 300,
+                    'imageFadeDuration': 300,
+                    'positionFromTop': 50
+                });
+            }
+        });
+    </script>
     
     <style>
         body {
             visibility: hidden;
         }
     </style>
-    
-    <script type="module">
-        import { initTheme } from '../../scripts/theme.js';
-        import { initLanguage } from '../../scripts/language.js';
-        import { initBackgroundAnimation } from '../../scripts/modules/backgroundAnimation.js';
-
-        document.addEventListener('DOMContentLoaded', () => {
-            initTheme();
-            initLanguage();
-            initBackgroundAnimation();
-        });
-
-        // Ajouter la gestion du FOUC
-        window.addEventListener('load', () => {
-            document.body.style.visibility = 'visible';
-        });
-    </script>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <a href="../../../index.html#projects" class="nav-back">
                 <i class="fas fa-arrow-left"></i>
-                <span data-i18n="projects.back" data-i18n-key="projects.back">Back to Projects</span>
+                <span data-i18n="projects.back">Back to Projects</span>
             </a>
             <div class="nav-controls">
                 <button class="theme-toggle" aria-label="Toggle theme">
@@ -136,6 +155,19 @@
                 <div class="technical-implementation">
                     <h2 data-i18n="projects.brainTumor.technical.implementation">Technical Implementation</h2>
                     
+                    <div class="notebook-container">
+                        <h3 data-i18n="projects.brainTumor.technical.notebook">Detailed Implementation Notebook</h3>
+                        <div class="notebook-wrapper">
+                            <iframe
+                                src="../../assets/projects/brain-tumor-detection/Brain-Tumor.html"
+                                frameborder="0"
+                                width="100%"
+                                height="800px"
+                                style="box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;"
+                            ></iframe>
+                        </div>
+                    </div>
+                    
                     <div class="model-architecture">
                         <h3 data-i18n="projects.brainTumor.technical.architecture">Model Architecture</h3>
                         <pre class="code-block">
@@ -182,26 +214,50 @@ dense_1 (Dense)            (None, 4)                516
         </div>
     </main>
 
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <!-- Colonne 1 : Copyright -->
+          <div class="footer-column">
+            <div class="footer-copyright">
+              <p class="copyright-text" data-i18n="footer.copyright">
+                <i class="far fa-copyright"></i> Copyright © 2024 Camille Maslin
+              </p>
+              <p class="rights-text" data-i18n="footer.rights">All rights reserved</p>
+            </div>
+          </div>
+          
+          <!-- Colonne 2 : Technologies -->
+          <div class="footer-column">
+            <div class="footer-tech">
+              <p class="tech-text" data-i18n="footer.madeWith">Made with</p>
+              <div class="tech-stack">
+                <i class="fab fa-html5" title="HTML5"></i>
+                <i class="fab fa-css3-alt" title="CSS3"></i>
+                <i class="fab fa-js" title="JavaScript"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colonne 3 : Version -->
+          <div class="footer-column">
+            <div class="footer-version">
+              <p class="version-text">v1.0.0</p>
+              <a href="https://github.com/mmillle/portfolio" class="source-link" target="_blank" data-i18n="footer.viewSource">
+                <i class="fab fa-github"></i>
+                <span>Source</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
     <canvas id="background-animation" class="background-canvas" aria-hidden="true"></canvas>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-
-    <script>
-        // Attendre que le DOM et les scripts soient chargés
-        document.addEventListener('DOMContentLoaded', function() {
-            // S'assurer que lightbox est défini
-            if (typeof lightbox !== 'undefined') {
-                lightbox.option({
-                    'resizeDuration': 200,
-                    'wrapAround': true,
-                    'albumLabel': "Image %1 of %2",
-                    'fadeDuration': 300,
-                    'imageFadeDuration': 300,
-                    'positionFromTop': 50
-                });
-            }
-        });
-    </script>
 </body>
 </html>

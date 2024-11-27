@@ -151,6 +151,7 @@
     },
     "projects": {
       "title": "Mes Projets",
+      "title-name": "Détection de Tumeurs Cérébrales",
       "discover": "Découvrez",
       "back": "Retour aux projets",
       "overview": "Vue d'ensemble",
@@ -203,10 +204,12 @@
       },
       "multispectral": {
         "title": "Visionneur d'Images Multispectrales",
+        "back": "Retour aux projets",
         "subtitle": "Une application Python pour visualiser et manipuler des images multispectrales avec différentes méthodes de simulation",
+        "viewGithub": "Voir sur GitHub",
         "overview": {
           "title": "Vue d'ensemble",
-          "description": "SimulFCImage est un outil sophistiqué conçu pour manipuler des images multispectrales, permettant aux utilisateurs de les visualiser dans différentes représentations colorées. L'application propose plusieurs méthodes de simulation, de la génération de couleurs réelles aux visualisations spécialisées comme la simulation de la vision des abeilles."
+          "description": "SimulFCImage est un outil conçu pour manipuler des images multispectrales, permettant aux utilisateurs de les visualiser dans différentes représentations colorées. L'application propose plusieurs méthodes de simulation, de la génération de couleurs réelles aux visualisations spécialisées comme la simulation de la vision des abeilles."
         },
         "features": {
           "title": "Fonctionnalités Clés",
@@ -225,7 +228,8 @@
             "multispectral": "Image Multispectrale",
             "imageProcessing": "Traitement d'Image",
             "gui": "Développement Interface",
-            "searching": "Recherche"
+            "searching": "Recherche",
+            "guiDevelopment": "Développement d'Interface"
           }
         },
         "concept": {
@@ -234,7 +238,7 @@
             "title": "Qu'est-ce qu'une Image Multispectrale ?",
             "description": "Une image multispectrale est composée de plusieurs bandes, chacune capturant la lumière à différentes longueurs d'onde. Contrairement aux images RGB classiques qui ne capturent que la lumière visible, les images multispectrales peuvent capturer des informations au-delà de la vision humaine, incluant l'infrarouge et l'ultraviolet."
           },
-          "bands": {
+          "understandingBands": {
             "title": "Comprendre les Bandes",
             "description": "Chaque bande dans une image multispectrale représente l'intensité de la lumière à une longueur d'onde spécifique. Par exemple, une bande unique peut montrer l'intensité de réflexion de la lumière à 550nm (lumière verte). Ces bandes peuvent être combinées de différentes manières pour révéler divers aspects de la scène capturée."
           },
@@ -243,7 +247,7 @@
         "interface": {
           "title": "Aperçu de l'Interface",
           "design": {
-            "title": "Design Convivial",
+            "title": "Design User-Friendly",
             "description": "L'application propose une interface intuitive permettant aux utilisateurs de :",
             "features": {
               "import": "Importer facilement des images multispectrales",
@@ -252,16 +256,21 @@
               "visualize": "Visualiser et sauvegarder les résultats"
             }
           },
-          "preview": "Interface principale de SimulFCImage avec navigation entre les bandes et options de simulation"
+          "preview": {
+            "title": "Aperçu de l'Interface",
+            "caption": "Interface principale de SimulFCImage avec navigation entre les bandes et options de simulation"
+          }
         },
         "methods": {
           "title": "Méthodes de Simulation",
           "trueColor": {
             "title": "Génération de Couleurs Réelles",
-            "input": "Bandes d'Entrée",
-            "result": "Résultat Généré",
-            "reference": "RGB Original",
-            "description": "Génère une représentation en couleurs naturelles telle que vue par l'œil humain"
+            "inputBands": "Bandes d'Entrée",
+            "generatedResult": "Résultat Généré",
+            "originalRGB": "RGB Original",
+            "description": "Génère une représentation en couleurs naturelles telle que vue par l'œil humain",
+            "generatedResultCaption": "Notre Méthode",
+            "originalRGBCaption": "Image de Référence"
           },
           "falseColor": {
             "title": "Génération de Fausses Couleurs",
@@ -271,6 +280,10 @@
             "title": "Simulation de Vision des Abeilles",
             "description": "Simule la façon dont les abeilles perçoivent les images multispectrales"
           }
+        },
+        "architecture": {
+          "title": "Architecture du Projet",
+          "description": "Diagramme de l'architecture du projet SimulFCImage"
         }
       },
       "portfolio": {

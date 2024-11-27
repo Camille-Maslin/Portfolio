@@ -220,14 +220,88 @@
       }
     },
     "multispectral": {
+      "back": "Back to Projects",
       "title": "Multispectral Image Viewer",
-      "description": "Created a software tool for simulating various vision types (human, colorblind, bee) from multispectral images, allowing custom RGB band combinations.",
-      "tags": {
-        "python": "Python",
-        "multispectralImage": "Multispectral Image",
-        "imageProcessing": "Image Processing",
-        "guiDevelopment": "GUI Development",
-        "searching": "Searching"
+      "subtitle": "A Python application for visualizing and manipulating multispectral images with various simulation methods",
+      "overview": {
+        "title": "Project Overview",
+        "description": "SimulFCImage is a tool designed for manipulating multispectral images, enabling users to visualize them in various color representations. The application provides multiple simulation methods, from true color generation to specialized visualizations like bee vision simulation."
+      },
+      "features": {
+        "title": "Key Features",
+        "list": {
+          "trueColor": "True Color Generation",
+          "falseColor": "False Color RGB Band Selection",
+          "beeVision": "Bee Vision Simulation",
+          "colorBlind": "Color Blindness Simulation",
+          "interface": "Intuitive User Interface"
+        }
+      },
+      "technical": {
+        "title": "Technical Details",
+        "tags": {
+          "python": "Python",
+          "multispectralImage": "Multispectral Image",
+          "imageProcessing": "Image Processing",
+          "guiDevelopment": "GUI Development",
+          "searching": "Searching"
+        }
+      },
+      "concept": {
+        "title": "Understanding Multispectral Images",
+        "whatIs": {
+          "title": "What is a Multispectral Image?",
+          "description": "A multispectral image consists of several bands, each capturing light at different wavelengths. Unlike regular RGB images that only capture visible light, multispectral images can capture information beyond human vision, including infrared and ultraviolet wavelengths."
+        },
+        "understandingBands": {
+          "title": "Understanding Bands",
+          "description": "Each band in a multispectral image represents the intensity of light at a specific wavelength. For example, a single band might show how strongly a scene reflects light at 550nm (green light). These bands can be combined in various ways to reveal different aspects of the captured scene."
+        },
+        "bandExample": "Example of a single spectral band (grayscale representation)"
+      },
+      "interface": {
+        "title": "Interface Overview",
+        "design": {
+          "title": "User-Friendly Design",
+          "description": "The application features an intuitive interface that allows users to:",
+          "features": {
+            "import": "Import multispectral images easily",
+            "navigate": "Navigate through different bands",
+            "select": "Select simulation methods",
+            "visualize": "Visualize and save results"
+          }
+        },
+        "preview": {
+          "caption": "SimulFCImage main interface with band navigation and simulation options"
+        }
+      },
+      "methods": {
+        "title": "Simulation Methods",
+        "trueColor": {
+          "title": "True Color Generation",
+          "inputBands": "Input Bands",
+          "inputBandsCaption": "203 Input Bands",
+          "generatedResult": "Generated Result",
+          "originalRGB": "Original RGB",
+          "generatedResultCaption": "Our Method",
+          "originalRGBCaption": "Reference Image"
+        },
+        "falseColor": {
+          "title": "False Color Generation",
+          "description": "Custom RGB band selection for specialized visualization where the user can choose the bands to be displayed, in this case, the red is assigned to the 167th band, the green to the 32th band and the blue to the 86th band"
+        },
+        "beeVision": {
+          "title": "Bee Vision Simulation",
+          "description": "Simulates how bees perceive multispectral images"
+        }
+      },
+      "architecture": {
+        "title": "Project Architecture"
+      },
+      "simulation": {
+        "trueColor": {
+          "description": "Generates natural color representation as seen by human eyes"
+        }
       }
     },
     "portfolio": {
