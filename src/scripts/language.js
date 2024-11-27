@@ -34,11 +34,14 @@ export const initLanguage = () => {
     
     try {
       const langFile = lang.toLowerCase();
-      const baseUrl = window.location.hostname === 'mmillle.github.io' 
-        ? '/Portfolio' 
-        : '';
-      const response = await fetch(`${baseUrl}/src/locales/${langFile}.json`);
-      if (!response.ok) throw new Error(`HTTP Error! status: ${response.status}`);
+      const isGitHubPages = window.location.hostname === 'mmillle.github.io';
+      const basePath = isGitHubPages ? '/Portfolio' : '';
+      
+      const response = await fetch(`${basePath}/src/locales/${langFile}.json`);
+      
+      if (!response.ok) {
+        throw new Error(`Erreur HTTP: ${response.status} - ${response.statusText}`);
+      }
       
       const translations = await response.json();
       const previousLang = currentLang.textContent;
@@ -48,10 +51,15 @@ export const initLanguage = () => {
       currentLang.textContent = lang;
       document.documentElement.setAttribute('lang', langFile);
       
-      console.log(`Changement de langue: ${previousLang} -> ${lang}`);
+      console.log(`Changement de langue réussi: ${previousLang} -> ${lang}`);
     } catch (error) {
-      console.error('Erreur lors du changement de langue:', error);
-      currentLang.textContent = localStorage.getItem('language') || 'EN';
+      console.error('Erreur détaillée lors du changement de langue:', {
+        error: error.message,
+        url: error.url,
+        status: error.status
+      });
+      const savedLang = localStorage.getItem('language') || 'EN';
+      currentLang.textContent = savedLang;
     } finally {
       isChangingLanguage = false;
     }
@@ -61,14 +69,17 @@ export const initLanguage = () => {
     const currentLanguage = currentLang.textContent;
     const newLanguage = currentLanguage === 'EN' ? 'FR' : 'EN';
     try {
-        await setLanguage(newLanguage);
+      await setLanguage(newLanguage);
     } catch (error) {
-        console.error('Erreur lors du changement de langue:', error);
-        alert('Erreur lors du changement de langue. Veuillez réessayer.');
+      console.error('Erreur lors du changement de langue:', error);
+      alert('Erreur lors du changement de langue. Veuillez réessayer.');
     }
   });
 
   const savedLanguage = localStorage.getItem('language') || 
     (navigator.language.startsWith('fr') ? 'FR' : 'EN');
-  setLanguage(savedLanguage);
+  
+  setLanguage(savedLanguage).catch(error => {
+    console.error('Erreur lors de l\'initialisation de la langue:', error);
+  });
 }; 
