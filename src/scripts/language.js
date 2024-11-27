@@ -34,7 +34,10 @@ export const initLanguage = () => {
     
     try {
       const langFile = lang.toLowerCase();
-      const response = await fetch(`./src/locales/${langFile}.json`);
+      const baseUrl = window.location.hostname === 'mmillle.github.io' 
+        ? '/Portfolio' 
+        : '';
+      const response = await fetch(`${baseUrl}/src/locales/${langFile}.json`);
       if (!response.ok) throw new Error(`HTTP Error! status: ${response.status}`);
       
       const translations = await response.json();
@@ -48,17 +51,21 @@ export const initLanguage = () => {
       console.log(`Changement de langue: ${previousLang} -> ${lang}`);
     } catch (error) {
       console.error('Erreur lors du changement de langue:', error);
-      isChangingLanguage = false;
+      currentLang.textContent = localStorage.getItem('language') || 'EN';
     } finally {
-      setTimeout(() => {
-        isChangingLanguage = false;
-      }, 500);
+      isChangingLanguage = false;
     }
   };
 
-  languageSelector.addEventListener('click', () => {
-    const newLanguage = currentLang.textContent === 'EN' ? 'FR' : 'EN';
-    setLanguage(newLanguage);
+  languageSelector.addEventListener('click', async () => {
+    const currentLanguage = currentLang.textContent;
+    const newLanguage = currentLanguage === 'EN' ? 'FR' : 'EN';
+    try {
+        await setLanguage(newLanguage);
+    } catch (error) {
+        console.error('Erreur lors du changement de langue:', error);
+        alert('Erreur lors du changement de langue. Veuillez réessayer.');
+    }
   });
 
   const savedLanguage = localStorage.getItem('language') || 
