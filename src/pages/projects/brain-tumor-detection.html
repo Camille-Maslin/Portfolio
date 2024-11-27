@@ -201,18 +201,28 @@ dense_1 (Dense)            (None, 4)                516
                 </div>
                 
                 <!-- Add new section for Jupyter Notebook -->
-                <div class="notebook-section">
-                    <h2 data-i18n="projects.brainTumor.notebook.title">Complete Implementation Details</h2>
+                <div class="notebook-section" role="region" aria-labelledby="notebook-title">
+                    <h2 id="notebook-title" data-i18n="projects.brainTumor.notebook.title">Complete Implementation Details</h2>
                     <p data-i18n="projects.brainTumor.notebook.description">Below is the complete implementation of the brain tumor detection model, including data processing, model architecture, training, and evaluation.</p>
                     
-                    <!-- Embed the Jupyter notebook -->
+                    <div class="notebook-link">
+                        <a href="../../notebooks/Notebook-Brain-Tumor.html" 
+                           class="btn-primary" 
+                           target="_blank" 
+                           rel="noopener"
+                           aria-label="Open complete notebook in new tab">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                            <span data-i18n="projects.brainTumor.notebook.openNotebook">View the Notebook</span>
+                        </a>
+                    </div>
+                    
                     <div class="jupyter-notebook-container">
                         <iframe 
-                            src="../../notebooks/Brain-Tumor-2.0.html" 
-                            width="100%" 
-                            height="800px" 
-                            frameborder="0" 
-                            scrolling="yes">
+                            src="../../notebooks/Notebook-Brain-Tumor.html" 
+                            title="Jupyter Notebook - Brain Tumor Detection Implementation"
+                            loading="lazy"
+                            aria-label="Embedded Jupyter notebook showing complete implementation"
+                            sandbox="allow-same-origin allow-scripts">
                         </iframe>
                     </div>
                 </div>

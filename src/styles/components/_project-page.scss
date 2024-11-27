@@ -104,4 +104,126 @@
       }
     }
   }
+
+  .notebook-mobile-link {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .jupyter-notebook-container {
+      display: none;
+    }
+    
+    .notebook-mobile-link {
+      display: block;
+    }
+  }
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background-color: var(--primary-color-dark);
+        transform: translateY(-2px);
+    }
+    
+    i {
+        font-size: 0.9em;
+    }
+}
+
+.notebook-section {
+    margin: 2rem 0;
+    
+    h2 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        color: var(--color-text-primary);
+        text-align: center;
+        
+        @media screen and (max-width: 768px) {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            margin-bottom: 0.75rem;
+        }
+    }
+    
+    p {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+        text-align: center;
+        color: var(--color-text-secondary);
+        
+        @media screen and (max-width: 768px) {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            padding: 0 1rem;
+        }
+    }
+    
+    .notebook-link {
+        text-align: center;
+        margin: 1.5rem 0;
+        
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-text-primary);
+            border: 2px solid var(--color-primary);
+            
+            &:hover, &:focus {
+                background-color: var(--color-bg-secondary);
+                border-color: var(--color-primary);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+            
+            &:focus-visible {
+                outline: 3px solid var(--color-accent);
+                outline-offset: 2px;
+            }
+
+            i {
+                color: currentColor;
+            }
+        }
+    }
+    
+    .jupyter-notebook-container {
+        margin-top: 2rem;
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: var(--color-bg-secondary);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        
+        iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+            background-color: var(--color-white);
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        .jupyter-notebook-container {
+            height: 400px;
+            
+            iframe {
+                height: 100%;
+            }
+        }
+    }
 } 

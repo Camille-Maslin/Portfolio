@@ -220,7 +220,8 @@
       },
       "notebook": {
         "title": "Complete Implementation Details",
-        "description": "Below is the complete implementation of the brain tumor detection model, including data processing, model architecture, training, and evaluation."
+        "description": "Below is the complete implementation of the brain tumor detection model, including data processing, model architecture, training, and evaluation.",
+        "openNotebook": "View the Notebook"
       }
     },
     "multispectral": {

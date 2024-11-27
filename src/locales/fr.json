@@ -203,7 +203,8 @@
         },
         "notebook": {
           "title": "Détails Complets de l'Implémentation",
-          "description": "Voici l'implémentation complète du modèle de détection de tumeurs cérébrales, y compris le traitement des données, l'architecture du modèle, l'entraînement et l'évaluation."
+          "description": "Voici l'implémentation complète du modèle de détection de tumeurs cérébrales, y compris le traitement des données, l'architecture du modèle, l'entraînement et l'évaluation.",
+          "openNotebook": "Voir le Notebook Complet"
         }
       },
       "multispectral": {
