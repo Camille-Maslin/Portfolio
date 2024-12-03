@@ -60,31 +60,6 @@ portfolio/
 - Adaptive skill bars
 - Flexible contact section
 
-## 🔧 Setup and Development
-
-1. Clone the repository:
-```bash
-git clone https://github.com/mmillle/portfolio.git
-```
-3. Navigate to project directory:
-```bash
-cd portfolio
-```
-
-4. Open `index.html` in your browser or use a local server.
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
-
-## 📄 License
-
-MIT License - feel free to use this project as a template for your own portfolio.
-
 ## 📬 Contact
 
 - LinkedIn: [Camille Maslin](https://linkedin.com/in/camille-maslin)
