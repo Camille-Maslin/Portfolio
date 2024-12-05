@@ -144,7 +144,7 @@
     "viewGithub": "View on GitHub",
     "brainTumor": {
       "title": "Brain Tumor Detection AI",
-      "subtitle": "A deep learning approach achieving 94% accuracy in brain tumor classification using CNN",
+      "subtitle": "Developed a Convolutional Neural Network (CNN) for automated brain tumor detection from MRI scans, achieving 93% accuracy in tumor classification.",
       "overview": {
         "title": "Project Overview",
         "description": "Developed a Convolutional Neural Network (CNN) model for automated classification of brain tumor MRI scans into four distinct categories: glioma, meningioma, no tumor, and pituitary tumor. This project demonstrates the practical application of deep learning in medical diagnosis support."

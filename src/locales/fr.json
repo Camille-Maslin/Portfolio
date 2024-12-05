@@ -144,7 +144,7 @@
     "viewGithub": "Voir sur GitHub",
     "brainTumor": {
       "title": "IA de Détection de Tumeurs Cérébrales",
-      "subtitle": "Une approche d'apprentissage profond atteignant 94% de précision dans la classification des tumeurs cérébrales utilisant les CNN",
+      "subtitle": "Développement d'un modèle de Réseau de Neurones Convolutifs (CNN) pour la classification automatisée des IRM cérébrales, atteignant 93% de précision dans la classification des tumeurs.",
       "overview": {
         "title": "Vue d'ensemble",
         "description": "Développement d'un modèle de Réseau de Neurones Convolutifs (CNN) pour la classification automatisée des IRM cérébrales en quatre catégories distinctes : gliome, méningiome, absence de tumeur et tumeur pituitaire. Ce projet démontre l'application pratique de l'apprentissage profond dans l'aide au diagnostic médical."
