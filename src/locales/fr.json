@@ -1,73 +1,74 @@
 {
-    "nav": {
-      "about": "À propos",
-      "skills": "Compétences",
-      "projects": "Projets",
-      "contact": "Contact"
-    },
-    "profile": {
-      "greeting": "Bonjour, je suis",
-      "title": "Étudiant en Informatique",
-      "subtitle": "Spécialisé en IA & Science des Données",
-      "contact": "Me Contacter",  
-      "resume": "Voir Mon CV"
-    },
-    "about": {
-      "explore": "DÉCOUVRIR",
-      "title": "Mon Parcours",
-      "subtitle": "À PROPOS DE MOI",
-      "bio": "Je suis étudiant en 3ème année d'informatique, passionné par la manipulation des données et particulièrement par les avancées en intelligence artificielle. Je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences en analyse et traitement des données. Je suis prêt à relever de nouveaux défis et à contribuer au succès des projets.",
-      "objectives": {
-        "title": "Mes Objectifs",
-        "shortTerm": {
-          "title": "Objectif à Court Terme",
-          "description": "Intégrer une école me permettant d'approfondir mes connaissances en développement et optimisation d'IA"
-        },
-        "longTerm": {
-          "title": "Objectif à Long Terme",
-          "description": "Travailler dans la recherche ou le développement en IA"
-        }
+  "nav": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "profile": {
+    "greeting": "Bonjour, je suis",
+    "title": "Étudiant en Informatique",
+    "subtitle": "Spécialisé en IA & Science des Données",
+    "contact": "Me Contacter",
+    "resume": "Voir Mon CV"
+  },
+  "about": {
+    "explore": "À PROPOS DE MOI",
+    "title": "À PROPOS DE MOI",
+    "bio": "Je suis étudiant en 3ème année d'informatique, passionné par la manipulation des données et particulièrement par les avancées en intelligence artificielle. Je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences en analyse et traitement des données. Je suis prêt à relever de nouveaux défis et à contribuer au succès des projets.",
+    "objectives": {
+      "title": "Mes Objectifs",
+      "shortTerm": {
+        "title": "Objectif à Court Terme",
+        "description": "Intégrer une école pour approfondir mes connaissances en développement et optimisation d'IA."
       },
-      "journey": {
-        "title": "Mon Parcours",
-        "experience": {
-          "title": "Expérience",
-          "duration": "9 semaines",
-          "databaseAnalysis": "Analyse de Base de Données",
-          "location": "Tours Métropole",
-          "techTags": {
-            "sql": "SQL",
-            "postgresql": "PostgreSQL",
-            "dbDesign": "Conception BDD",
-            "performance": "Performance"
-          }
-        },
-        "education": {
-          "title": "Formation",
-          "duration": "2022-2025",
-          "bachelor": "BUT Informatique",
-          "location": "Université de Dijon",
-          "viewProgram": "Voir le Programme"
-        },
-        "futureInternship": {
-          "title": "Stage à Venir",
-          "duration": "16 semaines",
-          "neuralNetworkEvaluation": "Évaluation de Réseaux Neuronaux",
-          "location": "Laboratoire CIAD, Dijon",
-          "techTags": {
-            "python": "Python",
-            "snn": "SNN",
-            "neuralNetworks": "Réseaux Neuronaux",
-            "evolutionary": "Évolutionnaire"
-          }
-        }
+      "longTerm": {
+        "title": "Objectif à Long Terme",
+        "description": "Travailler dans la recherche ou le développement en IA."
       }
     },
-    "skills": {
-      "explore": "Découvrez",
-      "title": "Mes Compétences",
-      "title2": "Mes Compétences Générales",
+    "journey": {
+      "title": "Mon Parcours",
+      "experience": {
+        "title": "Expérience",
+        "duration": "9 semaines",
+        "databaseAnalysis": "Analyse de Base de Données",
+        "location": "Tours Métropole",
+        "techTags": {
+          "sql": "SQL",
+          "postgresql": "PostgreSQL",
+          "dbDesign": "Conception BDD",
+          "performance": "Performance"
+        }
+      },
+      "education": {
+        "title": "Formation",
+        "duration": "2022-2025",
+        "bachelor": "BUT Informatique",
+        "location": "Université de Dijon",
+        "viewProgram": "Voir le Programme"
+      },
+      "futureInternship": {
+        "title": "Stage à Venir",
+        "duration": "16 semaines",
+        "neuralNetworkEvaluation": "Évaluation de Réseaux Neuronaux",
+        "location": "Laboratoire CIAD, Dijon",
+        "techTags": {
+          "python": "Python",
+          "snn": "SNN",
+          "neuralNetworks": "Réseaux Neuraux",
+          "evolutionary": "Évolutionnaire"
+        }
+      }
+    }
+  },
+  "skills": {
+    "explore": "DÉCOUVRIR",
+    "title": "Mes Compétences",
+    "title2": "Mes Compétences Générales",
+    "categories": {
       "database": {
+        "title": "Base de données",
         "skills": {
           "sql": "SQL",
           "excel": "Excel",
@@ -76,6 +77,7 @@
         }
       },
       "development": {
+        "title": "Développement",
         "skills": {
           "python": "Python",
           "cSharp": "C#",
@@ -84,241 +86,192 @@
           "cPlusPlus": "C++"
         }
       },
-      "tools": "Outils & Autres",
-      "levels": {
-        "basic": {
-          "label": "Débutant",
-          "description": "Connaissances fondamentales"
-        },
-        "intermediate": {
-          "label": "Intermédiaire",
-          "description": "Bonne maîtrise"
-        },
-        "advanced": {
-          "label": "Avancé",
-          "description": "Expertise approfondie"
-        }
-      },
-      "skillLevels": {
-        "b2": "Niveau B2",
-        "projectManagement": "Gestion de Projet"
-      },
-      "categories": {
-        "database": {
-          "title": "Base de données",
-          "skills": {
-            "sql": "SQL",
-            "postgresql": "PostgreSQL",
-            "oracle": "Oracle",
-            "excel": "Excel",
-            "neo4j": "Neo4j",
-            "powerbi": "Power BI"
-          }
-        },
-        "development": {
-          "title": "Développement",
-          "skills": {
-            "python": "Python",
-            "csharp": "C#",
-            "htmlcss": "HTML/CSS",
-            "php": "PHP",
-            "cpp": "C++"
-          }
-        },
-        "tools": {
-          "title": "Outils & Autres",
-          "skills": {
-            "git": "Git",
-            "projectManagement": "Gestion de Projet",
-            "promptEngineering": "Ingénierie de Prompts",
-            "english": "Anglais",
-            "tensorflow": "TensorFlow",
-            "keras": "Keras",
-            "opencv": "OpenCV",
-            "deepLearning": "Apprentissage Profond",
-            "cnn": "Réseau Neuronal Convolutif",
-            "multispectralImage": "Image Multispectrale",
-            "imageProcessing": "Traitement d'Image",
-            "guiDevelopment": "Développement d'Interface",
-            "research": "Recherche",
-            "html5": "HTML5",
-            "css3": "CSS3",
-            "javascript": "JavaScript",
-            "responsiveDesign": "Design Adaptatif"
-          }
-        }
-      },
-      "generalSkills": {
-        "communication": "Communication",
-        "collaboration": "Collaboration",
-        "adaptability": "Adaptabilité",
-        "autonomy": "Autonomie",
-        "learning": "Apprentissage Continu"
-      }
-    },
-    "projects": {
-      "title": "Mes Projets",
-      "title-name": "Détection de Tumeurs Cérébrales",
-      "discover": "Découvrez",
-      "back": "Retour aux projets",
-      "overview": "Vue d'ensemble",
-      "technologies": "Technologies utilisées",
-      "challenges": "Défis",
-      "results": "Résultats",
-      "viewDetails": "Voir les Détails",
-      "viewGithub": "Voir sur GitHub",
-      "brainTumor": {
-        "title": "IA de Détection de Tumeurs Cérébrales",
-        "subtitle": "Une approche d'apprentissage profond atteignant 94% de précision dans la classification des tumeurs cérébrales utilisant les CNN",
-        "overview": {
-          "title": "Vue d'ensemble",
-          "description": "Développement d'un modèle de Réseau de Neurones Convolutifs (CNN) pour la classification automatisée des IRM cérébrales en quatre catégories distinctes : gliome, méningiome, absence de tumeur et tumeur pituitaire. Ce projet démontre l'application pratique de l'apprentissage profond dans l'aide au diagnostic médical."
-        },
-        "challenge": {
-          "title": "Défi",
-          "description": "Le principal défi était de créer un système de classification fiable capable de distinguer avec précision les différents types de tumeurs cérébrales tout en maintenant une haute précision pour toutes les catégories. Cela a nécessité une conception minutieuse de l'architecture du modèle et une optimisation approfondie des données d'entraînement."
-        },
-        "technical": {
-          "title": "Détails Techniques",
-          "keyFeatures": "Caractéristiques Principales",
-          "features": {
-            "accuracy": "94% de précision globale",
-            "classification": "Classification multi-classes des tumeurs",
-            "architecture": "Architecture CNN personnalisée",
-            "optimization": "Optimisé pour les IRM 256x256"
-          },
-          "implementation": "Implémentation Technique",
-          "architecture": "Architecture du Modèle",
-          "training": "Progression de l'Entraînement",
-          "predictions": "Exemples de Prédictions",
-          "confidence": "Analyse de la Confiance",
-          "trainingDesc": "Évolution de la précision et de la perte du modèle pendant l'entraînement",
-          "predictionsDesc": "Prédictions sur différents types de tumeurs",
-          "confidenceDesc": "Distribution de la confiance du modèle pour les prédictions correctes"
-        },
-        "performance": {
-          "title": "Performance du Modèle",
-          "matrix": "Matrice de Confusion",
-          "matrixDesc": "Résultats détaillés de classification par type de tumeur",
-          "accuracyByType": "Précision par Type",
-          "types": {
-            "glioma": "Gliome : 93.6% de précision",
-            "meningioma": "Méningiome : 87.7% de précision",
-            "noTumor": "Pas de Tumeur : 98.0% de précision",
-            "pituitary": "Pituitaire : 96.7% de précision"
-          }
-        },
-        "notebook": {
-          "title": "Détails Complets de l'Implémentation",
-          "description": "Voici l'implémentation complète du modèle de détection de tumeurs cérébrales, y compris le traitement des données, l'architecture du modèle, l'entraînement et l'évaluation.",
-          "openNotebook": "Voir le Notebook Complet"
-        }
-      },
-      "multispectral": {
-        "title": "Visionneur d'Images Multispectrales",
-        "back": "Retour aux projets",
-        "subtitle": "Une application Python pour visualiser et manipuler des images multispectrales avec différentes méthodes de simulation",
-        "viewGithub": "Voir sur GitHub",
-        "overview": {
-          "title": "Vue d'ensemble",
-          "description": "SimulFCImage est un outil conçu pour manipuler des images multispectrales, permettant aux utilisateurs de les visualiser dans différentes représentations colorées. L'application propose plusieurs méthodes de simulation, de la génération de couleurs réelles aux visualisations spécialisées comme la simulation de la vision des abeilles."
-        },
-        "features": {
-          "title": "Fonctionnalités Clés",
-          "list": {
-            "trueColor": "Génération de Couleurs Réelles",
-            "falseColor": "Sélection de Bandes RGB Personnalisée",
-            "beeVision": "Simulation de Vision des Abeilles",
-            "colorBlind": "Simulation de Daltonisme",
-            "interface": "Interface Utilisateur Intuitive"
-          }
-        },
-        "technical": {
-          "title": "Détails Techniques",
-          "tags": {
-            "python": "Python",
-            "multispectral": "Image Multispectrale",
-            "imageProcessing": "Traitement d'Image",
-            "gui": "Développement Interface",
-            "searching": "Recherche",
-            "guiDevelopment": "Développement d'Interface"
-          }
-        },
-        "concept": {
-          "title": "Comprendre les Images Multispectrales",
-          "whatIs": {
-            "title": "Qu'est-ce qu'une Image Multispectrale ?",
-            "description": "Une image multispectrale est composée de plusieurs bandes, chacune capturant la lumière à différentes longueurs d'onde. Contrairement aux images RGB classiques qui ne capturent que la lumière visible, les images multispectrales peuvent capturer des informations au-delà de la vision humaine, incluant l'infrarouge et l'ultraviolet."
-          },
-          "understandingBands": {
-            "title": "Comprendre les Bandes",
-            "description": "Chaque bande dans une image multispectrale représente l'intensité de la lumière à une longueur d'onde spécifique. Par exemple, une bande unique peut montrer l'intensité de réflexion de la lumière à 550nm (lumière verte). Ces bandes peuvent être combinées de différentes manières pour révéler divers aspects de la scène capturée."
-          },
-          "bandExample": "Exemple d'une bande spectrale unique (représentation en niveaux de gris)"
-        },
-        "interface": {
-          "title": "Aperçu de l'Interface",
-          "design": {
-            "title": "Design User-Friendly",
-            "description": "L'application propose une interface intuitive permettant aux utilisateurs de :",
-            "features": {
-              "import": "Importer facilement des images multispectrales",
-              "navigate": "Naviguer entre les différentes bandes",
-              "select": "Sélectionner les méthodes de simulation",
-              "visualize": "Visualiser et sauvegarder les résultats"
-            }
-          },
-          "preview": {
-            "title": "Aperçu de l'Interface",
-            "caption": "Interface principale de SimulFCImage avec navigation entre les bandes et options de simulation"
-          }
-        },
-        "methods": {
-          "title": "Méthodes de Simulation",
-          "trueColor": {
-            "title": "Génération de Couleurs Réelles",
-            "inputBands": "Bandes d'Entrée",
-            "generatedResult": "Résultat Généré",
-            "originalRGB": "RGB Original",
-            "description": "Génère une représentation en couleurs naturelles telle que vue par l'œil humain",
-            "generatedResultCaption": "Notre Méthode",
-            "originalRGBCaption": "Image de Référence"
-          },
-          "falseColor": {
-            "title": "Génération de Fausses Couleurs",
-            "description": "Sélection personnalisée des bandes RGB pour une visualisation spécialisée où l'utilisateur peut choisir les bandes à afficher, dans ce cas, le rouge est assigné à la 167ème bande, le vert à la 32ème bande et le bleu à la 86ème bande"
-          },
-          "beeVision": {
-            "title": "Simulation de Vision des Abeilles",
-            "description": "Simule la façon dont les abeilles perçoivent les images multispectrales"
-          }
-        },
-        "architecture": {
-          "title": "Architecture du Projet",
-          "description": "Diagramme de l'architecture du projet SimulFCImage"
-        }
-      },
-      "portfolio": {
-        "title": "Site Portfolio",
-        "description": "Conception et développement d'un site portfolio professionnel responsive utilisant les technologies web modernes et les meilleures pratiques.",
-        "tags": {
-          "html5": "HTML5",
-          "css3": "CSS3",
-          "javascript": "JavaScript",
-          "responsiveDesign": "Design Responsive"
+      "tools": {
+        "title": "Outils & Autres",
+        "skills": {
+          "git": "Git",
+          "projectManagement": "Gestion de Projet",
+          "promptEngineering": "Ingénierie de Prompts",
+          "english": "Anglais"
         }
       }
     },
-    "contact": {
-      "getInTouch": "Rencontrez-moi",
-      "title": "Contactez-moi",
-      "email": "Email",
-      "linkedin": "LinkedIn"
+    "levels": {
+      "advanced": {
+        "label": "Avancé",
+        "description": "Maîtrise approfondie et expérience significative"
+      },
+      "intermediate": {
+        "label": "Intermédiaire",
+        "description": "Bonne compréhension et pratique régulière"
+      },
+      "basic": {
+        "label": "Débutant",
+        "description": "Connaissances fondamentales et pratique de base"
+      }
     },
-    "footer": {
-      "copyright": "Copyright © 2024 Camille Maslin",
-      "rights": "Tous droits réservés",
-      "madeWith": "Réalisé avec",
-      "viewSource": "Voir le code source"
+    "skillLevels": {
+      "b2": "Niveau B2"
     }
+  },
+  "general": {
+    "title": "Mes Compétences Générales",
+    "communication": "Communication",
+    "autonomy": "Autonomie",
+    "adaptability": "Adaptabilité",
+    "collaboration": "Collaboration",
+    "learning": "Apprentissage Continu"
+  },
+  "projects": {
+    "discover": "DÉCOUVRIR",
+    "title": "Mes Projets",
+    "viewDetails": "Voir les Détails",
+    "viewGithub": "Voir sur GitHub",
+    "brainTumor": {
+      "title": "IA de Détection de Tumeurs Cérébrales",
+      "subtitle": "Une approche d'apprentissage profond atteignant 94% de précision dans la classification des tumeurs cérébrales utilisant les CNN",
+      "overview": {
+        "title": "Vue d'ensemble",
+        "description": "Développement d'un modèle de Réseau de Neurones Convolutifs (CNN) pour la classification automatisée des IRM cérébrales en quatre catégories distinctes : gliome, méningiome, absence de tumeur et tumeur pituitaire. Ce projet démontre l'application pratique de l'apprentissage profond dans l'aide au diagnostic médical."
+      },
+      "challenge": {
+        "title": "Défi",
+        "description": "Le principal défi était de créer un système de classification fiable capable de distinguer avec précision les différents types de tumeurs cérébrales tout en maintenant une haute précision pour toutes les catégories. Cela a nécessité une conception minutieuse de l'architecture du modèle et une optimisation approfondie des données d'entraînement."
+      },
+      "technical": {
+        "title": "Détails Techniques",
+        "keyFeatures": "Caractéristiques Principales",
+        "features": {
+          "accuracy": "94% de précision globale",
+          "classification": "Classification multi-classes des tumeurs",
+          "architecture": "Architecture CNN personnalisée",
+          "optimization": "Optimisé pour les IRM 256x256"
+        }
+      },
+      "performance": {
+        "title": "Performance du Modèle",
+        "matrix": "Matrice de Confusion",
+        "matrixDesc": "Résultats détaillés de classification par type de tumeur",
+        "accuracyByType": "Précision par Type",
+        "types": {
+          "glioma": "Gliome : 93.6% de précision",
+          "meningioma": "Méningiome : 87.7% de précision",
+          "noTumor": "Pas de Tumeur : 98.0% de précision",
+          "pituitary": "Pituitaire : 96.7% de précision"
+        }
+      },
+      "notebook": {
+        "title": "Détails Complets de l'Implémentation",
+        "description": "Voici l'implémentation complète du modèle de détection de tumeurs cérébrales, y compris le traitement des données, l'architecture du modèle, l'entraînement et l'évaluation.",
+        "openNotebook": "Voir le Notebook Complet"
+      }
+    },
+    "multispectral": {
+      "back": "Retour aux Projets",
+      "title": "Visionneur d'Images Multispectrales",
+      "subtitle": "Une application Python pour visualiser et manipuler des images multispectrales avec diverses méthodes de simulation",
+      "overview": {
+        "title": "Vue d'ensemble",
+        "description": "SimulFCImage est un outil conçu pour manipuler des images multispectrales, permettant aux utilisateurs de les visualiser dans différentes représentations colorées. L'application propose plusieurs méthodes de simulation, de la génération de couleurs réelles aux visualisations spécialisées comme la simulation de la vision des abeilles."
+      },
+      "features": {
+        "title": "Fonctionnalités Clés",
+        "list": {
+          "trueColor": "Génération de Couleurs Réelles",
+          "falseColor": "Sélection de Bandes RGB Personnalisée",
+          "beeVision": "Simulation de Vision des Abeilles",
+          "colorBlind": "Simulation de Daltonisme",
+          "interface": "Interface Utilisateur Intuitive"
+        }
+      },
+      "technical": {
+        "title": "Détails Techniques",
+        "tags": {
+          "python": "Python",
+          "multispectralImage": "Image Multispectrale",
+          "imageProcessing": "Traitement d'Image",
+          "guiDevelopment": "Développement d'Interface",
+          "searching": "Recherche"
+        }
+      },
+      "concept": {
+        "title": "Comprendre les Images Multispectrales",
+        "whatIs": {
+          "title": "Qu'est-ce qu'une Image Multispectrale ?",
+          "description": "Une image multispectrale est composée de plusieurs bandes, chacune capturant la lumière à différentes longueurs d'onde. Contrairement aux images RGB classiques qui ne capturent que la lumière visible, les images multispectrales peuvent capturer des informations au-delà de la vision humaine, incluant l'infrarouge et l'ultraviolet."
+        },
+        "understandingBands": {
+          "title": "Comprendre les Bandes",
+          "description": "Chaque bande dans une image multispectrale représente l'intensité de la lumière à une longueur d'onde spécifique. Par exemple, une bande unique peut montrer l'intensité de réflexion de la lumière à 550nm (lumière verte). Ces bandes peuvent être combinées de différentes manières pour révéler divers aspects de la scène capturée."
+        },
+        "bandExample": "Exemple d'une bande spectrale unique (représentation en niveaux de gris)"
+      },
+      "interface": {
+        "title": "Aperçu de l'Interface",
+        "design": {
+          "title": "Design User-Friendly",
+          "description": "L'application propose une interface intuitive permettant aux utilisateurs de :",
+          "features": {
+            "import": "Importer facilement des images multispectrales",
+            "navigate": "Naviguer entre les différentes bandes",
+            "select": "Sélectionner les méthodes de simulation",
+            "visualize": "Visualiser et sauvegarder les résultats"
+          }
+        },
+        "preview": {
+          "caption": "Interface principale de SimulFCImage avec navigation entre les bandes et options de simulation"
+        }
+      },
+      "methods": {
+        "title": "Méthodes de Simulation",
+        "trueColor": {
+          "title": "Génération de Couleurs Réelles",
+          "inputBands": "Bandes d'Entrée",
+          "inputBandsCaption": "203 Bandes d'Entrée",
+          "generatedResult": "Résultat Généré",
+          "originalRGB": "RGB Original",
+          "generatedResultCaption": "Notre Méthode",
+          "originalRGBCaption": "Image de Référence"
+        },
+        "falseColor": {
+          "title": "Génération de Fausses Couleurs",
+          "description": "Sélection personnalisée des bandes RGB pour une visualisation spécialisée où l'utilisateur peut choisir les bandes à afficher, dans ce cas, le rouge est assigné à la 167ème bande, le vert à la 32ème bande et le bleu à la 86ème bande"
+        },
+        "beeVision": {
+          "title": "Simulation de Vision des Abeilles",
+          "description": "Simule la façon dont les abeilles perçoivent les images multispectrales"
+        }
+      },
+      "architecture": {
+        "title": "Architecture du Projet"
+      },
+      "simulation": {
+        "trueColor": {
+          "description": "Génère une représentation en couleurs naturelles telle que vue par l'œil humain"
+        }
+      }
+    },
+    "portfolio": {
+      "title": "Site Portfolio",
+      "description": "Conception et développement d'un site portfolio professionnel responsive utilisant les technologies web modernes et les meilleures pratiques.",
+      "tags": {
+        "html5": "HTML5",
+        "css3": "CSS3",
+        "javascript": "JavaScript",
+        "responsiveDesign": "Design Adaptatif"
+      }
+    }
+  },
+  "contact": {
+    "getInTouch": "RENCONTRER",
+    "title": "Contactez-moi",
+    "email": "Email",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "Copyright © 2024 Camille Maslin",
+    "rights": "Tous droits réservés",
+    "madeWith": "Réalisé avec",
+    "viewSource": "Voir le code source"
   }
+}
