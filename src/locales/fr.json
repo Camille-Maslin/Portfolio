@@ -184,7 +184,7 @@
     "multispectral": {
       "back": "Retour aux Projets",
       "title": "Visionneur d'Images Multispectrales",
-      "subtitle": "Une application Python pour visualiser et manipuler des images multispectrales avec diverses méthodes de simulation",
+      "subtitle": "Développement d'un outil logiciel pour simuler divers types de vision, pour le laboratoire ImViA à Dijon, améliorant les capacités d'analyse des images.",
       "overview": {
         "title": "Vue d'ensemble",
         "description": "SimulFCImage est un outil conçu pour manipuler des images multispectrales, permettant aux utilisateurs de les visualiser dans différentes représentations colorées. L'application propose plusieurs méthodes de simulation, de la génération de couleurs réelles aux visualisations spécialisées comme la simulation de la vision des abeilles."
