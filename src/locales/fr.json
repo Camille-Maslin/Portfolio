@@ -147,6 +147,13 @@
             "responsiveDesign": "Design Adaptatif"
           }
         }
+      },
+      "generalSkills": {
+        "communication": "Communication",
+        "collaboration": "Collaboration",
+        "adaptability": "Adaptabilité",
+        "autonomy": "Autonomie",
+        "learning": "Apprentissage Continu"
       }
     },
     "projects": {
