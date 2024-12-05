@@ -92,7 +92,12 @@
           "git": "Git",
           "projectManagement": "Gestion de Projet",
           "promptEngineering": "Ingénierie de Prompts",
-          "english": "Anglais"
+          "english": "Anglais",
+          "multispectralImage": "Image Multispectrale",
+          "imageProcessing": "Traitement d'Image",
+          "guiDevelopment": "Développement d'Interface",
+          "research": "Recherche",
+          "responsiveDesign": "Design Responsif"
         }
       }
     },
@@ -112,6 +117,16 @@
     },
     "skillLevels": {
       "b2": "Niveau B2"
+    },
+    "generalSkills": {
+      "title": "Mes Compétences Générales",
+      "skills": {
+        "communication": "Communication",
+        "autonomy": "Autonomie",
+        "adaptability": "Adaptabilité",
+        "collaboration": "Collaboration",
+        "learning": "Apprentissage Continu"
+      }
     }
   },
   "general": {

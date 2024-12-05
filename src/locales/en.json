@@ -92,7 +92,12 @@
           "git": "Git",
           "projectManagement": "Project Management",
           "promptEngineering": "Prompt Engineering",
-          "english": "English"
+          "english": "English",
+          "multispectralImage": "Multispectral Image",
+          "imageProcessing": "Image Processing",
+          "guiDevelopment": "GUI Development",
+          "research": "Research",
+          "responsiveDesign": "Responsive Design"
         }
       }
     },
@@ -112,6 +117,16 @@
     },
     "skillLevels": {
       "b2": "B2 Level"
+    },
+    "generalSkills": {
+      "title": "My General Skills",
+      "skills": {
+        "communication": "Communication",
+        "autonomy": "Autonomy",
+        "adaptability": "Adaptability",
+        "collaboration": "Collaboration",
+        "learning": "Continuous Learning"
+      }
     }
   },
   "general": {
