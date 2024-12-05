@@ -34,7 +34,7 @@ export const initLanguage = () => {
     
     try {
       const langFile = lang.toLowerCase();
-      const isGitHubPages = window.location.hostname === 'mmillle.github.io';
+      const isGitHubPages = window.location.hostname === 'camille-maslin.github.io';
       const basePath = isGitHubPages ? '/Portfolio' : '';
       const localesPath = `${basePath}/src/locales/${langFile}.json`;
       
