@@ -59,9 +59,3 @@ portfolio/
 - Responsive project grid
 - Adaptive skill bars
 - Flexible contact section
-
-## 📬 Contact
-
-- LinkedIn: [Camille Maslin](https://linkedin.com/in/camille-maslin)
-- Email: camillemaslin@gmail.com
-- GitHub: [@mmillle](https://github.com/mmillle)
