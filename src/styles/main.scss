@@ -43,6 +43,7 @@
 @use 'utilities/layout.scss';
 @use 'utilities/helpers.scss';
 body {
+    visibility: hidden;
     background-color: var(--color-bg-primary);
     color: var(--color-text-primary);
     transition: background-color var(--transition-speed),
@@ -75,6 +76,43 @@ body {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
-  scroll-timeline: none;
+}
+
+.content-overlay {
+  position: relative;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(var(--color-bg-overlay), var(--overlay-opacity));
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.project-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(var(--color-bg-overlay), var(--overlay-opacity));
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.general-skill-card {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.skill-category {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.section-title .title-highlight {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle), var(--gradient-end), var(--gradient-middle), var(--gradient-start));
+    background-size: 500% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 8s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
 }
 

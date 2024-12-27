@@ -185,6 +185,8 @@
   overflow: hidden;
   border: 1px solid var(--color-border);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   
   &::before {
     content: '';
@@ -350,6 +352,7 @@
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(var(--color-accent-rgb), 0.1);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     
     &:hover {
@@ -737,4 +740,82 @@
       background: linear-gradient(90deg, var(--color-level-b2-text), var(--color-level-b2-bg));
     }
   }
+}
+
+.progress-bar {
+    &[data-level="advanced"] {
+        width: 85%;
+    }
+    
+    &[data-level="intermediate"] {
+        width: 65%;
+    }
+    
+    &[data-level="basic"] {
+        width: 45%;
+    }
+    
+    &[data-level="b2"] {
+        width: 70%;
+    }
+
+    // Valeurs spécifiques
+    &[data-level="intermediate-55"] {
+        width: 55%;
+    }
+    
+    &[data-level="basic-45"] {
+        width: 45%;
+    }
+    
+    &[data-level="advanced-85"] {
+        width: 85%;
+    }
+    
+    &[data-level="intermediate-65"] {
+        width: 65%;
+    }
+    
+    &[data-level="advanced-75"] {
+        width: 75%;
+    }
+    
+    &[data-level="basic-50"] {
+        width: 50%;
+    }
+    
+    &[data-level="basic-40"] {
+        width: 40%;
+    }
+    
+    &[data-level="advanced-80"] {
+        width: 80%;
+    }
+    
+    &[data-level="basic-35"] {
+        width: 35%;
+    }
+}
+
+.project-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(var(--color-bg-overlay), var(--overlay-opacity));
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.content-overlay {
+  position: relative;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(var(--color-bg-overlay), var(--overlay-opacity));
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }

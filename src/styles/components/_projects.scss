@@ -283,4 +283,41 @@
     &[data-type="javascript"] { border-color: #F7DF1E; &:hover { background: #F7DF1E; color: black; }}
     &[data-type="responsive"] { border-color: #00BCD4; &:hover { background: #00BCD4; color: white; }}
   }
+}
+
+.project-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(var(--color-bg-overlay), var(--overlay-opacity));
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.project-type {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+    
+    .project-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.4rem 1rem;
+        border-radius: 1rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        
+        &.academic {
+            background: rgba(var(--color-accent-rgb), 0.1);
+            color: var(--color-accent);
+        }
+        
+        &.personal {
+            background: rgba(var(--color-success-rgb), 0.1);
+            color: var(--color-success);
+        }
+    }
 } 

@@ -1,6 +1,6 @@
 section {
   padding: 4rem 0;
-  min-height: auto;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,4 +147,23 @@ section {
     margin-bottom: 1rem;
     text-transform: uppercase;
   }
+}
+
+.content-overlay {
+  position: relative;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(var(--color-bg-overlay), var(--overlay-opacity));
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.section-title .title-highlight {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 8s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
 }

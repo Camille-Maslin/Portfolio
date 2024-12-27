@@ -227,3 +227,34 @@
         }
     }
 } 
+
+.project-brand {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.project-name {
+    margin-bottom: 2rem;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .project-brand {
+        font-size: 3rem;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+} 

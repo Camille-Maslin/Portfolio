@@ -28,6 +28,7 @@
       }
     },
     "journey": {
+      "discover": "DÉCOUVRIR",
       "title": "Mon Parcours",
       "experience": {
         "title": "Expérience",
@@ -138,6 +139,10 @@
     "learning": "Apprentissage Continu"
   },
   "projects": {
+    "types": {
+      "academic": "Projet Académique",
+      "personal": "Projet Personnel"
+    },
     "discover": "DÉCOUVRIR",
     "title": "Mes Projets",
     "viewDetails": "Voir les Détails",
@@ -182,9 +187,12 @@
       }
     },
     "multispectral": {
+      "brand": "SimulFCImage",
       "back": "Retour aux Projets",
-      "title": "Visionneur d'Images Multispectrales",
-      "subtitle": "Développement d'un outil logiciel pour simuler divers types de vision, pour le laboratoire ImViA à Dijon, améliorant les capacités d'analyse des images.",
+      "title": "SimulFCImage | Visionneur d'Images Multispectrales",
+      "indexTitle": "SimulFCImage | Visionneur d'Images Multispectrales",
+      "indexDescription": "Direction du développement d'un outil logiciel professionnel pour le Laboratoire ImViA, permettant la visualisation et l'analyse d'images multispectrales à travers diverses méthodes de simulation.",
+      "subtitle": "Un projet professionnel développé pour le Laboratoire ImViA à Dijon pendant ma dernière année de BUT Informatique",
       "overview": {
         "title": "Vue d'ensemble",
         "description": "SimulFCImage est un outil conçu pour manipuler des images multispectrales, permettant aux utilisateurs de les visualiser dans différentes représentations colorées. L'application propose plusieurs méthodes de simulation, de la génération de couleurs réelles aux visualisations spécialisées comme la simulation de la vision des abeilles."
@@ -258,12 +266,33 @@
         }
       },
       "architecture": {
-        "title": "Architecture du Projet"
+        "title": "Architecture Technique",
+        "description": "L'application suit une architecture moderne en 6 couches conçue pour la maintenabilité et l'évolutivité :",
+        "layers": {
+          "hmi": "IHM (Interface Homme Machine) : Gère l'interface visuelle et les interactions utilisateur",
+          "builder": "Builder : Gère la création des widgets selon le pattern Builder",
+          "logic": "LogicLayer : Contient la logique métier pour le traitement d'images multispectrales",
+          "factory": "Factory : Implémente le pattern Factory pour les méthodes de simulation",
+          "managers": "Managers : Gère les opérations fichiers et les ressources",
+          "exceptions": "Exceptions : Gestion personnalisée des erreurs spécifiques à l'application"
+        }
       },
       "simulation": {
         "trueColor": {
           "description": "Génère une représentation en couleurs naturelles telle que vue par l'œil humain"
         }
+      },
+      "role": {
+        "title": "Rôle",
+        "description": "Chef de Projet, Responsable Communication & Développeur"
+      },
+      "context": {
+        "title": "Contexte",
+        "description": "Projet Professionnel, 3ème année BUT Informatique"
+      },
+      "client": {
+        "title": "Client",
+        "description": "Laboratoire ImViA, Dijon"
       }
     },
     "portfolio": {
