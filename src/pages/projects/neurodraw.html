@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NeuroDraw - Educational Neural Network Implementation">
+    <title>NeuroDraw - Project Details</title>
+    
+    <!-- Styles -->
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    </noscript>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script type="module">
+        import { initTheme } from '../../scripts/theme.js';
+        import { initLanguage } from '../../scripts/language.js';
+        import { initBackgroundAnimation } from '../../scripts/modules/backgroundAnimation.js';
+        import { initScroll } from '../../scripts/scroll.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            initLanguage();
+            initBackgroundAnimation();
+            initScroll();
+            document.body.style.visibility = 'visible';
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../../../index.html#projects" class="nav-back">
+                <i class="fas fa-arrow-left"></i>
+                <span data-i18n="projects.back">Back to Projects</span>
+            </a>
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="language-selector" aria-label="Change language">
+                    <span class="current-lang">EN</span>
+                    <i class="fas fa-globe"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="project-container">
+        <header class="project-header text-center">
+            <div class="project-name">
+                <h1 class="project-brand" data-i18n="projects.neurodraw.brand">NeuroDraw</h1>
+            </div>
+            <h1 class="main-title" data-i18n="projects.neurodraw.title">Neural Network Visualization</h1>
+            <p class="main-subtitle" data-i18n="projects.neurodraw.subtitle">A hands-on educational project to understand neural networks by implementing one from scratch</p>
+        </header>
+
+        <div class="project-image-container">
+            <img src="../../assets/projects/neurodraw/banner.webp" 
+                 alt="NeuroDraw Project Banner" 
+                 class="project-img"
+                 loading="lazy">
+        </div>
+
+        <div class="project-content">
+            <div class="project-description">
+                <div class="project-type">
+                    <span class="project-badge personal" data-i18n="projects.types.personal">Personal Project</span>
+                </div>
+                
+                <h2 data-i18n="projects.neurodraw.overview.title">Project Overview</h2>
+                <p data-i18n="projects.neurodraw.overview.description">
+                    NeuroDraw is a Python application created for educational purposes to demonstrate how neural networks work at their most basic level. Instead of using sophisticated libraries like TensorFlow or PyTorch, this project implements a simple neural network from scratch, making it easier to understand the core concepts of neural networks.
+                </p>
+
+                <div class="project-goals">
+                    <h2 data-i18n="projects.neurodraw.goals.title">Learning Objectives</h2>
+                    <ul>
+                        <li data-i18n="projects.neurodraw.goals.implementation">Implement a neural network without complex libraries</li>
+                        <li data-i18n="projects.neurodraw.goals.visualization">Create an interactive visualization of network decisions</li>
+                        <li data-i18n="projects.neurodraw.goals.understanding">Understand core neural network concepts</li>
+                        <li data-i18n="projects.neurodraw.goals.documentation">Create detailed documentation for educational purposes</li>
+                    </ul>
+                </div>
+
+                <div class="network-visualization">
+                    <h2 data-i18n="projects.neurodraw.architecture.title">Network Architecture</h2>
+                    <p data-i18n="projects.neurodraw.architecture.description">The neural network consists of three layers:</p>
+                    <ul>
+                        <li data-i18n="projects.neurodraw.architecture.layers.input">Input Layer: 784 neurons (28x28 pixel images)</li>
+                        <li data-i18n="projects.neurodraw.architecture.layers.hidden">Hidden Layer: 28 neurons with ReLU activation</li>
+                        <li data-i18n="projects.neurodraw.architecture.layers.output">Output Layer: 10 neurons (digits 0-9) with Softmax activation</li>
+                    </ul>
+                    <div class="architecture-diagram">
+                        <img src="../../assets/projects/neurodraw/network-visualization.webp" 
+                             alt="Neural Network Architecture Visualization"
+                             class="network-diagram">
+                        <p class="diagram-caption" data-i18n="projects.neurodraw.architecture.diagram">Visual representation of the network architecture</p>
+                    </div>
+                </div>
+
+                <div class="demo-section">
+                    <h2 data-i18n="projects.neurodraw.demo.title">Live Demo</h2>
+                    <p data-i18n="projects.neurodraw.demo.description">Watch the network recognize hand-drawn digits in real-time:</p>
+                    <div class="demo-videos">
+                        <div class="demo-video">
+                            <video controls loop>
+                                <source src="../../assets/projects/neurodraw/draw-3.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="video-caption" data-i18n="projects.neurodraw.demo.videos.simple">Real-time prediction of a drawn digit "3"</p>
+                        </div>
+                        <div class="demo-video">
+                            <video controls loop>
+                                <source src="../../assets/projects/neurodraw/draw-8.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="video-caption" data-i18n="projects.neurodraw.demo.videos.evolution">Evolution of predictions: drawing starts as "3", transitions to "2", and ends as "8"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-details">
+                <div class="technical-details-section">
+                    <h2 data-i18n="projects.neurodraw.technical.title">Technical Details</h2>
+                    
+                    <div class="tech-stack-grid">
+                        <span data-i18n="projects.neurodraw.technical.features.python">Python</span>
+                        <span data-i18n="projects.neurodraw.technical.features.numpy">NumPy</span>
+                        <span data-i18n="projects.neurodraw.technical.features.pyqt">PyQt5</span>
+                        <span data-i18n="projects.neurodraw.technical.features.neuralNetworks">Neural Networks</span>
+                    </div>
+
+                    <div class="github-button-wrapper">
+                        <a href="https://github.com/camille-maslin/NeuroDraw-NN" class="github-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <span data-i18n="projects.viewGithub">View on GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-copyright">
+                        <p class="copyright-text" data-i18n="footer.copyright">
+                            <i class="far fa-copyright"></i> Copyright © 2024 Camille Maslin
+                        </p>
+                        <p class="rights-text" data-i18n="footer.rights">All rights reserved</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <div class="footer-tech">
+                        <p class="tech-text" data-i18n="footer.madeWith">Made with</p>
+                        <div class="tech-stack">
+                            <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                            <i class="fab fa-js" title="JavaScript"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-version">
+                        <p class="version-text">v1.0.0</p>
+                        <a href="https://github.com/camille-maslin/portfolio" class="source-link" target="_blank" rel="noopener noreferrer" data-i18n="footer.viewSource">
+                            <i class="fab fa-github"></i>
+                            <span>Source</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <canvas id="background-animation" class="background-canvas" aria-hidden="true"></canvas>
+</body>
+</html> 

@@ -148,11 +148,19 @@
     "viewDetails": "View Details",
     "viewGithub": "View on GitHub",
     "brainTumor": {
+      "brand": "BrainScan AI",
       "title": "Brain Tumor Detection AI",
-      "subtitle": "Developed a Convolutional Neural Network (CNN) for automated brain tumor detection from MRI scans, achieving 93% accuracy in tumor classification.",
+      "subtitle": "A personal deep learning project to explore TensorFlow and Keras capabilities in medical image analysis",
       "overview": {
         "title": "Project Overview",
-        "description": "Developed a Convolutional Neural Network (CNN) model for automated classification of brain tumor MRI scans into four distinct categories: glioma, meningioma, no tumor, and pituitary tumor. This project demonstrates the practical application of deep learning in medical diagnosis support."
+        "description": "BrainScan AI is a personal project aimed at learning and mastering TensorFlow and Keras through practical application. The project focuses on developing a Convolutional Neural Network (CNN) for automated brain tumor classification from MRI scans. This self-directed learning experience helped me gain hands-on experience with deep learning frameworks while tackling a meaningful medical imaging challenge."
+      },
+      "goals": {
+        "title": "Learning Objectives",
+        "tensorflow": "Master TensorFlow framework and Keras API",
+        "cnn": "Understand CNN architecture design and optimization",
+        "medical": "Apply deep learning to medical image analysis",
+        "evaluation": "Learn model evaluation and performance metrics"
       },
       "challenge": {
         "title": "Challenge",
@@ -189,8 +197,8 @@
     "multispectral": {
       "back": "Back to Projects",
       "brand": "SimulFCImage",
-      "title": "SimulFCImage | Multispectral Image Viewer",
-      "indexTitle": "SimulFCImage | Multispectral Image Viewer",
+      "title": "Multispectral Image Viewer",
+      "indexTitle": "Multispectral Image Viewer",
       "indexDescription": "Led the development of a professional software tool for the ImViA Laboratory, enabling visualization and analysis of multispectral images through various simulation methods.",
       "subtitle": "A professional project developed for ImViA Laboratory (Dijon) during my final year of Bachelor's degree in Computer Science",
       "overview": {
@@ -293,16 +301,79 @@
       "client": {
         "title": "Client",
         "description": "ImViA Laboratory, Dijon"
+      },
+      "goals": {
+        "title": "Project Details",
+        "role": "Project Leader, Communication Manager & Developer",
+        "context": "Professional Project, 3rd Year BUT Informatique",
+        "client": "ImViA Laboratory, Dijon"
       }
     },
     "portfolio": {
+      "brand": "Portfolio",
       "title": "Portfolio Website",
-      "description": "Designed and developed a responsive professional portfolio website using modern web technologies and best practices.",
+      "description": "A modern, responsive portfolio website built from scratch using HTML5, CSS3, and JavaScript, focusing on clean design and accessibility.",
       "tags": {
         "html5": "HTML5",
         "css3": "CSS3",
         "javascript": "JavaScript",
         "responsiveDesign": "Responsive Design"
+      }
+    },
+    "neurodraw": {
+      "brand": "NeuroDraw",
+      "title": "Neural Network Visualization",
+      "indexTitle": "Neural Network Visualization",
+      "indexDescription": "An educational neural network implementation from scratch for digit recognition, designed to understand the fundamentals without complex libraries.",
+      "subtitle": "A hands-on educational project to understand neural networks by implementing one from scratch",
+      "overview": {
+        "title": "Project Overview",
+        "description": "NeuroDraw is a Python application created for educational purposes to demonstrate how neural networks work at their most basic level. Instead of using sophisticated libraries like TensorFlow or PyTorch, this project implements a simple neural network from scratch, making it easier to understand the core concepts of neural networks."
+      },
+      "architecture": {
+        "title": "Network Architecture",
+        "description": "The neural network consists of three layers:",
+        "layers": {
+          "input": "Input Layer: 784 neurons (28x28 pixel images)",
+          "hidden": "Hidden Layer: 28 neurons with ReLU activation",
+          "output": "Output Layer: 10 neurons (digits 0-9) with Softmax activation"
+        },
+        "diagram": "Visual representation of the network architecture"
+      },
+      "demo": {
+        "title": "Live Demo",
+        "description": "Watch the network recognize hand-drawn digits in real-time:",
+        "videos": {
+          "simple": "Real-time prediction of a drawn digit \"3\"",
+          "evolution": "Evolution of predictions: drawing starts as \"3\", transitions to \"2\", and ends as \"8\""
+        }
+      },
+      "goals": {
+        "title": "Learning Objectives",
+        "implementation": "Implement a neural network without complex libraries",
+        "visualization": "Create an interactive visualization of network decisions",
+        "understanding": "Understand core neural network concepts",
+        "documentation": "Create detailed documentation for educational purposes"
+      },
+      "features": {
+        "title": "Key Features",
+        "list": {
+          "network": "Simple neural network implemented from scratch",
+          "canvas": "Interactive drawing canvas for testing",
+          "visualization": "Real-time visualization of network decisions",
+          "documentation": "Detailed implementation documentation"
+        }
+      },
+      "technical": {
+        "title": "Technical Details",
+        "architecture": "Network Architecture",
+        "implementation": "Implementation Details",
+        "features": {
+          "python": "Python",
+          "numpy": "NumPy",
+          "pyqt": "PyQt5",
+          "neuralNetworks": "Neural Networks"
+        }
       }
     }
   },

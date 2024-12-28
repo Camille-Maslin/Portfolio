@@ -81,10 +81,13 @@
         <div class="content-overlay">
 
             <div class="project-container">
-                <div class="project-header text-center">
+                <header class="project-header text-center">
+                    <div class="project-name">
+                        <h1 class="project-brand" data-i18n="projects.brainTumor.brand">BrainScan AI</h1>
+                    </div>
                     <h1 class="main-title" data-i18n="projects.brainTumor.title">Brain Tumor Detection AI</h1>
-                    <p class="main-subtitle" data-i18n="projects.brainTumor.subtitle">A deep learning approach achieving 94% accuracy in brain tumor classification using CNN</p>
-                </div>
+                    <p class="main-subtitle" data-i18n="projects.brainTumor.subtitle">A personal deep learning project to explore TensorFlow and Keras capabilities in medical image analysis</p>
+                </header>
 
                 <div class="project-image-container">
                     <img src="../../assets/projects/brain-tumor-detection/brain-tumor-banner.webp" 
@@ -95,11 +98,26 @@
 
                 <div class="project-content">
                     <div class="project-description">
-                        <h2 data-i18n="projects.brainTumor.overview.title">Project Overview</h2>
-                        <p data-i18n="projects.brainTumor.overview.description">Developed a Convolutional Neural Network (CNN) model for automated classification of brain tumor MRI scans into four distinct categories: glioma, meningioma, no tumor, and pituitary tumor. This project demonstrates the practical application of deep learning in medical diagnosis support.</p>
+                        <div class="project-type">
+                            <span class="project-badge personal" data-i18n="projects.types.personal">Personal Project</span>
+                        </div>
                         
-                        <h2 data-i18n="projects.brainTumor.challenge.title">Challenge</h2>
-                        <p data-i18n="projects.brainTumor.challenge.description">The main challenge was to create a reliable classification system that could accurately distinguish between different types of brain tumors while maintaining high precision across all categories. This required careful model architecture design and extensive training data optimization.</p>
+                        <h2 data-i18n="projects.brainTumor.overview.title">Project Overview</h2>
+                        <p data-i18n="projects.brainTumor.overview.description">
+                            BrainScan AI is a personal project aimed at learning and mastering TensorFlow and Keras through practical application. 
+                            The project focuses on developing a Convolutional Neural Network (CNN) for automated brain tumor classification from MRI scans. 
+                            This self-directed learning experience helped me gain hands-on experience with deep learning frameworks while tackling a meaningful medical imaging challenge.
+                        </p>
+
+                        <div class="project-goals">
+                            <h2 data-i18n="projects.brainTumor.goals.title">Learning Objectives</h2>
+                            <ul>
+                                <li data-i18n="projects.brainTumor.goals.tensorflow">Master TensorFlow framework and Keras API</li>
+                                <li data-i18n="projects.brainTumor.goals.cnn">Understand CNN architecture design and optimization</li>
+                                <li data-i18n="projects.brainTumor.goals.medical">Apply deep learning to medical image analysis</li>
+                                <li data-i18n="projects.brainTumor.goals.evaluation">Learn model evaluation and performance metrics</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="project-details">
@@ -124,7 +142,7 @@
                             </ul>
                             
                             <div class="github-button-wrapper">
-                                <a href="https://github.com/..." class="github-button">
+                                <a href="https://github.com/camille-maslin/BrainScan-AI" class="github-button">
                                     <i class="fab fa-github"></i>
                                     <span data-i18n="projects.brainTumor.viewGithub">View on GitHub</span>
                                 </a>
@@ -260,7 +278,7 @@ dense_1 (Dense)            (None, 4)                516
           <div class="footer-column">
             <div class="footer-version">
               <p class="version-text">v1.0.0</p>
-              <a href="https://github.com/camille-maslin/portfolio" class="source-link" target="_blank" data-i18n="footer.viewSource">
+              <a href="https://github.com/camille-maslin/portfolio" class="source-link" target="_blank" rel="noopener" data-i18n="footer.viewSource">
                 <i class="fab fa-github"></i>
                 <span>Source</span>
               </a>

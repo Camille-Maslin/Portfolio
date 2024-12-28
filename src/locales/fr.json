@@ -148,11 +148,19 @@
     "viewDetails": "Voir les Détails",
     "viewGithub": "Voir sur GitHub",
     "brainTumor": {
+      "brand": "BrainScan AI",
       "title": "IA de Détection de Tumeurs Cérébrales",
-      "subtitle": "Développement d'un modèle de Réseau de Neurones Convolutifs (CNN) pour la classification automatisée des IRM cérébrales, atteignant 93% de précision dans la classification des tumeurs.",
+      "subtitle": "Un projet personnel d'apprentissage profond pour explorer les capacités de TensorFlow et Keras en analyse d'images médicales",
       "overview": {
         "title": "Vue d'ensemble",
-        "description": "Développement d'un modèle de Réseau de Neurones Convolutifs (CNN) pour la classification automatisée des IRM cérébrales en quatre catégories distinctes : gliome, méningiome, absence de tumeur et tumeur pituitaire. Ce projet démontre l'application pratique de l'apprentissage profond dans l'aide au diagnostic médical."
+        "description": "BrainScan AI est un projet personnel visant à apprendre et maîtriser TensorFlow et Keras par la pratique. Le projet se concentre sur le développement d'un Réseau de Neurones Convolutifs (CNN) pour la classification automatisée des tumeurs cérébrales à partir d'IRM. Cette expérience d'apprentissage autodidacte m'a permis d'acquérir une expérience pratique des frameworks d'apprentissage profond tout en relevant un défi significatif en imagerie médicale."
+      },
+      "goals": {
+        "title": "Objectifs d'Apprentissage",
+        "tensorflow": "Maîtriser le framework TensorFlow et l'API Keras",
+        "cnn": "Comprendre la conception et l'optimisation d'architecture CNN",
+        "medical": "Appliquer l'apprentissage profond à l'analyse d'images médicales",
+        "evaluation": "Apprendre l'évaluation de modèles et les métriques de performance"
       },
       "challenge": {
         "title": "Défi",
@@ -189,8 +197,8 @@
     "multispectral": {
       "brand": "SimulFCImage",
       "back": "Retour aux Projets",
-      "title": "SimulFCImage | Visionneur d'Images Multispectrales",
-      "indexTitle": "SimulFCImage | Visionneur d'Images Multispectrales",
+      "title": "Visionneur d'Images Multispectrales",
+      "indexTitle": "Visionneur d'Images Multispectrales",
       "indexDescription": "Direction du développement d'un outil logiciel professionnel pour le Laboratoire ImViA, permettant la visualisation et l'analyse d'images multispectrales à travers diverses méthodes de simulation.",
       "subtitle": "Un projet professionnel développé pour le Laboratoire ImViA à Dijon pendant ma dernière année de BUT Informatique",
       "overview": {
@@ -293,16 +301,79 @@
       "client": {
         "title": "Client",
         "description": "Laboratoire ImViA, Dijon"
+      },
+      "goals": {
+        "title": "Détails du Projet",
+        "role": "Chef de Projet, Responsable Communication & Développeur",
+        "context": "Projet Professionnel, 3ème année BUT Informatique",
+        "client": "Laboratoire ImViA, Dijon"
       }
     },
     "portfolio": {
+      "brand": "Portfolio",
       "title": "Site Portfolio",
-      "description": "Conception et développement d'un site portfolio professionnel responsive utilisant les technologies web modernes et les meilleures pratiques.",
+      "description": "Un site portfolio moderne et responsive construit from scratch avec HTML5, CSS3 et JavaScript, mettant l'accent sur un design épuré et l'accessibilité.",
       "tags": {
         "html5": "HTML5",
         "css3": "CSS3",
         "javascript": "JavaScript",
         "responsiveDesign": "Design Adaptatif"
+      }
+    },
+    "neurodraw": {
+      "brand": "NeuroDraw",
+      "title": "Visualisation de Réseau Neuronal",
+      "indexTitle": "Visualisation de Réseau Neuronal",
+      "indexDescription": "Une implémentation éducative d'un réseau de neurones créée from scratch pour la reconnaissance de chiffres, conçue pour comprendre les fondamentaux sans bibliothèques complexes.",
+      "subtitle": "Un projet éducatif pratique pour comprendre les réseaux de neurones en en implémentant un from scratch",
+      "overview": {
+        "title": "Vue d'ensemble",
+        "description": "NeuroDraw est une application Python créée à des fins éducatives pour démontrer le fonctionnement des réseaux de neurones à leur niveau le plus basique. Au lieu d'utiliser des bibliothèques sophistiquées comme TensorFlow ou PyTorch, ce projet implémente un réseau de neurones simple from scratch, facilitant la compréhension des concepts fondamentaux."
+      },
+      "goals": {
+        "title": "Objectifs d'Apprentissage",
+        "implementation": "Implémenter un réseau de neurones sans bibliothèques complexes",
+        "visualization": "Créer une visualisation interactive des décisions du réseau",
+        "understanding": "Comprendre les concepts fondamentaux des réseaux de neurones",
+        "documentation": "Créer une documentation détaillée à des fins éducatives"
+      },
+      "features": {
+        "title": "Fonctionnalités Clés",
+        "list": {
+          "network": "Réseau de neurones simple implémenté from scratch",
+          "canvas": "Zone de dessin interactive pour les tests",
+          "visualization": "Visualisation en temps réel des décisions du réseau",
+          "documentation": "Documentation détaillée de l'implémentation"
+        }
+      },
+      "technical": {
+        "title": "Détails Techniques",
+        "architecture": "Architecture du Réseau",
+        "implementation": "Détails d'Implémentation",
+        "features": {
+          "python": "Python",
+          "numpy": "NumPy",
+          "pyqt": "PyQt5",
+          "neuralNetworks": "Réseaux de Neurones"
+        }
+      },
+      "architecture": {
+        "title": "Architecture du Réseau",
+        "description": "Le réseau neuronal est composé de trois couches :",
+        "layers": {
+          "input": "Couche d'entrée : 784 neurones (images 28x28 pixels)",
+          "hidden": "Couche cachée : 28 neurones avec activation ReLU",
+          "output": "Couche de sortie : 10 neurones (chiffres 0-9) avec activation Softmax"
+        },
+        "diagram": "Représentation visuelle de l'architecture du réseau"
+      },
+      "demo": {
+        "title": "Démonstration en Direct",
+        "description": "Observez le réseau reconnaître les chiffres dessinés en temps réel :",
+        "videos": {
+          "simple": "Prédiction en temps réel d'un chiffre \"3\" dessiné",
+          "evolution": "Évolution des prédictions : le dessin commence comme un \"3\", devient un \"2\", et se termine en \"8\""
+        }
       }
     }
   },
