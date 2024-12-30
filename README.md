@@ -59,3 +59,9 @@ portfolio/
 - Responsive project grid
 - Adaptive skill bars
 - Flexible contact section
+
+### 📜 License
+This project is licensed under the CC BY-NC-ND 4.0 License.
+You are free to view and fork this project, but no modifications, redistributions, or commercial use are allowed without explicit permission.
+
+For more details, please refer to the full license in the [LICENSE](./LICENSE) file.
