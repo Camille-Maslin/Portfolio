@@ -375,6 +375,56 @@
           "evolution": "Évolution des prédictions : le dessin commence comme un \"3\", devient un \"2\", et se termine en \"8\""
         }
       }
+    },
+    "secureCard": {
+      "brand": "SecureCard-AI",
+      "title": "Système de Détection de Fraude Bancaire",
+      "subtitle": "Un système d'apprentissage automatique haute performance atteignant 99,97% de précision dans la détection de fraudes bancaires",
+      "overview": {
+        "title": "Vue d'ensemble",
+        "description": "SecureCard-AI est un projet d'apprentissage automatique qui implémente un système de détection de fraude bancaire haute performance. En utilisant des techniques avancées et des données de transactions réelles, le modèle atteint un taux de précision exceptionnel de 99,97%, en faisant un outil fiable pour identifier les transactions frauduleuses."
+      },
+      "goals": {
+        "title": "Objectifs du Projet",
+        "accuracy": "Développer un système de détection de fraude hautement précis",
+        "balance": "Atteindre un équilibre optimal entre précision et rappel",
+        "interpretability": "Créer une solution interprétable et maintenable",
+        "documentation": "Fournir une documentation et une analyse complètes"
+      },
+      "technical": {
+        "title": "Détails Techniques",
+        "features": {
+          "python": "Python",
+          "sklearn": "Scikit-learn",
+          "pandas": "Pandas",
+          "numpy": "NumPy",
+          "matplotlib": "Matplotlib"
+        }
+      },
+      "dataset": {
+        "title": "Informations sur les Données",
+        "overview": {
+          "title": "Aperçu des Données",
+          "source": "Source : Dataset Kaggle de Détection de Fraude Bancaire 2023",
+          "size": "Taille : Plus de 57 000 transactions",
+          "balance": "Équilibre : 50% fraude, 50% non-fraude",
+          "features": "Caractéristiques : Montant de transaction, temps et caractéristiques anonymisées (V1-V28)"
+        }
+      },
+      "performance": {
+        "title": "Performance du Modèle",
+        "accuracy": {
+          "title": "Métriques de Précision",
+          "overall": "99,97% de Précision Globale",
+          "errors": "Seulement 18-19 erreurs sur 57 000 transactions",
+          "validation": "Scores de validation croisée : [0,9996 - 0,9997]"
+        }
+      },
+      "notebook": {
+        "title": "Détails Complets de l'Implémentation",
+        "description": "Ci-dessous se trouve l'implémentation complète du système de détection de fraude bancaire, incluant le traitement des données, l'architecture du modèle, l'entraînement et l'évaluation.",
+        "openNotebook": "Voir le Notebook"
+      }
     }
   },
   "contact": {

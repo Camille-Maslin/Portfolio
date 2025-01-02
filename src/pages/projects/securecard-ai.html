@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SecureCard-AI - Credit Card Fraud Detection System">
+    <title>SecureCard-AI - Project Details</title>
+    
+    <!-- Styles -->
+    <link rel="shortcut icon" href="#">
+    <link rel="preload" href="../../styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    </noscript>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script type="module">
+        import { initTheme } from '../../scripts/theme.js';
+        import { initLanguage } from '../../scripts/language.js';
+        import { initBackgroundAnimation } from '../../scripts/modules/backgroundAnimation.js';
+        import { initScroll } from '../../scripts/scroll.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            initLanguage();
+            initBackgroundAnimation();
+            initScroll();
+            document.body.style.visibility = 'visible';
+
+            // Configure lightbox
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'fadeDuration': 300,
+                'imageFadeDuration': 300,
+                'positionFromTop': 50
+            });
+        });
+    </script>
+    
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../../../index.html#projects" class="nav-back">
+                <i class="fas fa-arrow-left"></i>
+                <span data-i18n="projects.back">Back to Projects</span>
+            </a>
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="language-selector" aria-label="Change language">
+                    <span class="current-lang">EN</span>
+                    <i class="fas fa-globe"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-overlay">
+            <div class="project-container">
+                <header class="project-header text-center">
+                    <div class="project-name">
+                        <h1 class="project-brand" data-i18n="projects.secureCard.brand">SecureCard-AI</h1>
+                    </div>
+                    <h1 class="main-title" data-i18n="projects.secureCard.title">Credit Card Fraud Detection System</h1>
+                    <p class="main-subtitle" data-i18n="projects.secureCard.subtitle">A high-performance machine learning system achieving 99.97% accuracy in credit card fraud detection</p>
+                </header>
+
+                <div class="project-image-container">
+                    <img src="../../assets/projects/securecard-ai/banner.webp" 
+                         alt="SecureCard-AI Project Banner" 
+                         class="project-img"
+                         loading="lazy">
+                </div>
+
+                <div class="project-content">
+                    <div class="project-description">
+                        <div class="project-type">
+                            <span class="project-badge personal" data-i18n="projects.types.personal">Personal Project</span>
+                        </div>
+                        
+                        <h2 data-i18n="projects.secureCard.overview.title">Project Overview</h2>
+                        <p data-i18n="projects.secureCard.overview.description">
+                            SecureCard-AI is a machine learning project that implements a high-performance credit card fraud detection system. Using advanced techniques and real transaction data, the model achieves an exceptional accuracy rate of 99.97%, making it a reliable tool for identifying fraudulent transactions.
+                        </p>
+
+                        <div class="project-goals">
+                            <h2 data-i18n="projects.secureCard.goals.title">Project Goals</h2>
+                            <ul>
+                                <li data-i18n="projects.secureCard.goals.accuracy">Develop a highly accurate fraud detection system</li>
+                                <li data-i18n="projects.secureCard.goals.balance">Achieve optimal balance between precision and recall</li>
+                                <li data-i18n="projects.secureCard.goals.interpretability">Create an interpretable and maintainable solution</li>
+                                <li data-i18n="projects.secureCard.goals.documentation">Provide comprehensive documentation and analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="technical-details-section">
+                            <h2 data-i18n="projects.secureCard.technical.title">Technical Details</h2>
+                            
+                            <div class="tech-stack-grid">
+                                <span data-i18n="projects.secureCard.technical.features.python">Python</span>
+                                <span data-i18n="projects.secureCard.technical.features.sklearn">Scikit-learn</span>
+                                <span data-i18n="projects.secureCard.technical.features.pandas">Pandas</span>
+                                <span data-i18n="projects.secureCard.technical.features.numpy">NumPy</span>
+                                <span data-i18n="projects.secureCard.technical.features.matplotlib">Matplotlib</span>
+                            </div>
+
+                            <div class="github-button-wrapper">
+                                <a href="https://github.com/camille-maslin/SecureCard-AI" class="github-button" target="_blank" rel="noopener">
+                                    <i class="fab fa-github"></i>
+                                    <span data-i18n="projects.viewGithub">View on GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dataset-section">
+                    <h2 data-i18n="projects.secureCard.dataset.title">Dataset Information</h2>
+                    <div class="dataset-details">
+                        <div class="dataset-overview">
+                            <h3 data-i18n="projects.secureCard.dataset.overview.title">Dataset Overview</h3>
+                            <ul>
+                                <li data-i18n="projects.secureCard.dataset.overview.source">Source: Kaggle Credit Card Fraud Detection Dataset 2023</li>
+                                <li data-i18n="projects.secureCard.dataset.overview.size">Size: 57,000+ transactions</li>
+                                <li data-i18n="projects.secureCard.dataset.overview.balance">Balance: 50% fraud, 50% non-fraud</li>
+                                <li data-i18n="projects.secureCard.dataset.overview.features">Features: Transaction amount, time, and anonymized features (V1-V28)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-section">
+                    <h2 data-i18n="projects.secureCard.performance.title">Model Performance</h2>
+                    <div class="performance-grid">
+                        <div class="performance-card">
+                            <h3 data-i18n="projects.secureCard.performance.accuracy.title">Accuracy Metrics</h3>
+                            <ul>
+                                <li data-i18n="projects.secureCard.performance.accuracy.overall">99.97% Overall Accuracy</li>
+                                <li data-i18n="projects.secureCard.performance.accuracy.errors">Only 18-19 errors per 57,000 transactions</li>
+                                <li data-i18n="projects.secureCard.performance.accuracy.validation">Cross-validation scores: [0.9996 - 0.9997]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add new section for Jupyter Notebook -->
+                <div class="notebook-section" role="region" aria-labelledby="notebook-title">
+                    <h2 id="notebook-title" data-i18n="projects.secureCard.notebook.title">Complete Implementation Details</h2>
+                    <p data-i18n="projects.secureCard.notebook.description">Below is the complete implementation of the credit card fraud detection system, including data processing, model architecture, training, and evaluation.</p>
+                    
+                    <div class="notebook-link">
+                        <a href="../../notebooks/Notebook-SecureCard-AI.html" 
+                           class="btn-primary" 
+                           target="_blank" 
+                           rel="noopener"
+                           aria-label="Open complete notebook in new tab">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                            <span data-i18n="projects.secureCard.notebook.openNotebook">View the Notebook</span>
+                        </a>
+                    </div>
+                    
+                    <div class="jupyter-notebook-container">
+                        <iframe src="../../notebooks/Notebook-SecureCard-AI.html" 
+                                title="SecureCard-AI Jupyter Notebook"
+                                loading="lazy"
+                                class="notebook-preview">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-copyright">
+                        <p class="copyright-text" data-i18n="footer.copyright">
+                            <i class="far fa-copyright"></i> Copyright © 2024 Camille Maslin
+                        </p>
+                        <p class="rights-text" data-i18n="footer.rights">All rights reserved</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <div class="footer-tech">
+                        <p class="tech-text" data-i18n="footer.madeWith">Made with</p>
+                        <div class="tech-stack">
+                            <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                            <i class="fab fa-js" title="JavaScript"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-version">
+                        <p class="version-text">v1.0.0</p>
+                        <a href="https://github.com/camille-maslin/portfolio" class="source-link" target="_blank" rel="noopener noreferrer" data-i18n="footer.viewSource">
+                            <i class="fab fa-github"></i>
+                            <span>Source</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html> 

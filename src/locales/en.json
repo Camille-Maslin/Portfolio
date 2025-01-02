@@ -328,7 +328,7 @@
       "subtitle": "A hands-on educational project to understand neural networks by implementing one from scratch",
       "overview": {
         "title": "Project Overview",
-        "description": "NeuroDraw is a Python application created for educational purposes to demonstrate how neural networks work at their most basic level. Instead of using sophisticated libraries like TensorFlow or PyTorch, this project implements a simple neural network from scratch, making it easier to understand the core concepts of neural networks."
+        "description": "NeuroDraw is a Python application created for educational purposes to demonstrate how neural networks work at their most basic level. Instead of using libraries like TensorFlow or PyTorch, this project implements a simple neural network from scratch, making it easier to understand the core concepts of neural networks."
       },
       "architecture": {
         "title": "Network Architecture",
@@ -374,6 +374,56 @@
           "pyqt": "PyQt5",
           "neuralNetworks": "Neural Networks"
         }
+      }
+    },
+    "secureCard": {
+      "brand": "SecureCard-AI",
+      "title": "Credit Card Fraud Detection System",
+      "subtitle": "A high-performance machine learning system achieving 99.97% accuracy in credit card fraud detection",
+      "overview": {
+        "title": "Project Overview",
+        "description": "SecureCard-AI is a machine learning project that implements a high-performance credit card fraud detection system. Using advanced techniques and real transaction data, the model achieves an exceptional accuracy rate of 99.97%, making it a reliable tool for identifying fraudulent transactions."
+      },
+      "goals": {
+        "title": "Project Goals",
+        "accuracy": "Develop a highly accurate fraud detection system",
+        "balance": "Achieve optimal balance between precision and recall",
+        "interpretability": "Create an interpretable and maintainable solution",
+        "documentation": "Provide comprehensive documentation and analysis"
+      },
+      "technical": {
+        "title": "Technical Details",
+        "features": {
+          "python": "Python",
+          "sklearn": "Scikit-learn",
+          "pandas": "Pandas",
+          "numpy": "NumPy",
+          "matplotlib": "Matplotlib"
+        }
+      },
+      "dataset": {
+        "title": "Dataset Information",
+        "overview": {
+          "title": "Dataset Overview",
+          "source": "Source: Kaggle Credit Card Fraud Detection Dataset 2023",
+          "size": "Size: 57,000+ transactions",
+          "balance": "Balance: 50% fraud, 50% non-fraud",
+          "features": "Features: Transaction amount, time, and anonymized features (V1-V28)"
+        }
+      },
+      "performance": {
+        "title": "Model Performance",
+        "accuracy": {
+          "title": "Accuracy Metrics",
+          "overall": "99.97% Overall Accuracy",
+          "errors": "Only 18-19 errors per 57,000 transactions",
+          "validation": "Cross-validation scores: [0.9996 - 0.9997]"
+        }
+      },
+      "notebook": {
+        "title": "Complete Implementation Details",
+        "description": "Below is the complete implementation of the credit card fraud detection system, including data processing, model architecture, training, and evaluation.",
+        "openNotebook": "View the Notebook"
       }
     }
   },
