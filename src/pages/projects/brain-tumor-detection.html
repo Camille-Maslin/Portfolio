@@ -104,18 +104,18 @@
                         
                         <h2 data-i18n="projects.brainTumor.overview.title">Project Overview</h2>
                         <p data-i18n="projects.brainTumor.overview.description">
-                            BrainScan AI is a personal project aimed at learning and mastering TensorFlow and Keras through practical application. 
-                            The project focuses on developing a Convolutional Neural Network (CNN) for automated brain tumor classification from MRI scans. 
-                            This self-directed learning experience helped me gain hands-on experience with deep learning frameworks while tackling a meaningful medical imaging challenge.
+                            BrainScan AI est un projet personnel visant à développer un système de classification des tumeurs cérébrales basé sur l'apprentissage profond.
+                            Le projet utilise un réseau de neurones convolutif (CNN) pour analyser des images IRM et classifier les tumeurs en quatre catégories : gliome, méningiome, absence de tumeur et tumeur pituitaire.
+                            Cette implémentation met l'accent sur une analyse approfondie des données, une architecture CNN optimisée et une évaluation détaillée des performances.
                         </p>
 
                         <div class="project-goals">
                             <h2 data-i18n="projects.brainTumor.goals.title">Learning Objectives</h2>
                             <ul>
-                                <li data-i18n="projects.brainTumor.goals.tensorflow">Master TensorFlow framework and Keras API</li>
-                                <li data-i18n="projects.brainTumor.goals.cnn">Understand CNN architecture design and optimization</li>
-                                <li data-i18n="projects.brainTumor.goals.medical">Apply deep learning to medical image analysis</li>
-                                <li data-i18n="projects.brainTumor.goals.evaluation">Learn model evaluation and performance metrics</li>
+                                <li data-i18n="projects.brainTumor.goals.tensorflow">Maîtriser l'analyse exploratoire des données médicales</li>
+                                <li data-i18n="projects.brainTumor.goals.cnn">Concevoir et optimiser une architecture CNN pour la classification d'images médicales</li>
+                                <li data-i18n="projects.brainTumor.goals.medical">Implémenter des techniques avancées d'évaluation de modèles (ROC, matrices de confusion)</li>
+                                <li data-i18n="projects.brainTumor.goals.evaluation">Développer une solution complète avec TensorFlow 2.18 et Keras 3.7</li>
                             </ul>
                         </div>
                     </div>
@@ -135,10 +135,10 @@
                             
                             <h3 data-i18n="projects.brainTumor.technical.keyFeatures">Key Features</h3>
                             <ul class="key-features-list">
-                                <li data-i18n="projects.brainTumor.technical.features.accuracy">94% overall classification accuracy</li>
-                                <li data-i18n="projects.brainTumor.technical.features.classification">Multi-class tumor classification</li>
-                                <li data-i18n="projects.brainTumor.technical.features.architecture">Custom CNN architecture</li>
-                                <li data-i18n="projects.brainTumor.technical.features.optimization">Optimized for 256x256 MRI scans</li>
+                                <li data-i18n="projects.brainTumor.technical.features.accuracy">93% overall classification accuracy</li>
+                                <li data-i18n="projects.brainTumor.technical.features.classification">Multi-class tumor classification (Glioma, Meningioma, No tumor, Pituitary)</li>
+                                <li data-i18n="projects.brainTumor.technical.features.architecture">Optimized CNN architecture with early stopping</li>
+                                <li data-i18n="projects.brainTumor.technical.features.optimization">Optimized for 256x256 MRI scans with data augmentation</li>
                             </ul>
                             
                             <div class="github-button-wrapper">
@@ -164,10 +164,10 @@
                         <div class="performance-metrics">
                             <h3 data-i18n="projects.brainTumor.performance.accuracyByType">Classification Accuracy by Type</h3>
                             <ul>
-                                <li data-i18n="projects.brainTumor.performance.types.glioma">Glioma: 93.6% accuracy</li>
-                                <li data-i18n="projects.brainTumor.performance.types.meningioma">Meningioma: 87.7% accuracy</li>
-                                <li data-i18n="projects.brainTumor.performance.types.noTumor">No Tumor: 98.0% accuracy</li>
-                                <li data-i18n="projects.brainTumor.performance.types.pituitary">Pituitary: 96.7% accuracy</li>
+                                <li data-i18n="projects.brainTumor.performance.types.glioma">Glioma: 96% accuracy (Precision: 0.96, Recall: 0.83)</li>
+                                <li data-i18n="projects.brainTumor.performance.types.meningioma">Meningioma: 89% accuracy (Precision: 0.89, Recall: 0.89)</li>
+                                <li data-i18n="projects.brainTumor.performance.types.noTumor">No Tumor: 98% accuracy (Precision: 0.98, Recall: 1.00)</li>
+                                <li data-i18n="projects.brainTumor.performance.types.pituitary">Pituitary: 91% accuracy (Precision: 0.91, Recall: 0.99)</li>
                             </ul>
                         </div>
                     </div>
@@ -185,36 +185,64 @@ Layer (type)                Output Shape              Param #
 rescaling (Rescaling)       (None, 256, 256, 3)      0         
 conv2d (Conv2D)            (None, 256, 256, 16)     448       
 max_pooling2d (MaxPooling)  (None, 128, 128, 16)     0         
-...
+conv2d_1 (Conv2D)          (None, 128, 128, 32)     4,640     
+max_pooling2d_1 (MaxPool)  (None, 64, 64, 32)       0         
+conv2d_2 (Conv2D)          (None, 64, 64, 64)       18,496    
+max_pooling2d_2 (MaxPool)  (None, 32, 32, 64)       0         
+flatten (Flatten)          (None, 65536)            0         
+dense (Dense)              (None, 128)              8,388,736 
 dense_1 (Dense)            (None, 4)                516       
 =================================================================
+Total params: 8,412,836 (32.09 MB)
+Trainable params: 8,412,836 (32.09 MB)
+Non-trainable params: 0 (0.00 B)
                         </pre>
                     </div>
                     
                     <div class="analysis-grid">
                         <div class="analysis-card">
-                            <h3 data-i18n="projects.brainTumor.technical.training">Training Progress</h3>
-                            <a href="../../assets/projects/brain-tumor-detection/training-results.webp" data-lightbox="project-gallery" data-title="Training Progress: Model accuracy and loss evolution during training">
-                                <img src="../../assets/projects/brain-tumor-detection/training-results.webp" alt="Training Progress Graphs">
+                            <h3 data-i18n="projects.brainTumor.technical.training">Analyse des Données</h3>
+                            <a href="../../assets/projects/brain-tumor-detection/data-distribution.webp" data-lightbox="project-gallery" data-title="Distribution des Images: Répartition équilibrée des classes dans le jeu de données">
+                                <img src="../../assets/projects/brain-tumor-detection/data-distribution.webp" alt="Distribution des Images">
                             </a>
-                            <p data-i18n="projects.brainTumor.technical.trainingDesc">Model accuracy and loss evolution during training</p>
+                            <p data-i18n="projects.brainTumor.technical.dataDesc">Distribution équilibrée des classes : Gliome (23.1%), Méningiome (23.4%), Sans tumeur (27.9%), Pituitaire (25.5%)</p>
                         </div>
                         
                         <div class="analysis-card">
-                            <h3 data-i18n="projects.brainTumor.technical.predictions">Example Predictions</h3>
-                            <a href="../../assets/projects/brain-tumor-detection/predictions.webp" data-lightbox="project-gallery" data-title="Example Predictions: Sample predictions across different tumor types">
-                                <img src="../../assets/projects/brain-tumor-detection/predictions.webp" alt="Example MRI Predictions">
+                            <h3 data-i18n="projects.brainTumor.technical.roc">Courbes ROC</h3>
+                            <a href="../../assets/projects/brain-tumor-detection/roc-curves.webp" data-lightbox="project-gallery" data-title="Courbes ROC: Performance par classe avec scores AUC">
+                                <img src="../../assets/projects/brain-tumor-detection/roc-curves.webp" alt="Courbes ROC">
                             </a>
-                            <p data-i18n="projects.brainTumor.technical.predictionsDesc">Sample predictions across different tumor types</p>
+                            <p data-i18n="projects.brainTumor.technical.rocDesc">Analyse des performances par classe avec courbes ROC et scores AUC</p>
                         </div>
                         
                         <div class="analysis-card">
-                            <h3 data-i18n="projects.brainTumor.technical.confidence">Confidence Analysis</h3>
-                            <a href="../../assets/projects/brain-tumor-detection/correct-predictions-confidence.webp" data-lightbox="project-gallery" data-title="Confidence Analysis: Distribution of model confidence for correct predictions">
-                                <img src="../../assets/projects/brain-tumor-detection/correct-predictions-confidence.webp" alt="Confidence Distribution">
+                            <h3 data-i18n="projects.brainTumor.technical.patterns">Motifs Moyens</h3>
+                            <a href="../../assets/projects/brain-tumor-detection/average-patterns.webp" data-lightbox="project-gallery" data-title="Motifs Moyens: Caractéristiques visuelles distinctives par type de tumeur">
+                                <img src="../../assets/projects/brain-tumor-detection/average-patterns.webp" alt="Motifs Moyens par Type">
                             </a>
-                            <p data-i18n="projects.brainTumor.technical.confidenceDesc">Distribution of model confidence for correct predictions</p>
+                            <p data-i18n="projects.brainTumor.technical.patternsDesc">Visualisation des caractéristiques moyennes par type de tumeur</p>
                         </div>
+                    </div>
+
+                    <div class="dataset-details">
+                        <h3 data-i18n="projects.brainTumor.technical.dataset">Détails du Dataset</h3>
+                        <ul>
+                            <li data-i18n="projects.brainTumor.technical.datasetTotal">Total d'images : 5712 images d'entraînement, 1311 images de test</li>
+                            <li data-i18n="projects.brainTumor.technical.datasetSize">Taille des images : 256x256 pixels, 3 canaux</li>
+                            <li data-i18n="projects.brainTumor.technical.datasetSource">Source : Brain Tumor MRI Dataset (Kaggle)</li>
+                            <li data-i18n="projects.brainTumor.technical.datasetPrep">Prétraitement : Redimensionnement, normalisation et augmentation des données</li>
+                        </ul>
+                    </div>
+
+                    <div class="training-details">
+                        <h3 data-i18n="projects.brainTumor.technical.trainingDetails">Détails d'Entraînement</h3>
+                        <ul>
+                            <li data-i18n="projects.brainTumor.technical.trainingBatch">Taille de batch : 32</li>
+                            <li data-i18n="projects.brainTumor.technical.trainingEpochs">Epochs : 20 (avec early stopping)</li>
+                            <li data-i18n="projects.brainTumor.technical.trainingOptimizer">Optimiseur : Adam</li>
+                            <li data-i18n="projects.brainTumor.technical.trainingMetrics">Métriques : Accuracy, Loss, ROC-AUC</li>
+                        </ul>
                     </div>
                 </div>
                 

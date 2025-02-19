@@ -170,11 +170,43 @@
         "title": "Détails Techniques",
         "keyFeatures": "Caractéristiques Principales",
         "features": {
-          "accuracy": "94% de précision globale",
-          "classification": "Classification multi-classes des tumeurs",
-          "architecture": "Architecture CNN personnalisée",
-          "optimization": "Optimisé pour les IRM 256x256"
-        }
+          "accuracy": "93% de précision globale",
+          "classification": "Classification multi-classes des tumeurs (Gliome, Méningiome, Sans tumeur, Pituitaire)",
+          "architecture": "Architecture CNN optimisée avec early stopping",
+          "optimization": "Optimisé pour les IRM 256x256 avec augmentation des données",
+          "training": "Analyse des Données",
+          "dataDesc": "Distribution équilibrée des classes : Gliome (23.1%), Méningiome (23.4%), Sans tumeur (27.9%), Pituitaire (25.5%)",
+          "roc": "Courbes ROC",
+          "rocDesc": "Analyse des performances par classe avec courbes ROC et scores AUC",
+          "patterns": "Motifs Moyens",
+          "patternsDesc": "Visualisation des caractéristiques moyennes par type de tumeur",
+          "dataset": "Détails du Dataset",
+          "datasetTotal": "Total d'images : 5712 images d'entraînement, 1311 images de test",
+          "datasetSize": "Taille des images : 256x256 pixels, 3 canaux",
+          "datasetSource": "Source : Brain Tumor MRI Dataset (Kaggle)",
+          "datasetPrep": "Prétraitement : Redimensionnement, normalisation et augmentation des données",
+          "trainingDetails": "Détails d'Entraînement",
+          "trainingBatch": "Taille de batch : 32",
+          "trainingEpochs": "Epochs : 20 (avec early stopping)",
+          "trainingOptimizer": "Optimiseur : Adam",
+          "trainingMetrics": "Métriques : Accuracy, Loss, ROC-AUC"
+        },
+        "training": "Analyse des Données",
+        "dataDesc": "Distribution équilibrée des classes : Gliome (23.1%), Méningiome (23.4%), Sans tumeur (27.9%), Pituitaire (25.5%)",
+        "roc": "Courbes ROC",
+        "rocDesc": "Analyse des performances par classe avec courbes ROC et scores AUC",
+        "patterns": "Motifs Moyens",
+        "patternsDesc": "Visualisation des caractéristiques moyennes par type de tumeur",
+        "dataset": "Détails du Dataset",
+        "datasetTotal": "Total d'images : 5712 images d'entraînement, 1311 images de test",
+        "datasetSize": "Taille des images : 256x256 pixels, 3 canaux",
+        "datasetSource": "Source : Brain Tumor MRI Dataset (Kaggle)",
+        "datasetPrep": "Prétraitement : Redimensionnement, normalisation et augmentation des données",
+        "trainingDetails": "Détails d'Entraînement",
+        "trainingBatch": "Taille de batch : 32",
+        "trainingEpochs": "Epochs : 20 (avec early stopping)",
+        "trainingOptimizer": "Optimiseur : Adam",
+        "trainingMetrics": "Métriques : Accuracy, Loss, ROC-AUC"
       },
       "performance": {
         "title": "Performance du Modèle",
@@ -182,10 +214,10 @@
         "matrixDesc": "Résultats détaillés de classification par type de tumeur",
         "accuracyByType": "Précision par Type",
         "types": {
-          "glioma": "Gliome : 93.6% de précision",
-          "meningioma": "Méningiome : 87.7% de précision",
-          "noTumor": "Pas de Tumeur : 98.0% de précision",
-          "pituitary": "Pituitaire : 96.7% de précision"
+          "glioma": "Gliome : 96% de précision (Précision : 0.96, Rappel : 0.83)",
+          "meningioma": "Méningiome : 89% de précision (Précision : 0.89, Rappel : 0.89)",
+          "noTumor": "Sans Tumeur : 98% de précision (Précision : 0.98, Rappel : 1.00)",
+          "pituitary": "Pituitaire : 91% de précision (Précision : 0.91, Rappel : 0.99)"
         }
       },
       "notebook": {

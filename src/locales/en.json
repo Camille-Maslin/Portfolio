@@ -170,11 +170,27 @@
         "title": "Technical Details",
         "keyFeatures": "Key Features",
         "features": {
-          "accuracy": "94% overall classification accuracy",
-          "classification": "Multi-class tumor classification",
-          "architecture": "Custom CNN architecture",
-          "optimization": "Optimized for 256x256 MRI scans"
-        }
+          "accuracy": "93% overall classification accuracy",
+          "classification": "Multi-class tumor classification (Glioma, Meningioma, No tumor, Pituitary)",
+          "architecture": "Optimized CNN architecture with early stopping",
+          "optimization": "Optimized for 256x256 MRI scans with data augmentation"
+        },
+        "training": "Data Analysis",
+        "dataDesc": "Balanced class distribution: Glioma (23.1%), Meningioma (23.4%), No tumor (27.9%), Pituitary (25.5%)",
+        "roc": "ROC Curves",
+        "rocDesc": "Performance analysis by class with ROC curves and AUC scores",
+        "patterns": "Average Patterns",
+        "patternsDesc": "Visualization of average features by tumor type",
+        "dataset": "Dataset Details",
+        "datasetTotal": "Total images: 5712 training images, 1311 test images",
+        "datasetSize": "Image size: 256x256 pixels, 3 channels",
+        "datasetSource": "Source: Brain Tumor MRI Dataset (Kaggle)",
+        "datasetPrep": "Preprocessing: Resizing, normalization and data augmentation",
+        "trainingDetails": "Training Details",
+        "trainingBatch": "Batch size: 32",
+        "trainingEpochs": "Epochs: 20 (with early stopping)",
+        "trainingOptimizer": "Optimizer: Adam",
+        "trainingMetrics": "Metrics: Accuracy, Loss, ROC-AUC"
       },
       "performance": {
         "title": "Model Performance",
@@ -182,10 +198,10 @@
         "matrixDesc": "Detailed classification results across tumor types",
         "accuracyByType": "Classification Accuracy by Type",
         "types": {
-          "glioma": "Glioma: 93.6% accuracy",
-          "meningioma": "Meningioma: 87.7% accuracy",
-          "noTumor": "No Tumor: 98.0% accuracy",
-          "pituitary": "Pituitary: 96.7% accuracy"
+          "glioma": "Glioma: 96% accuracy (Precision: 0.96, Recall: 0.83)",
+          "meningioma": "Meningioma: 89% accuracy (Precision: 0.89, Recall: 0.89)",
+          "noTumor": "No Tumor: 98% accuracy (Precision: 0.98, Recall: 1.00)",
+          "pituitary": "Pituitary: 91% accuracy (Precision: 0.91, Recall: 0.99)"
         }
       },
       "notebook": {
